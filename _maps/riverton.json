@@ -1,0 +1,37 @@
+{
+	"map_name": "Riverton",
+	"map_path": "map_files/Riverton",
+	"map_file": [
+		"Riverton_dungeons.dmm",
+		"Riverton_riverlevel.dmm",
+		"Riverton_toplevel.dmm"
+	],
+	"station_ruin_budget":0,
+	"space_ruin_levels":0,
+	"space_empty_levels":0,
+	"shuttles": {
+		"cargo":"cargo_pahrump",
+		"emergency": "emergency_pahrump",
+		"ferry": "ferry_fancy"
+	},
+	"traits":[
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
+			"Dungeons": true,
+			"Up": 1
+		},
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
+			"Up": 1,
+			"Down": -1
+		},
+		{
+			"Gravity": true,
+			"Station": 1,
+			"Down": -1
+		}
+	],
+	"minetype": "none"
+}

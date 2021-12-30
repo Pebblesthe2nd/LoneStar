@@ -145,7 +145,7 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	projectiletype = /obj/item/projectile/bullet/a556/match
+	projectiletype = /obj/item/projectile/bullet/a556
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
 	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
