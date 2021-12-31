@@ -560,7 +560,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Farmer"
 	neck = /obj/item/clothing/neck/scarf/cptpatriot
 	suit = /obj/item/clothing/suit/jacket/miljacket
-	uniform = /obj/item/clothing/under/f13/flannelshirt
+	uniform = /obj/item/clothing/under/riverton
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/drinks/flask = 1,

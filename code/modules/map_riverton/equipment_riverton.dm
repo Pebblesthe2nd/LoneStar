@@ -30,8 +30,6 @@
 	access = list(ACCESS_BAR, ACCESS_GATEWAY)
 
 
-
-
 // ----------------------------------- ARMOR ----------------------------------------- //
 
 /obj/item/clothing/suit/hooded/mayor_coat

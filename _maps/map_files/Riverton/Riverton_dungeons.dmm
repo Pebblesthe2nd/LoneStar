@@ -284,7 +284,7 @@
 	},
 /area/indoors/bunker)
 "bp" = (
-/mob/living/simple_animal/hostile/handy/assaultron/stealth/nationalguard,
+/mob/living/simple_animal/hostile/handy/assaultron/nationalguard,
 /turf/open/floor/plasteel/f13/vault_floor/green/dirty,
 /area/f13/bunker)
 "bq" = (
@@ -834,7 +834,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/mob/living/simple_animal/hostile/handy/assaultron/stealth/nationalguard,
+/mob/living/simple_animal/hostile/handy/assaultron/nationalguard,
 /turf/open/floor/carpet/black,
 /area/f13/bunker)
 "dz" = (

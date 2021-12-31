@@ -1852,7 +1852,7 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/raider/lurker/shaman,
+/mob/living/simple_animal/hostile/raider/lurkers/shaman,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
 "hq" = (
@@ -8893,7 +8893,7 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/raider/lurker/chieftain,
+/mob/living/simple_animal/hostile/raider/lurkers/chieftain,
 /turf/open/floor/wooden/chestnut,
 /area/indoors/tribals)
 "JB" = (

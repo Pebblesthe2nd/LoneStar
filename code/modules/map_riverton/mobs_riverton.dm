@@ -8,7 +8,7 @@
 /mob/living/simple_animal/hostile/supermutant/nationalguard
 	name = "super mutant soldier"
 	desc = "A huge mutant in ripped military clothing. To dumb to use tools it seems."
-	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon = 'icons/fallout/module_riverton/mobs/supermutants.dmi'
 	icon_state = "mutant_private"
 	icon_living = "mutant_private"
 	icon_dead = "mutant_private"
@@ -57,7 +57,6 @@
 /mob/living/simple_animal/hostile/supermutant/nationalguard/elite
 	name = "elite mutant soldier"
 	desc = "A mutant that retains much of its intelligence,  armor and laser weapons."
-	icon = 'icons/fallout/mobs/supermutant.dmi'
 	icon_state = "mutant_elite"
 	icon_living = "mutant_elite"
 	icon_dead = "mutant_elite"
@@ -84,22 +83,24 @@
 
 
 // ARMY ASSAULTRON
-/mob/living/simple_animal/hostile/handy/assaultron/stealth
-	alpha = 80
-
-/mob/living/simple_animal/hostile/handy/assaultron/stealth/nationalguard
+/mob/living/simple_animal/hostile/handy/assaultron/nationalguard
+	icon = 'icons/fallout/module_riverton/mobs/robots.dmi'
+	icon_state = "assaultron"
 	aggro_vision_range = 12
 	faction = list("hostile", "supermutant")
+	alpha = 80
 
-/mob/living/simple_animal/hostile/handy/assaultron/stealth/Aggro()
+/mob/living/simple_animal/hostile/handy/assaultron/nationalguard/Aggro()
 	..()
 	summon_backup(8)
 	alpha = 255
 
 /mob/living/simple_animal/hostile/handy/gutsy/nationalguard
 	name = "private Gutsy"
+	icon = 'icons/fallout/module_riverton/mobs/robots.dmi'
 	icon_state = "pvtgutsy"
 	icon_living = "pvtgutsy"
+	icon_dead = "robot_dead"
 	melee_damage_type = BURN
 	icon_dead = "gib6"
 	aggro_vision_range = 12
@@ -134,7 +135,7 @@
 /mob/living/simple_animal/hostile/ghoul/mamasboys
 	name = "worker ghoul"
 	desc = "A sentient ghoul, but involved in shady dealings and not very friendly."
-	icon = 'icons/fallout/mobs/npc/mobnpc.dmi'
+	icon = 'icons/fallout/module_riverton/mobs/raiders.dmi'
 	icon_state = "ghoul_worker"
 	icon_living = "ghoul_worker"
 	icon_dead = "ghoul_worker_dead"
@@ -220,6 +221,7 @@
 /mob/living/simple_animal/hostile/raider/skull
 	name = "Skulls hangaround"
 	desc = "Want to join the gang but haven't killed enough people yet, sniffs glue in their spare time. You might be their ticket in."
+	icon = 'icons/fallout/module_riverton/mobs/raiders.dmi'
 	icon_state = "skulls"
 	icon_living = "skulls"
 	icon_dead = "skulls_dead"
@@ -273,6 +275,21 @@
 // LURKERS //
 /////////////
 
+/mob/living/simple_animal/hostile/raider/lurkers
+	name = "Lurkers tribal"
+	desc = "The Lurkers tribe are very violent to outsiders and speak a homebrew language, making peaceful interactions difficult."
+	icon = 'icons/fallout/module_riverton/mobs/raiders.dmi'
+	icon_state = "lurkers"
+	icon_living = "lurkers"
+	icon_dead = "lurkers_dead"
+	retreat_distance = 0
+	minimum_distance = 0
+	melee_damage_lower = 40
+	melee_damage_upper = 40
+	healable = 1
+	loot = list(/obj/item/reagent_containers/food/snacks/grown/broc)
+	death_sound = 'sound/voice/scream/scream_m1.ogg'
+
 /mob/living/simple_animal/hostile/raider/lurkers/club/Aggro()
 	..()
 	summon_backup(12)
@@ -302,19 +319,7 @@
 	icon_dead = "lurkersbeggarfem_dead"
 	death_sound = 'sound/voice/scream/scream_f3.ogg'
 
-/mob/living/simple_animal/hostile/raider/lurkers
-	name = "Lurkers tribal"
-	desc = "The Lurkers tribe are very violent to outsiders and speak a homebrew language, making peaceful interactions difficult."
-	icon_state = "lurkers"
-	icon_living = "lurkers"
-	icon_dead = "lurkers_dead"
-	retreat_distance = 0
-	minimum_distance = 0
-	melee_damage_lower = 40
-	melee_damage_upper = 40
-	healable = 1
-	loot = list(/obj/item/reagent_containers/food/snacks/grown/broc)
-	death_sound = 'sound/voice/scream/scream_m1.ogg'
+
 
 /mob/living/simple_animal/hostile/raider/lurkers/club
 	name = "Lurkers clubman"
@@ -339,7 +344,7 @@
 	projectiletype = /obj/item/projectile/bullet/shotgun_slug
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
 
-/mob/living/simple_animal/hostile/raider/lurker/shaman
+/mob/living/simple_animal/hostile/raider/lurkers/shaman
 	name = "Lurkers shaman"
 	desc = "The Lurkers shamans are old but strong and armed with a looted Ripper."
 	icon_state = "lurkersshaman"
@@ -355,7 +360,7 @@
 	loot = list(/obj/item/melee/powered/ripper, /obj/item/reagent_containers/pill/patch/bitterdrink = 1)
 
 
-/mob/living/simple_animal/hostile/raider/lurker/chieftain
+/mob/living/simple_animal/hostile/raider/lurkers/chieftain
 	name = "Lurkers chieftain"
 	desc = "The Lurkers chieftains are usually very short and stocky for some reason."
 	icon_state = "lurkerschief"
@@ -381,6 +386,7 @@
 /mob/living/simple_animal/hostile/raider/unique/gourmet
 	name = "The Aspiring Chef"
 	desc = "Corpulent and jovial, too bad Mr. Gourmet is a merciless murderer and cannibal."
+	icon = 'icons/fallout/module_riverton/mobs/raiders.dmi'
 	icon_state = "gourmet"
 	icon_living = "gourmet"
 	icon_dead = "gourmet_dead"
@@ -404,6 +410,7 @@
 /mob/living/simple_animal/hostile/raider/unique/hammertime
 	name = "Hammertime"
 	desc = "Pale and gaunt, plagued by tics, and a massive Turbo abuser. Hammertime lies in bed all day and only gets up to look for a fix, or to brain passers-by, hoping to rob their corpses. He then sells the corpses to the Gourmet. Good relations with your neighbours are important "
+	icon = 'icons/fallout/module_riverton/mobs/raiders.dmi'
 	icon_state = "hammertime"
 	icon_living = "hammertime"
 	icon_dead = "hammertime_dead"
@@ -459,3 +466,206 @@
 
 	aggrosound = list('sound/f13npc/sentry/aggro1.ogg', 'sound/f13npc/sentry/aggro2.ogg', 'sound/f13npc/sentry/aggro3.ogg', 'sound/f13npc/sentry/aggro4.ogg', 'sound/f13npc/sentry/aggro5.ogg')
 	idlesound = list('sound/f13npc/sentry/idle1.ogg', 'sound/f13npc/sentry/idle2.ogg', 'sound/f13npc/sentry/idle3.ogg', 'sound/f13npc/sentry/idle4.ogg')
+
+
+
+
+/mob/living/simple_animal/hostile/radroach/east
+	name = "Radroach"
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	faction = list("gecko")
+
+/mob/living/simple_animal/hostile/ghoulrotter
+	name = "rotting ghoul"
+	desc = "A ancient bloated ghoul that has lost its mind and become aggressive."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	icon_state = "ghoulrotter"
+	icon_living = "ghoulrotter"
+	icon_dead = "ghoulrotter_dead"
+	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	robust_searching = 1
+	turns_per_move = 5
+	speak_emote = list("growls")
+	emote_see = list("gurgles")
+	a_intent = INTENT_HARM
+	maxHealth = 120
+	health = 120
+	speed = 3
+	harm_intent_damage = 8
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	attack_verb_simple = "gnaws"
+	attack_sound = 'sound/hallucinations/growl1.ogg'
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	unsuitable_atmos_damage = 20
+	faction = list("ghoul")
+	decompose = TRUE
+	sharpness = SHARP_NONE
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+							/obj/item/stack/sheet/bone = 1)
+	emote_taunt_sound = list('sound/f13npc/ghoul/taunt.ogg')
+	emote_taunt = list("gurgles", "stares")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/ghoul/aggro1.ogg', 'sound/f13npc/ghoul/aggro2.ogg')
+	idlesound = list('sound/f13npc/ghoul/idle.ogg')
+	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
+
+
+/mob/living/simple_animal/hostile/bloatfly/east
+	name = "bloatfly"
+	desc = "A common pest resembling an oversized blow-fly. Can attack at a distance."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	faction = list("gecko")
+	minimum_distance = 1
+	retreat_distance = 1
+	obj_damage = 0
+	ranged = 1
+	ranged_cooldown_time = 30
+	projectiletype = /obj/item/projectile/neurotox2
+	projectilesound = 'sound/f13npc/centaur/spit.ogg'
+
+
+/mob/living/simple_animal/hostile/skolf
+	name = "skull wolf"
+	desc = "Half rotted by radiation, blind, hunting by smell and sound."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	icon_state = "skolf"
+	icon_living = "skolf"
+	icon_dead = "skolf_dead"
+	icon_gib = "gib"
+	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	turns_per_move = 1
+	response_help_simple = "pets"
+	response_disarm_simple = "pushes aside"
+	response_harm_simple = "kicks"
+	maxHealth = 75
+	health = 75
+	faction = list("hostile", "wolf")
+	environment_smash = 0
+	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/wolf = 1, /obj/item/reagent_containers/food/snacks/meat/slab/wolf = 1,/obj/item/stack/sheet/bone = 1)
+	melee_damage_lower = 18
+	melee_damage_upper = 24
+	aggro_vision_range = 9
+	attack_verb_simple = "bites"
+	attack_sound = 'sound/weapons/bite.ogg'
+	move_to_delay = 2
+	speed = -1.5
+	emote_taunt_sound = list('sound/f13npc/dog/dog_charge1.ogg', 'sound/f13npc/dog/dog_charge2.ogg', 'sound/f13npc/dog/dog_charge3.ogg', 'sound/f13npc/dog/dog_charge4.ogg', 'sound/f13npc/dog/dog_charge5.ogg', 'sound/f13npc/dog/dog_charge6.ogg', 'sound/f13npc/dog/dog_charge7.ogg',)
+	emote_taunt = list("growls", "barks", "snarls")
+	taunt_chance = 30
+	aggrosound = list('sound/f13npc/dog/dog_alert1.ogg', 'sound/f13npc/dog/dog_alert2.ogg', 'sound/f13npc/dog/dog_alert3.ogg')
+	idlesound = list('sound/f13npc/dog/dog_bark1.ogg', 'sound/f13npc/dog/dog_bark2.ogg', 'sound/f13npc/dog/dog_bark3.ogg')
+	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
+	has_field_of_vision = FALSE
+
+/mob/living/simple_animal/hostile/skolf/alpha
+	name = "skull wolf alpha"
+	icon_state = "skolfalpha"
+	icon_living = "skolfalpha"
+	speed = -2
+	maxHealth = 90
+	health = 90
+	melee_damage_lower = 20
+	melee_damage_upper = 27
+	aggro_vision_range = 12
+
+
+
+/mob/living/simple_animal/hostile/deathclaw/yaoguai
+	name = "yao guai"
+	desc = "Huge hulking beast, a bear thats irradiated and insane, half blind with bleeding ulcers all over."
+	icon = 'icons/fallout/module_riverton/mobs/yaoguai.dmi'
+	icon_state = "yaoguai"
+	icon_living = "yaoguai"
+	icon_dead = "yaoguai_dead"
+	icon_gib = "yaoguai_dead"
+	speak = list("ROAR!","Rawr!","Grrrowl!","Growl!")
+	emote_taunt = list("stares blindly", "sniffs the air")
+	speed = -0.5
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/bear = 4,
+							/obj/item/clothing/head/bearpelt = 1,
+							/obj/item/stack/sheet/bone = 4)
+	maxHealth = 500
+	health = 500
+	armour_penetration = 0.6
+	melee_damage_lower = 60
+	melee_damage_upper = 70
+	attack_verb_simple = "claws"
+	faction = list("hostile", "wolf")
+	wound_bonus = -2
+	bare_wound_bonus = 5 
+	sharpness = SHARP_EDGED
+	emote_taunt_sound = list('sound/f13npc/deathclaw/taunt.ogg')
+	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
+	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
+	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+	armour_penetration = 0.3
+
+/mob/living/simple_animal/hostile/deathclaw/yaoguai/Aggro()
+	..()
+	summon_backup(20)
+
+
+
+//Want to make these cause like 100 rads or so per bite plus their damage, maybe a little less. Instead of toxins. Remove comment if able to solve it.
+/mob/living/simple_animal/hostile/aradnid
+	name = "aradnid"
+	desc = "Deeply disturbing creature, they can only consume radiated meat and drag their prey to contaminated areas to tenderize them."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	icon_state = "aradnid"
+	icon_living = "aradnid"
+	icon_dead = "aradnid_dead"
+	mob_biotypes = MOB_ORGANIC|MOB_BUG
+	speak_emote = list("chitters")
+	emote_hear = list("chitters")
+	speak_chance = 5
+	turns_per_move = 5
+	see_in_dark = 10
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/reagent_containers/food/snacks/spiderleg = 4)
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently pushes aside"
+	response_disarm_simple = "gently push aside"
+	response_harm_continuous = "kicks"
+	response_harm_simple = "kick"
+	speed = -0.5
+	maxHealth = 150
+	health = 150
+	obj_damage = 60
+	melee_damage_lower = 15
+	melee_damage_upper = 25
+	faction = list("spiders")
+	pass_flags = PASSTABLE
+	move_to_delay = 6
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/weapons/bite.ogg'
+	unique_name = 1
+	see_in_dark = 6
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	footstep_type = FOOTSTEP_MOB_CLAW
+	has_field_of_vision = FALSE // 360° vision.
+
+/mob/living/simple_animal/hostile/aradnid/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		H.reagents.add_reagent(/datum/reagent/radium, 10)
+
+/mob/living/simple_animal/hostile/bloatfly/east
+	name = "bloatfly"
+	desc = "A common pest resembling an oversized blow-fly. Can attack at a distance."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	faction = list("gecko")
+	minimum_distance = 1
+	retreat_distance = 1
+	obj_damage = 0
+	ranged = 1
+	ranged_cooldown_time = 30
+	projectiletype = /obj/item/projectile/neurotox2
+	projectilesound = 'sound/f13npc/centaur/spit.ogg'
+
+/obj/item/projectile/neurotox2
+	name = "spit"
+	damage = 12
+	icon_state = "toxin"

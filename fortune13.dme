@@ -2421,6 +2421,8 @@
 #include "code\modules\map_riverton\areas_modular.dm"
 #include "code\modules\map_riverton\armor.dm"
 #include "code\modules\map_riverton\clothing_riverton.dm"
+#include "code\modules\map_riverton\decals.dm"
+#include "code\modules\map_riverton\equipment_riverton.dm"
 #include "code\modules\map_riverton\faction_brotherhood.dm"
 #include "code\modules\map_riverton\faction_raidercoalition.dm"
 #include "code\modules\map_riverton\faction_riverton.dm"
