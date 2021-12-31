@@ -2417,6 +2417,7 @@
 #include "code\modules\mafia\outfits.dm"
 #include "code\modules\mafia\roles.dm"
 #include "code\modules\map_riverton\animalhostile.dm"
+#include "code\modules\map_riverton\area.dm"
 #include "code\modules\map_riverton\areas_modular.dm"
 #include "code\modules\map_riverton\armor.dm"
 #include "code\modules\map_riverton\clothing_riverton.dm"

@@ -13,6 +13,8 @@ Detective : 4 ACCESS_FORENSICS_LOCKERS
 here's a tip, go search DEFINES/access.dm
 */
 
+// RIVERTOWN
+
 /datum/job/town
 	exp_type = EXP_TYPE_OASIS
 	department_flag = DEP_OASIS
@@ -76,7 +78,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/job/town/alderman
 	name = "Alderman"
 	jobtype = /datum/job/town/alderman
-	id = /obj/item/card/id/silver/mayor/alderman
+	id = /obj/item/card/id/dogtag/mayor
 	backpack = /obj/item/storage/backpack/satchel/leather
 	satchel = /obj/item/storage/backpack/satchel/leather
 	neck = /obj/item/storage/belt/holster
@@ -86,7 +88,7 @@ here's a tip, go search DEFINES/access.dm
 	shoes = /obj/item/clothing/shoes/f13/tan
 	l_hand = /obj/item/gun/ballistic/automatic/smg/greasegun
 	uniform = /obj/item/clothing/under/f13/gentlesuit
-	suit = /obj/item/clothing/suit/hooded/alderman
+	suit = /obj/item/clothing/suit/hooded/mayor_coat
 	backpack_contents = list(
 		/obj/item/storage/box/citizenship_permits = 1,
 		/obj/item/ammo_box/magazine/m9mmds = 1,
@@ -130,7 +132,7 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/dogtag/town/preacher
 	belt = null
 	backpack = /obj/item/storage/backpack/satchel/leather
-	uniform = /obj/item/clothing/under/f13/chaplain
+	uniform = /obj/item/clothing/under/riverton/preacher
 	suit = /obj/item/clothing/suit/armor/f13/rosary
 	shoes =	/obj/item/clothing/shoes/f13/fancy
 	r_pocket = /obj/item/flashlight/lantern
@@ -245,7 +247,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/job/town/commander
 	name = "Mercenary Commander"
 	jobtype = /datum/job/town/commander
-	id = /obj/item/card/id/dogtag/sheriff/talon
+	id = /obj/item/card/id/dogtag/mercenarycommander
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	head = /obj/item/clothing/head/helmet/steel/heavy
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -254,8 +256,8 @@ here's a tip, go search DEFINES/access.dm
 	r_pocket = /obj/item/flashlight/seclite
 	r_hand = /obj/item/melee/onehanded/knife/hunting
 	shoes = /obj/item/clothing/shoes/f13/military/leather
-	uniform = /obj/item/clothing/under/f13/talonuniform
-	belt = /obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
+	uniform = /obj/item/clothing/under/riverton/mercenary
+	belt = /obj/item/storage/belt/ammobandolier
 	l_pocket =	/obj/item/storage/bag/money/small/legofficers
 	mask = /obj/item/clothing/mask/balaclava/merc
 	backpack_contents = list(
@@ -274,7 +276,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/cleaner
 	name = "Cleaner"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/automag/talon = 1,
+		/obj/item/gun/ballistic/automatic/pistol/automag = 1,
 		/obj/item/ammo_box/magazine/automag = 2,
 		/obj/item/gun/ballistic/automatic/smg/ppsh = 1,
 		)
@@ -333,15 +335,15 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/job/town/mercenary
 	name = "Mercenary"
 	jobtype = /datum/job/town/mercenary
-	id = /obj/item/card/id/dogtag/deputy/talon
+	id = /obj/item/card/id/dogtag/mercenary
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	neck = /obj/item/storage/belt/holster/legholster/chinapistol
 	suit = /obj/item/clothing/suit/armor/f13/combat/chinese
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/f13/military/leather
-	uniform = /obj/item/clothing/under/f13/talonuniform
+	uniform = /obj/item/clothing/under/riverton/mercenary
 	mask = /obj/item/clothing/mask/balaclava/merc
-	belt = /obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
+	belt = /obj/item/storage/belt/ammobandolier
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs/cable/zipties = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
@@ -640,7 +642,6 @@ here's a tip, go search DEFINES/access.dm
 		/datum/outfit/loadout/properlady,
 		/datum/outfit/loadout/propergent,
 		/datum/outfit/loadout/tailor,
-		/datum/outfit/loadout/singer,
 	)
 
 /datum/outfit/job/town/citizen
@@ -692,16 +693,6 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/ammo_box/magazine/m22 = 2,
 	)
 	
-/datum/outfit/loadout/singer
-	name = "Saloon Singer"
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(/obj/item/clothing/under/f13/classdress = 1,
-	/obj/item/clothing/under/suit/black_really = 1,
-	/obj/item/clothing/gloves/evening = 1,
-	/obj/item/clothing/gloves/color/white = 1,
-	/obj/item/melee/unarmed/brass = 1,
-	)
-
 
 
 /*---------------------- TOWN MACHINIST ---------------------------*/
@@ -714,7 +705,7 @@ here's a tip, go search DEFINES/access.dm
 	flag = F13SHOPKEEPER
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Town Alderman"
+	supervisors = "the Mayor"
 	description = "You are a skilled machinist and mechanic, you have a functional quad bike in your garage which you carry the key for & are responsible for repairs to the vital water wheel that drives the generators and river trading barges."
 	outfit = /datum/outfit/job/town/machinist
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
@@ -742,3 +733,45 @@ here's a tip, go search DEFINES/access.dm
 		return
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+
+
+
+/obj/effect/landmark/start/f13/town/alderman
+	name = "Alderman"
+	icon_state = "Town Alderman"
+
+/obj/effect/landmark/start/f13/town/preacher
+	name = "Preacher"
+	icon_state = "Town Preacher"
+
+/obj/effect/landmark/start/f13/commander
+	name = "Mercenary Commander"
+	icon_state = "Mercenary Commander"
+
+/obj/effect/landmark/start/f13/mercenary
+	name = "Mercenary"
+	icon_state = "Mercenary"
+
+/obj/effect/landmark/start/f13/town/citizen
+	name = "Citizen"
+	icon_state = "Town Citizen"
+
+/obj/effect/landmark/start/f13/town/nurse
+	name = "Town Doctor"
+	icon_state = "Town Doctor"
+
+/obj/effect/landmark/start/f13/town/machinist
+	name = "Town Machinist"
+	icon_state = "Town Machinist"
+
+/obj/effect/landmark/start/f13/town/shopkeeper
+	name = "Shopkeeper"
+	icon_state = "Town Shopkeeper"
+
+/obj/effect/landmark/start/f13/town/barkeeper
+	name = "Barkeep"
+	icon_state = "Town Barkeep"
+
+/obj/effect/landmark/start/f13/town/settler
+	name = "Settler"
+	icon_state = "Town Settler"

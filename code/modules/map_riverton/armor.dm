@@ -68,49 +68,9 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-//Enclave/Remnants
-
-/obj/item/clothing/suit/armor/f13/combat/enclave
-	name = "enclave combat armor"
-	desc = "(VI) An old set of pre-war combat armor, painted black."
-	icon_state = "enclave_new"
-	item_state = "enclave_new"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
-
-/obj/item/clothing/suit/armor/f13/environmentalsuit
-	name = "enclave envirosuit"
-	desc = "(II) An advanced white and airtight environmental suit. It seems to be equipped with a fire-resistant seal and a refitted internals system. This one looks to have been developed by the Enclave sometime after the Great War. You'd usually exclusively see this on scientists of the Enclave."
-	icon_state = "envirosuit"
-	item_state = "envirosuit"
-	w_class = WEIGHT_CLASS_BULKY
-	gas_transfer_coefficient = 0.9
-	permeability_coefficient = 0.5
-	clothing_flags = THICKMATERIAL
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("tier" = 2,"energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 100)
-	strip_delay = 60
-	equip_delay_other = 60
-	flags_inv = HIDEJUMPSUIT
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-
-/obj/item/clothing/suit/armor/f13/combat/remnant
-	name = "remnant combat armor"
-	desc = "(VI) A dark armor, used commonly in espionage or shadow ops."
-	icon_state = "remnant"
-	item_state = "remnant"
-	armor = list("tier" = 6, "energy" = 75, "bomb" = 70, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
 
-/obj/item/clothing/suit/armor/f13/rosary
-	name = "rosary"
-	desc = "Worn outside of your clothing, showing the world your faith is your armor."
-	icon_state = "rosary"
-	item_state = "rosary"
-	icon = 'icons/fallout/clothing/suits_utility.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
-	armor = list("tier" = 1, "energy" = 5, "bomb" = 5, "bio" = 10, "rad" = 5, "fire" = 30, "acid" = 0)
-	var/armor_block_threshold = 1
-	var/armor_block_chance = 0.6
+
 
 
 // -------------------------- RAIDER COALITION ------------------- //
@@ -240,31 +200,19 @@
 	armor = list("tier" = 4, "energy" = 15, "bomb" = 15, "bio" = 10, "rad" = 10, "fire" = 30, "acid" = 30)
 
 
-
-//Oasis/Town
-/obj/item/clothing/suit/hooded/alderman
-	name = "aldermans raincoat"
-	desc = "(IV) A pre-war high-quality raincoat, reinforced by precious kevlar lining. The yellow color makes the Alderman visible while he keeps dry"
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	icon_state = "alderman"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	item_state = "alderman"
-	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
-	strip_delay = 40
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/alderman
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-
-/obj/item/clothing/head/hooded/cloakhood/alderman
-	name = "patched leather hood"
-	desc = "(IV) Thick layered leather, patched together."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	icon_state = "hood_alderman"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	item_state = "hood_alderman"
-	armor = list("tier" = 4, "energy" = 40, "bomb" = 25, "bio" = 40, "rad" = 35, "fire" = 80, "acid" = 0)
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-
 /obj/item/clothing/suit/armor/f13/sulphitearmor/bishop
 	desc = "(VI) Once a firemans suit, now with added metal plating, a useless engine on the back, and a cross showing the wearer got extra protection from the Lord."
 	icon_state = "bishop"
 	item_state = "bishop"
+
+
+/obj/effect/spawner/lootdrop/f13/armor/random_high
+	name = "high tier random armor loot"
+	lootcount = 1
+
+	loot = list(
+			/obj/effect/spawner/lootdrop/f13/armor/tier2 = 70,
+			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 20,
+			/obj/effect/spawner/lootdrop/f13/armor/tier4 = 10
+			///obj/item/traumapack = 1 //one ring to rule them all
+			)

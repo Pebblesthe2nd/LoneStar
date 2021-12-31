@@ -512,3 +512,20 @@
 	icon_state = "fakeglass"
 	door_type = "fakeglass"
 	can_hold_padlock = TRUE
+
+
+/obj/structure/nest/yaoguai
+	name = "yaoguai lair"
+	spawn_time = 40 SECONDS
+	max_mobs = 2
+	mob_types = list(/mob/living/simple_animal/hostile/deathclaw/yaoguai = 2)
+
+/obj/structure/nest/aradnid
+	name = "aradnid infestation"
+	max_mobs = 2
+	mob_types = list(/mob/living/simple_animal/hostile/aradnid = 4)
+
+/obj/structure/barricade/wooden/boarded
+	name = "boarded door"
+	icon_state = "boarded"
+	max_integrity = 120

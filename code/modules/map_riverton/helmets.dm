@@ -225,3 +225,13 @@
 	flags_cover = null
 	dynamic_hair_suffix = ""
 	armor = list("tier" = 1)
+
+
+/obj/item/clothing/head/fedora/mobster
+	name = "fedora"
+	desc = "(IV) Under this stylish hat, a hardened kevlar skullcap is hidden."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "detectivealt"
+	item_state = "detectivealt"
+	armor = list("tier" = 4, "linemelee" = 0, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 0)

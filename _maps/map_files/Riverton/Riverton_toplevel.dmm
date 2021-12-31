@@ -766,15 +766,15 @@
 /turf/open/floor/sepia,
 /area/indoors/town/bar)
 "aLb" = (
-/obj/item/ammo_casing/a22/plinking{
+/obj/item/ammo_casing/a22{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/ammo_casing/a22/plinking{
+/obj/item/ammo_casing/a22{
 	pixel_x = 6;
 	pixel_y = 10
 	},
-/obj/item/ammo_casing/a22/plinking,
+/obj/item/ammo_casing/a22,
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
 	icon_state = "horizontalinnermain2right"
@@ -3747,7 +3747,7 @@
 /area/indoors/bunker)
 "dHa" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf,
-/obj/item/twohanded/baseball/golfclub/louisville{
+/obj/item/twohanded/baseball/louisville{
 	pixel_y = 5
 	},
 /obj/item/clothing/gloves/f13/baseball{
@@ -17466,7 +17466,7 @@
 "ruq" = (
 /obj/structure/rack/steel,
 /obj/item/gun/ballistic/rifle/mag/varmint,
-/obj/item/ammo_box/m22/plinking,
+/obj/item/ammo_box/m22,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},

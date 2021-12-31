@@ -1816,7 +1816,7 @@
 "il" = (
 /obj/item/storage/firstaid/ancient,
 /obj/structure/closet/cabinet,
-/obj/item/ammo_box/c45/jhp,
+/obj/item/ammo_box/c45,
 /turf/open/floor/wood/f13,
 /area/indoors/caves)
 "io" = (
@@ -10436,8 +10436,8 @@
 /area/indoors/bunker)
 "XB" = (
 /obj/structure/closet/crate,
-/obj/item/ammo_box/a556/match,
-/obj/item/ammo_box/a556/match,
+/obj/item/ammo_box/a556,
+/obj/item/ammo_box/a556,
 /obj/effect/spawner/lootdrop/ammo/military,
 /turf/open/floor/engine,
 /area/f13/bunker)

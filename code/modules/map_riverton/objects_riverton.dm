@@ -10,9 +10,7 @@
 	name = "5th National Guard Engineer Battallion: Final log"
 	info = "This is the last entry I will make, when finished I will take the single dose of experimental 'Behemoth' serum we have. When our food stores ran low we opened the Vault-Tec crisis package and started distributing the special serum that causes controlled mutations, in order to make the soldiers able to survive. Sadly, it turned out the serum caused massive loss of mental ability in most subjects, but we literally have no choice, we lack the gear to survive in the radioactive dust and have no food. We have intercepted what appears to be chinese radio traffic, if I can retain my mind after taking the serum I will lead my troops as they were, to destroy the enemies of liberty. God bless America! - signed Major Jackson"
 
-//Automag Talon		Keywords: .44 Magnum, Semi-auto, Long barrel, 7 rounds, Heavy. Special modifiers: bullet speed +300
-/obj/item/gun/ballistic/automatic/pistol/automag/talon
-	mag_type = /obj/item/ammo_box/magazine/automag
+
 
 // Heavy Wrench			Keywords: Damage 25/45
 /obj/item/twohanded/sledgehammer/tankwrench
@@ -82,33 +80,6 @@
 	caliber = "a50MG"
 	max_ammo = 2
 
-//Some pipe crap to put on the floor
-/obj/effect/decal/oldpipes
-	name = "old pipes"
-	desc = "Rusty old pipes."
-	icon = 'icons/fallout/decals/turf_decoration.dmi'
-	icon_state = "rustpipe"
-	density = FALSE
-	mouse_opacity = MOUSE_OPACITY_OPAQUE
-
-/obj/effect/decal/oldpipes/manifold
-	icon_state = "rustpipe-manifold"
-
-/obj/effect/decal/oldpipes/manifold/fourway
-	icon_state = "rustpipe-fourway"
-
-/obj/effect/decal/oldpipes/end
-	icon_state = "rustpipe-end"
-
-/obj/effect/decal/oldpipes/vent
-	icon_state = "rustpipe-vent"
-
-/obj/effect/decal/oldpipes/valve
-	icon_state = "rustpipe-valve"
-
-/obj/effect/decal/oldpipes/meter
-	icon_state = "meter"
-
 
 /obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas
 	icon_state = "grey"
@@ -128,58 +99,11 @@
 	bulb_colour = "#dd8c52"
 	light_color = "#dd8c52"
 
-/obj/item/card/id/dogtag/sheriff/talon
-	name = "dogtags"
-	desc = "Custom made silver dogtags, the commander wearering it spent some money on it."
-	icon_state = "talon_command"
-
-/obj/item/card/id/silver/mayor/alderman
-	name = "Aldermans silver watch"
-	desc = "A pocket watch in silver, engraved with the names of previous Aldermen, the current owners one at the bottom in tiny text."
-	icon_state = "alderman"
-
-/obj/item/card/id/dogtag/town/preacher
-	name = "family bible"
-	desc = "The preachers old personal bible."
-	icon_state = "preacher"
-	item_state = null
-	assignment = "citizenship permit"
-	access = list(ACCESS_BAR)
-
-
-//ENCLAVE ID
-
-
-/obj/item/card/id/dogtag/enclave
-	name = "US identity card"
-	desc = "Issued to Enclave citizens with photo and fingerprint."
-	icon_state = "enclave"
-	item_state = "card-id_leg"
-	assignment = "US dogtags"
-	access = list(ACCESS_ENCLAVE)
-
-
-/obj/item/storage/belt/holster/legholster
-	name = "leg holster"
-	desc = "A holster to carry a handgun and ammo worn on the leg."
-	icon = 'icons/fallout/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
-	icon_state = "holster_leg"
-	item_state = "holster_leg"
-
 /obj/item/storage/belt/holster/legholster/sig/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm(src)
 
-/obj/item/storage/belt/holster/legholster/chinapistol/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
-	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
-	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
-
-/obj/item/storage/belt/holster/legholster/aep7/PopulateContents()
-	new /obj/item/gun/energy/laser/pistol(src)
-	new /obj/item/stock_parts/cell/ammo/ec(src)
 
 /obj/item/card/id/dentattoo
 	name = "Den Gang tattoo"
@@ -194,19 +118,6 @@
 /obj/item/card/id/dentattoo/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-/obj/item/card/id/dogtag/deputy/talon
-	name = "dogtags"
-	desc = "Given to every recruit that signs up for the mercs."
-	icon_state = "talon"
-
-/obj/item/storage/belt/military/NCR_Bandolier/ammobandolier
-	name = "ammunition bandolier"
-	desc = "No-nonsense bandolier for small items."
-	icon = 'icons/fallout/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
-	icon_state = "talon_bandolier"
-	item_state = "talon_bandolier"
 
 
 /////////////////////////////////////
@@ -324,11 +235,6 @@
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
 
-// BETA // Obsolete
-/obj/item/gun/ballistic/rifle/rifletesting
-	name = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 30
 
 /obj/item/reagent_containers/glass/bucket/plastic
 	name = "bucket"
@@ -338,15 +244,6 @@
 	custom_materials = list(/datum/material/plastic=200)
 	possible_transfer_amounts = list(10,20,30,60,120)
 	volume = 120
-
-
-/obj/structure/table/single
-	icon = 'icons/fallout/furniture/tables.dmi'
-	icon_state = "metal_square"
-	smooth = FALSE
-
-/obj/structure/table/single/round
-	icon_state = "metal_round"
 
 
 /obj/machinery/reagentgrinder/industrial
@@ -359,3 +256,411 @@
 	holdingitems = list()
 	beaker = new /obj/item/reagent_containers/glass/bucket/plastic(src)
 	beaker.desc += " May contain blended dust. Don't breathe this in!"
+
+/obj/machinery/autolathe/army
+	name = "army style autolathe"
+	icon = 'icons/fallout/machines/autolathe_army.dmi'
+	desc = "Old but well maintained military-grade autolathe."
+
+
+
+/obj/machinery/button/door/simple
+	icon_state = "alt_doorctrl"
+	skin = "alt_doorctrl"
+
+
+/obj/machinery/porta_turret/syndicate/army
+	name = "Automated point-defense laser system"
+	desc = "Protects sensitive installations from unauthorized personell."
+	icon_state = "turretCover"
+	base_icon_state = "standard"
+	always_up = 0
+	has_cover = 1
+	stun_projectile = /obj/item/projectile/beam/weak/penetrator
+	lethal_projectile = /obj/item/projectile/beam/weak/penetrator
+	lethal_projectile_sound = 'sound/weapons/laser.ogg'
+	stun_projectile_sound = 'sound/weapons/laser.ogg'
+	faction = list("hostile","supermutant")
+
+
+
+
+
+
+// Chemistry rack
+/obj/machinery/smartfridge/bottlerack/chemical
+	name = "chemistry rack"
+	desc = "A handy way to keep all your bottles of weird chemicals sorted."
+	chance_initial_contents = list(
+		/obj/item/reagent_containers/glass/bottle/capsaicin = 1,
+		/obj/item/reagent_containers/glass/bottle/venom = 1,
+		/obj/item/reagent_containers/glass/bottle/charcoal = 3,
+		/obj/item/reagent_containers/glass/bottle/chloralhydrate = 1,
+		/obj/item/reagent_containers/glass/bottle/ethanol = 2,
+		/obj/item/reagent_containers/glass/bottle/bromine = 2,
+		/obj/item/reagent_containers/glass/bottle/iodine = 2,
+		/obj/item/reagent_containers/glass/bottle/sacid = 2,
+		/obj/item/reagent_containers/glass/bottle/mercury = 2,
+		/obj/item/reagent_containers/glass/bottle/radium = 2,
+		/obj/item/reagent_containers/glass/bottle/potassium = 2,
+		/obj/item/reagent_containers/glass/bottle/chlorine = 2,
+		/obj/item/reagent_containers/glass/bottle/sulfur = 2,
+		/obj/item/reagent_containers/glass/bottle/phosphorus = 2,
+		/obj/item/reagent_containers/glass/bottle/silicon = 2,
+		/obj/item/reagent_containers/glass/bottle/aluminium = 2,
+		/obj/item/reagent_containers/glass/bottle/fluorine = 2,
+		/obj/item/reagent_containers/glass/bottle/sodium = 3,
+		/obj/item/reagent_containers/glass/bottle/hydrogen = 4,
+		/obj/item/reagent_containers/glass/bottle/lithium = 2,
+		/obj/item/reagent_containers/glass/bottle/carbon = 4,
+		/obj/item/reagent_containers/glass/bottle/nitrogen = 4,
+		/obj/item/reagent_containers/glass/bottle/oxygen = 4,
+		/obj/item/reagent_containers/food/condiment/sugar = 2)
+
+
+/obj/structure/campfire/barrel/prelit
+	name = "steel drum firepit"
+	icon_state = "drumfire-lit"
+	fired = 1
+	fuel = 2000
+	light_range = 4
+
+
+/obj/item/flashlight/old
+	name = "ancient flashlight"
+	desc = "Large, very worn, and still working by some miracle."
+	icon_state = "flashlight_old"
+	item_state = "flashlight_old" 
+
+
+
+
+/obj/machinery/vending/kink
+	name = "KinkMate"
+	desc = "A vending machine for all your unmentionable desires."
+	icon_state = "kink"
+	product_slogans = "Kinky!;Sexy!;Check me out, big boy!"
+	vend_reply = "Have fun, you shameless pervert!"
+	products = list(
+				/obj/item/clothing/head/maid = 1,
+				/obj/item/clothing/neck/petcollar/choker = 1,
+				/obj/item/restraints/handcuffs/fake/kinky = 2,
+				/obj/item/clothing/glasses/sunglasses/blindfold = 1,
+				/obj/item/clothing/mask/muzzle = 1,
+				/obj/item/clothing/under/misc/stripper = 3,
+				/obj/item/clothing/under/misc/stripper/green = 3,
+				/obj/item/clothing/under/misc/gear_harness = 1,
+				/obj/item/dildo/custom = 2,
+				/obj/item/clothing/under/shorts/polychromic/pantsu = 1,
+				/obj/item/clothing/under/misc/poly_bottomless = 1,
+				/obj/item/clothing/under/misc/poly_tanktop = 1,
+				/obj/item/clothing/under/misc/poly_tanktop/female = 1,
+				)
+	contraband = list(
+				/obj/item/clothing/neck/petcollar/locked = 1,
+				/obj/item/key/collar = 1,
+				/obj/item/clothing/under/misc/keyholesweater = 1,
+				/obj/item/clothing/under/misc/stripper/mankini = 1,
+				/obj/item/dildo/flared/huge = 1
+				)
+	premium = list(
+				/obj/item/clothing/accessory/skullcodpiece/fake = 1,
+				)
+	default_price = PRICE_CHEAP
+	extra_price = PRICE_BELOW_NORMAL
+	payment_department = NO_FREEBIES
+
+
+
+
+
+/obj/machinery/computer/shuttle/riverbarge
+	name = "long-wave radio set"
+	desc = "Tuned to the channels used by the traders on the Kanawha river."
+	icon_screen = "shuttle"
+	icon_keyboard = "tech_key"
+	light_color = null
+	circuit = null
+	shuttleId = "riverbarge"
+	possible_destinations = "Riverton dock"
+	flags_1 = NODECONSTRUCT_1
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
+
+/obj/item/ingot/bronze/copper
+	custom_materials = list(/datum/material/bronze=1)
+	grind_results = list(/datum/reagent/copper = 120)
+
+
+
+
+
+
+/obj/vehicle/ridden/atv/rustyatv
+	name = "Rusty ATV"
+	desc = "An old, rusty, though mostly functional all-terrain vehicle, who'd have the ability to restore something like this locally..?"
+	icon_state = "rustyatv"
+	key_type = /obj/item/key/janitor
+
+
+///////////////
+// FURNITURE //
+///////////////
+
+/obj/structure/furniture
+	icon = 'icons/fallout/objects/structures/stationary.dmi'
+	obj_integrity = 100
+	max_integrity = 100
+	anchored = 1
+	density = 1
+	var/buildstacktype = /obj/item/stack/sheet/mineral/wood
+	var/buildstackamount = 1
+
+/obj/structure/furniture/grand_clock
+	name = "very old clock"
+	desc = "Meticulously maintained old clock, the delicate machinery inside it irreplacable. Ticks when it does not tock."
+	icon_state = "grand_clock_act"
+
+/obj/structure/chair/wood/worn
+	icon_state = "wooden_chair_old"
+	desc = "The furnish has faded and it's not so shiny anymore.<br>Still a good chair though."
+	item_chair = /obj/item/chair/wood/worn
+
+/obj/item/chair/wood/worn
+	icon_state = "wooden_chair_generic_toppled"
+	item_state = "wooden_chair_old"
+	origin_type = /obj/structure/chair/wood/worn
+
+/obj/structure/displaycase/knight
+	name = "display case"
+	start_showpiece_type = /obj/item/clothing/suit/armor/riot/knight/tabard
+
+/obj/structure/table/single
+	icon = 'icons/fallout/furniture/tables.dmi'
+	icon_state = "metal_square"
+	smooth = FALSE
+
+/obj/structure/table/single/round
+	icon_state = "metal_round"
+
+
+///////////
+// DOORS //
+///////////
+
+// ID locked door
+/obj/machinery/door/unpowered/padlockwooddoor
+	name = "wooden door with lock"
+	icon_state = "wood" 
+	max_integrity = 180
+
+/obj/machinery/door/unpowered/padlockwooddoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "woodopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "woodclosing"
+
+// Standard town ID locked door
+/obj/machinery/door/unpowered/padlockwooddoor/town
+	req_one_access_txt = "25" // Standard Town access
+
+// Merc commander ID locked door
+/obj/machinery/door/unpowered/padlockwooddoor/merc
+	req_one_access_txt = "62" // Merc access
+
+// Raider ID locked door
+/obj/machinery/door/unpowered/padlockraiderdoor
+	name = "beat up old door with a rusty lock"
+	icon_state = "fakeglass" 
+	max_integrity = 160
+	req_one_access_txt = "87" // Raider access
+
+/obj/machinery/door/unpowered/padlockraiderdoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "fakeglassopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "fakeglassclosing"
+
+// Raider boss ID locked door
+/obj/machinery/door/unpowered/padlockraiderdoor/boss
+	req_one_access_txt = "38" // Raider Boss access
+
+// Raider ragecage door
+/obj/machinery/door/unpowered/ragecagefencedoor
+	name = "padlocked fence door"
+	icon_state = "fence"
+	req_one_access_txt = "87" // Raider access
+	max_integrity = 80
+
+/obj/machinery/door/unpowered/ragecagefencedoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorchainlink_open.ogg',30,1)
+			icon_state = "fenceopening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorchainlink_close.ogg',30,1)
+			icon_state = "fenceclosing"
+
+// Raider wooden fence door
+/obj/machinery/door/unpowered/woodenfencedoor
+	name = "padlocked wooden fence door"
+	icon_state = "fence_wood"
+	req_one_access_txt = "87" // Raider access
+	max_integrity = 100
+
+/obj/machinery/door/unpowered/woodenfencedoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "fence_woodopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "fence_woodclosing"
+
+// Merc cell door
+/obj/machinery/door/unpowered/barredcelldoor
+	name = "cell door"
+	icon_state = "barred"
+	req_one_access_txt = "62" // Mercenary access
+	max_integrity = 220
+	autoclose = TRUE
+
+/obj/machinery/door/unpowered/barredcelldoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorstore_open.ogg',30,1)
+			icon_state = "barredopening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorstore_close.ogg',30,1)
+			icon_state = "barredclosing"
+
+// Raider cell door
+/obj/machinery/door/unpowered/barredcelldoor/raider
+	name = "barred door with a simple lock"
+	req_one_access_txt = "87" // Raider access
+
+// Clinic outer door
+/obj/machinery/door/unpowered/padlockwooddoor/clinic
+	name = "Town Clinic"
+	icon_state = "white-weathered" 
+	req_one_access_txt = "68" // Clinic access
+	max_integrity = 180
+
+/obj/machinery/door/unpowered/padlockwooddoor/clinic/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',40,1)
+			icon_state = "white-weatheredopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',40,1)
+			icon_state = "white-weatheredclosing"
+
+// Clinic inner door
+/obj/machinery/door/unpowered/padlockwooddoor/clinic/interior
+	name = "wooden door with lock"
+	icon_state = "white-dirty" 
+
+/obj/machinery/door/unpowered/padlockwooddoor/clinic/interior/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "white-dirtyopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "white-dirtyclosing"
+
+/obj/structure/simple_door/white
+	name = "white door"
+	desc = "A painted wooden door."
+	icon_state = "white"
+	door_type = "white"
+
+/obj/structure/simple_door/white/dirty
+	name = "dirty white door"
+	desc = "A painted wooden door."
+	icon_state = "white-dirty"
+	door_type = "white-dirty"
+
+/obj/structure/simple_door/white/weathered
+	name = "weathered white door"
+	desc = "A painted wooden door."
+	icon_state = "white-weathered"
+	door_type = "white-weathered"
+
+//Military Door with glass
+/obj/machinery/door/unpowered/militarydoor/glass
+	name = "military secure door with a window"
+	icon_state = "bunkerglass"
+	max_integrity = 400
+	opacity = 0
+
+/obj/machinery/door/unpowered/militarydoor/glass/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorairlock_open.ogg',30,1)
+			icon_state = "bunkerglassopening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorairlock_close.ogg',30,1)
+			icon_state = "bunkerglassclosing"
+
+/obj/machinery/door/unpowered/militarydoor/glass/enclave
+	req_one_access_txt = "134" // Enclave access
+
+// Mayors office
+/obj/machinery/door/unpowered/padlockwooddoor/alderman
+	name = "Mayors office"
+	icon_state = "white-dirty" 
+	req_one_access_txt = "52" // Alderman access
+
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "white-dirtyopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "white-dirtyclosing"
+
+// Mayors office inner door
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior
+	name = "wooden door with lock"
+	icon_state = "white" 
+
+/obj/machinery/door/unpowered/padlockwooddoor/alderman/interior/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',30,1)
+			icon_state = "whiteopening"
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',30,1)
+			icon_state = "whiteclosing"
+
+// Locked iron door
+/obj/machinery/door/unpowered/padlockirondoor
+	name = "iron door with lock"
+	icon_state = "metal"
+	max_integrity = 600
+	req_one_access_txt = "34" // Trader access
+
+/obj/machinery/door/unpowered/padlockirondoor/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorstore_open.ogg',30,1)
+			icon_state = "metalopening"
+		if("closing")
+			playsound(src,'sound/f13machines/doorstore_close.ogg',30,1)
+			icon_state = "metalclosing"
+
+// Locked iron door - mercenary
+/obj/machinery/door/unpowered/padlockirondoor/merc
+	req_one_access_txt = "62" // Mercenary access
+
+// Locked iron door - mercenary commander
+/obj/machinery/door/unpowered/padlockirondoor/merc/commander
+	req_one_access_txt = "65" // Mercenary commander access

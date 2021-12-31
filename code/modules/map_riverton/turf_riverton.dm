@@ -337,3 +337,78 @@
 	slowdown = 10
 	luminosity	= 3
 //	var/defer_change = 1
+
+//WOOD FLOOR FOR BRIDGES ETC, OUTDOORS
+/turf/open/floor/wood/f13/stage_tl/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_t/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_l/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_bl/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_b/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_tr/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_r/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/floor/wood/f13/stage_br/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+
+/turf/open/floor/wood/f13/oak/outdoors
+	sunlight_state = SUNLIGHT_SOURCE
+
+
+
+/obj/effect/turf_decal/cliff
+	layer = ABOVE_NORMAL_TURF_LAYER
+	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
+	icon_state = "dirt_side"
+
+/obj/effect/turf_decal/cliff/corner
+	icon_state = "dirt_corner"
+
+// Makeshift way to get cliff face to show up outside overhang, sunlight still problematic.
+/obj/effect/overlay/cliff
+	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
+	icon_state = "dirt_side"
+/obj/effect/overlay/cliff/corner
+	icon_state = "dirt_corner"
+
+// DANGEROUS OR UNUSUAL FLOORs
+
+/turf/open/floor/mineral/uranium/dusty
+	name = "rusty plating covered in suspicious dust"
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "plating_rust"
+
+/turf/open/transparent/openspace/outside
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/transparent/openspace/outside/fishingspot
+
+
+//GRAVEL OUTDOORS
+/turf/open/indestructible/ground/outside/graveldirt
+	name = "gravel"
+	icon_state = "graveldirt"
+	icon = 'icons/fallout/turfs/ground.dmi'
+	slowdown = 0.05
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET
+	clawfootstep = FOOTSTEP_CARPET
+
+/turf/open/indestructible/ground/outside/graveldirt/path
+	icon_state = "graveldirtpath"
+
+/turf/open/indestructible/ground/outside/graveldirt/path/intersection
+	icon_state = "graveldirtpath_intersection"

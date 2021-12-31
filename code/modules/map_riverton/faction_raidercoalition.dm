@@ -6,6 +6,49 @@ Psychos - Drugs, chemistry
 Tribals - Tinker, hobo guns
 */
 
+
+// RAIDER COALITION
+
+/obj/effect/landmark/start/f13/raider/king
+	name = "Raider Boss"
+	icon_state = "Raider King"
+
+/obj/effect/landmark/start/f13/raider/bodyguard
+	name = "Raider Bodyguard"
+	icon_state = "Raider Bodyguard"
+
+/obj/effect/landmark/start/f13/raider/bandit
+	name = "Raider Bandit"
+	icon_state = "Raider Bandit"
+
+/obj/effect/landmark/start/f13/raider/bishop
+	name = "Raider Bishop"
+	icon_state = "Raider Bishop"
+
+/obj/effect/landmark/start/f13/raider/strongman
+	name = "Raider Strongman"
+	icon_state = "Raider Strongman"
+
+/obj/effect/landmark/start/f13/raider/psycho
+	name = "Raider Psycho"
+	icon_state = "Raider Psycho"
+
+/obj/effect/landmark/start/f13/raider/chieftain
+	name = "Raider Chieftain"
+	icon_state = "Raider Chieftain"
+
+/obj/effect/landmark/start/f13/raider/berserker
+	name = "Raider Berserker"
+	icon_state = "Raider Berserker"
+
+/obj/effect/landmark/start/f13/raider/tribal
+	name = "Raider Tribal"
+	icon_state = "Raider Tribal"
+
+/obj/effect/landmark/start/f13/raider/streetdoc
+	name = "Street Doc"
+	icon_state = "Raider Butcher"
+
 /datum/job/raider
 	department_flag = WASTELAND
 	access = list(ACCESS_DEN)
@@ -345,7 +388,7 @@ Tribals - Tinker, hobo guns
 	suit =	/obj/item/clothing/suit/armor/f13/sulphitearmor/bishop
 	gloves =	/obj/item/clothing/gloves/f13/leather
 	r_pocket =	/obj/item/flashlight/flare
-	uniform =	/obj/item/clothing/under/f13/chaplain
+	uniform =	/obj/item/clothing/under/riverton/preacher
 	shoes =	/obj/item/clothing/shoes/f13/military/plated
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
