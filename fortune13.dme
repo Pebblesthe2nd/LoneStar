@@ -2428,6 +2428,7 @@
 #include "code\modules\map_riverton\faction_riverton.dm"
 #include "code\modules\map_riverton\faction_vault.dm"
 #include "code\modules\map_riverton\faction_wastelanders.dm"
+#include "code\modules\map_riverton\furniture_riverton.dm"
 #include "code\modules\map_riverton\helmets.dm"
 #include "code\modules\map_riverton\hoboguns.dm"
 #include "code\modules\map_riverton\mobs_riverton.dm"

@@ -1,10 +1,9 @@
 //Riverton object file. -Pebbles
 
-/obj/structure/rack/steel
-	name = "steel rack"
-	desc = "Durable storage option."
-	icon = 'icons/fallout/furniture/stationary.dmi'
-	icon_state = "rack_metal"
+
+/obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas
+	icon_state = "grey"
+	gas_type = /datum/gas/methyl_bromide
 
 /obj/item/paper/journal/page1
 	name = "5th National Guard Engineer Battallion: Final log"
@@ -249,7 +248,7 @@
 /obj/machinery/reagentgrinder/industrial
 	name = "industrial grinder"
 	desc = "Heavy duty grinder, can grind most things."
-	icon = 'icons/fallout/machines/industrialgrinder.dmi'
+	icon = 'icons/fallout/module_riverton/items/industrialgrinder.dmi'
 
 /obj/machinery/reagentgrinder/industrial/Initialize()
 	. = ..()
@@ -259,19 +258,20 @@
 
 /obj/machinery/autolathe/army
 	name = "army style autolathe"
-	icon = 'icons/fallout/machines/autolathe_army.dmi'
+	icon = 'icons/fallout/module_riverton/items//autolathe_army.dmi'
 	desc = "Old but well maintained military-grade autolathe."
-
 
 
 /obj/machinery/button/door/simple
 	icon_state = "alt_doorctrl"
+	icon = 'icons/fallout/module_riverton/items/items.dmi'
 	skin = "alt_doorctrl"
 
 
 /obj/machinery/porta_turret/syndicate/army
 	name = "Automated point-defense laser system"
 	desc = "Protects sensitive installations from unauthorized personell."
+	icon = 'icons/fallout/module_riverton/items/turret.dmi'
 	icon_state = "turretCover"
 	base_icon_state = "standard"
 	always_up = 0
@@ -281,9 +281,6 @@
 	lethal_projectile_sound = 'sound/weapons/laser.ogg'
 	stun_projectile_sound = 'sound/weapons/laser.ogg'
 	faction = list("hostile","supermutant")
-
-
-
 
 
 
@@ -334,6 +331,18 @@
 
 
 
+/obj/machinery/light/small/orange
+	name = "orange light"
+	bulb_colour = "#dd8c52"
+	light_color = "#e0b25e"
+	desc = "A small lighting fixture."
+	light_type = /obj/item/light/bulb
+
+/obj/machinery/light/floor/orange
+	brightness = 4
+	nightshift_brightness = 3
+	bulb_colour = "#dd8c52"
+	light_color = "#dd8c52"
 
 /obj/machinery/vending/kink
 	name = "KinkMate"
@@ -372,8 +381,6 @@
 
 
 
-
-
 /obj/machinery/computer/shuttle/riverbarge
 	name = "long-wave radio set"
 	desc = "Tuned to the channels used by the traders on the Kanawha river."
@@ -392,10 +399,6 @@
 	grind_results = list(/datum/reagent/copper = 120)
 
 
-
-
-
-
 /obj/vehicle/ridden/atv/rustyatv
 	name = "Rusty ATV"
 	desc = "An old, rusty, though mostly functional all-terrain vehicle, who'd have the ability to restore something like this locally..?"
@@ -403,45 +406,6 @@
 	key_type = /obj/item/key/janitor
 
 
-///////////////
-// FURNITURE //
-///////////////
-
-/obj/structure/furniture
-	icon = 'icons/fallout/objects/structures/stationary.dmi'
-	obj_integrity = 100
-	max_integrity = 100
-	anchored = 1
-	density = 1
-	var/buildstacktype = /obj/item/stack/sheet/mineral/wood
-	var/buildstackamount = 1
-
-/obj/structure/furniture/grand_clock
-	name = "very old clock"
-	desc = "Meticulously maintained old clock, the delicate machinery inside it irreplacable. Ticks when it does not tock."
-	icon_state = "grand_clock_act"
-
-/obj/structure/chair/wood/worn
-	icon_state = "wooden_chair_old"
-	desc = "The furnish has faded and it's not so shiny anymore.<br>Still a good chair though."
-	item_chair = /obj/item/chair/wood/worn
-
-/obj/item/chair/wood/worn
-	icon_state = "wooden_chair_generic_toppled"
-	item_state = "wooden_chair_old"
-	origin_type = /obj/structure/chair/wood/worn
-
-/obj/structure/displaycase/knight
-	name = "display case"
-	start_showpiece_type = /obj/item/clothing/suit/armor/riot/knight/tabard
-
-/obj/structure/table/single
-	icon = 'icons/fallout/furniture/tables.dmi'
-	icon_state = "metal_square"
-	smooth = FALSE
-
-/obj/structure/table/single/round
-	icon_state = "metal_round"
 
 
 ///////////

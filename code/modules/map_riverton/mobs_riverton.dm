@@ -125,6 +125,12 @@
 	attack_sound = 'sound/f13npc/handy/attack.wav'
 
 
+/mob/living/simple_animal/hostile/megafauna/behemoth/jackson
+	name = "Major Jackson"
+	loot = list(/obj/item/keycard/library)
+	speak = list("You chinese spy?? DIE!!", "Intruder! I see you!","Ha ha! Funny enemy, so tiny!!","Why radio no work?? RED ALERT! DIE!")
+
+
 ////////////////
 // MAMAS BOYS // 
 ////////////////

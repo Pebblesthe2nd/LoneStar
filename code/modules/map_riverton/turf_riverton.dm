@@ -100,9 +100,7 @@
 /obj/effect/overlay/turfs/decoration/oldpipes/meter
 	icon_state = "meter"
 
-//Cliffedge turf
-/turf/open/indestructible/ground/outside/dirt/cliffcorner
-	icon_state = "dirtcliff_corner"
+
 
 
 // ----------------- WOODEN FLOORS ------------------
@@ -170,6 +168,9 @@
 /turf/open/floor/wooden/oakstagebr
 	icon_state = "stageoak_br"
 
+/turf/open/floor/wooden/oakstagebl
+	icon_state = "stageoak_bl"
+
 /turf/open/floor/wooden/oakstagetl
 	icon_state = "stageoak_tl"
 
@@ -228,6 +229,12 @@
 
 /turf/open/floor/wooden/laminatediagonal/broken
 	icon_state = "laminateCbroken1"
+
+// DINER FLOOR //
+
+/turf/open/floor/plasteel/f13/vault_floor/diner
+	icon = 'icons/fallout/module_riverton/turfs/floortiles.dmi'
+	icon_state = "bar"
 
 
 	/* GREEN TILES */
@@ -363,26 +370,10 @@
 /turf/open/floor/wood/f13/stage_br/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
-
 /turf/open/floor/wood/f13/oak/outdoors
 	sunlight_state = SUNLIGHT_SOURCE
 
 
-
-/obj/effect/turf_decal/cliff
-	layer = ABOVE_NORMAL_TURF_LAYER
-	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
-	icon_state = "dirt_side"
-
-/obj/effect/turf_decal/cliff/corner
-	icon_state = "dirt_corner"
-
-// Makeshift way to get cliff face to show up outside overhang, sunlight still problematic.
-/obj/effect/overlay/cliff
-	icon = 'icons/fallout/decals/turf_mergeoverlays.dmi'
-	icon_state = "dirt_side"
-/obj/effect/overlay/cliff/corner
-	icon_state = "dirt_corner"
 
 // DANGEROUS OR UNUSUAL FLOORs
 
@@ -412,3 +403,133 @@
 
 /turf/open/indestructible/ground/outside/graveldirt/path/intersection
 	icon_state = "graveldirtpath_intersection"
+
+
+// ------------
+// SNOW TESTING
+// ------------
+
+/turf/open/indestructible/ground/outside/dirt/frost
+	name = "bare ground"
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "dirt"
+	slowdown = 0.1
+
+/obj/effect/overlay/dirtfrost
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "dirt_side"
+
+
+
+/turf/open/indestructible/ground/outside/dirt/frost/light
+	name = "frozen ground"
+	icon_state = "dirt_frost1"
+
+/turf/open/indestructible/ground/outside/dirt/frost/medium
+	name = "frozen ground"
+	icon_state = "dirt_frost2"
+
+/turf/open/indestructible/ground/outside/dirt/frost/heavy
+	name = "frozen ground"
+	icon_state = "dirt_frost3"
+
+/turf/open/indestructible/ground/outside/dirt/frost/total
+	name = "frozen ground"
+	icon_state = "dirt_frost4"
+
+/turf/open/indestructible/ground/outside/dirt/frost/merge
+	name = "frozen ground"
+	icon_state = "dirt_snow_merger"
+	slowdown = 0.2
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow
+	name = "snow covered ground"
+	icon_state = "dirt_snow1"
+	slowdown = 0.2
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow/light
+	icon_state = "dirt_snow2"
+	slowdown = 0.3
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow/medium
+	name = "snow"
+	icon_state = "dirt_snow3"
+	slowdown = 0.4
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow/heavy
+	name = "snow"
+	icon_state = "snow"
+	slowdown = 0.5
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow/merge_light
+	name = "snow"
+	icon_state = "dirt_snow_merger"
+	slowdown = 0.3
+
+/turf/open/indestructible/ground/outside/dirt/frost/snow/merge_heavy
+	name = "snow"
+	icon_state = "snow_merger"
+	slowdown = 0.4
+
+/turf/open/indestructible/ground/outside/ice
+	name = "ice"
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "ice"
+	slowdown = 1.5
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+
+/turf/open/indestructible/ground/outside/ice/snowy
+	icon_state = "ice_snow"
+	slowdown = 2
+
+/turf/open/indestructible/ground/outside/ice/hole
+	icon_state = "ice_hole"
+	slowdown = 80
+
+/obj/effect/overlay/snow
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "light_snow_overlay"
+
+/obj/effect/overlay/snow/heavy
+	icon_state = "heavy_snow_overlay"
+
+/obj/effect/overlay/snow/corner
+	icon_state = "corner_snow_overlay"
+
+//Cliffedge turf
+/turf/open/indestructible/ground/outside/snow/cliffcorner
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "snowcliff_angle2"
+
+/obj/effect/turf_decal/cliff
+	layer = ABOVE_NORMAL_TURF_LAYER
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "snowdirt_side"
+
+/obj/effect/turf_decal/cliff/corner
+	icon_state = "snowdirt_corner"
+
+/obj/effect/overlay/dirtfrost/corner
+	icon_state = "dirt_corner"
+
+// Makeshift way to get cliff face to show up outside overhang, sunlight still problematic.
+/obj/effect/overlay/cliff
+	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
+	icon_state = "snowdirt_side"
+/obj/effect/overlay/cliff/corner
+	icon_state = "snowdirt_corner"
+
+/*
+/turf/open/indestructible/ground/outside/dirt/fertile/sandedge
+	icon_state = "dirt_fertile_sandedge"
+
+/turf/open/indestructible/ground/outside/dirt/fertile/sandcorner
+	icon_state = "dirt_fertile_sandcorner"
+
+/obj/effect/overlay/dirt/fertile_side
+	icon_state = "dirt_fertileside"
+
+/obj/effect/overlay/dirt/fertile_corner
+	icon_state = "dirt_fertilecorner"
+*/

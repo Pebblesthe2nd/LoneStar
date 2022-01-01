@@ -10,14 +10,23 @@
 // OBSTACLES //
 ///////////////
 
+
 /obj/structure/obstacle
-	name = "obstacle template"
-	desc = "don't use"
-	icon = 'icons/fallout/structures/barricades.dmi'
+	name = "pile of car tires"
+	desc = "Ring-shaped vehicle components that cover the wheel's rims to protect them and enable better vehicle performance."
+	icon = 'icons/fallout/structures/obstacles.dmi'
+	icon_state = "tires_few"
 	anchored = TRUE
 	density = TRUE
-	obj_integrity = 150
-	max_integrity = 150
+	obj_integrity = 90
+	max_integrity = 90
+	proj_pass_rate = 90
+
+/obj/structure/obstacle/tirepile
+	name = "large pile of car tires"
+	icon_state = "tires_many"
+	obj_integrity = 140
+	max_integrity = 140
 
 /obj/structure/obstacle/tanktrap
 	name = "tanktrap"
@@ -27,15 +36,18 @@
 	density = 1
 	obj_integrity = 500
 	max_integrity = 500
-	proj_pass_rate = 90
 	pass_flags = LETPASSTHROW
 	climbable = TRUE
+	opacity = FALSE
 
-/obj/structure/obstacle/old_locked_door
+/obj/structure/obstacle/old_door
 	name = "old locked door"
 	desc = "Key long lost, lock rusted shut. Apply violence to gain entry."
 	icon_state = "locked"
 	opacity = TRUE
+	obj_integrity = 150
+	max_integrity = 150
+	proj_pass_rate = null
 
 /obj/structure/obstacle/jammed_door
 	name = "jammed secure door"
@@ -44,6 +56,8 @@
 	obj_integrity = 800
 	max_integrity = 800
 	climbable = TRUE
+	opacity = FALSE
+	proj_pass_rate = 20
 
 
 /////////////////
@@ -67,7 +81,7 @@
 //For adding to tops of fences/walls etc
 /obj/effect/overlay/barbed
 	name = "razorwire"
-	icon = 'icons/fallout/structures/barricades.dmi'
+	icon = 'icons/fallout/structures/obstacles.dmi'
 	icon_state = "barbed_single"
 	layer = ABOVE_ALL_MOB_LAYER
 

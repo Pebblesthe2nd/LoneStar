@@ -6009,11 +6009,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/indoors/bunker)
 "CB" = (
-/mob/living/simple_animal/hostile/megafauna/behemoth{
-	loot = list(/obj/item/keycard/library);
-	name = "Major Jackson";
-	speak = list("Ha ha ha! You hit like a radroach!","Bleed! Bleed and die!","I'll wear your guts around my neck!","I'm gonna feast on your flesh, human!","I'm gonna splatter your brains!")
-	},
+/mob/living/simple_animal/hostile/megafauna/behemoth/jackson,
 /turf/open/floor/engine,
 /area/f13/bunker)
 "CD" = (

@@ -734,11 +734,14 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
-
+/obj/effect/landmark/start/f13/town
+	name = "Citizen"
+	icon = 'icons/fallout/module_riverton/mobs/landmarks.dmi'
+	icon_state = "Town Citizen"
 
 /obj/effect/landmark/start/f13/town/alderman
 	name = "Alderman"
-	icon_state = "Town Alderman"
+	icon_state = "Town Mayor"
 
 /obj/effect/landmark/start/f13/town/preacher
 	name = "Preacher"
@@ -746,15 +749,13 @@ here's a tip, go search DEFINES/access.dm
 
 /obj/effect/landmark/start/f13/commander
 	name = "Mercenary Commander"
+	icon = 'icons/fallout/module_riverton/mobs/landmarks.dmi'
 	icon_state = "Mercenary Commander"
 
 /obj/effect/landmark/start/f13/mercenary
 	name = "Mercenary"
+	icon = 'icons/fallout/module_riverton/mobs/landmarks.dmi'
 	icon_state = "Mercenary"
-
-/obj/effect/landmark/start/f13/town/citizen
-	name = "Citizen"
-	icon_state = "Town Citizen"
 
 /obj/effect/landmark/start/f13/town/nurse
 	name = "Town Doctor"

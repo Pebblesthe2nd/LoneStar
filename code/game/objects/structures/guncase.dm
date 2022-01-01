@@ -2,7 +2,7 @@
 /obj/structure/guncase
 	name = "gun locker"
 	desc = "A locker that holds guns."
-	icon = 'icons/fallout/objects/furniture/closet.dmi'
+	icon = 'icons/fallout/objects/furniture/closets.dmi'
 	icon_state = "shotguncase"
 	anchored = FALSE
 	density = TRUE
