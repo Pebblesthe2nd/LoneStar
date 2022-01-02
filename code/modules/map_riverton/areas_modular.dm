@@ -20,6 +20,10 @@
 	name = "Manhole Surface"
 	icon_state = "manhole"
 
+/area/outdoors/farmland
+	name = "Farmland"
+	icon_state = "farmland"
+
 
 //Indoor areas
 
@@ -32,9 +36,9 @@
 	has_gravity = 1
 	grow_chance = 1
 
-/area/indoors/farmhouse
-	name = "Farmhouse"
-	icon_state = "farmhouse"
+/area/indoors/settlers
+	name = "settler"
+	icon_state = "settler"
 	grow_chance = 4
 	ambientsounds = list('sound/f13effects/thunder_distant_1.ogg','sound/f13effects/thunder_distant_2.ogg','sound/ambience/seag3.ogg', \
 	'sound/ambience/seag2.ogg','sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg', \
@@ -104,6 +108,10 @@
 
 
 //Factions
+/area/indoors/brotherhood
+	name = "Brotherhood of Steel"
+	icon_state = "bos"
+
 /area/indoors/enclave
 	name = "Enclave"
 	icon_state = "enclave"

@@ -336,3 +336,22 @@
 	name = "boarded door"
 	icon_state = "boarded"
 	max_integrity = 120
+
+
+
+/obj/machinery/button/door/simple
+	icon = 'icons/fallout/module_riverton/items/items.dmi'
+	icon_state = "alt_doorctrl"
+	skin = "alt_doorctrl"
+
+/obj/machinery/door/poddoor/shutters/autorepair
+	name = "auto repair shutter"
+
+	id = "autorepair"
+
+/obj/machinery/button/door/autorepair
+	name = "garage door button"
+	icon = 'icons/fallout/module_riverton/items/items.dmi'
+	icon_state = "alt_doorctrl"
+	id = "autorepair"
+	pixel_x = 26

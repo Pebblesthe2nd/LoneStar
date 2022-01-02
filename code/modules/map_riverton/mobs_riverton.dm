@@ -675,3 +675,35 @@
 	name = "spit"
 	damage = 12
 	icon_state = "toxin"
+
+
+/mob/living/simple_animal/radstag/riverton
+	name = "radstag"
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+
+
+///////////////////////////
+// SECURITRON "Riverton" //
+///////////////////////////
+
+/mob/living/simple_animal/hostile/securitron/riverton
+	icon = 'icons/fallout/module_riverton/mobs/robots.dmi'
+	icon_state = "securitron"
+	icon_living = "securitron"
+	icon_dead = "robot_dead"
+
+/mob/living/simple_animal/hostile/wolf/riverton
+	name = "wolf"
+	desc = "A hungry wolf."
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	icon_state = "wolf"
+	icon_living = "wolf"
+	icon_dead = "wolf_dead"
+
+/mob/living/simple_animal/hostile/wolf/alpha/riverton
+	name = "alpha wolf"
+	desc = "A fierce and hungry wolf!"
+	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
+	icon_state = "wolf"
+	icon_living = "wolf"
+	icon_dead = "wolf_dead"

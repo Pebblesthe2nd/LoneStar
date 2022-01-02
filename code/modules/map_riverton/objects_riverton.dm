@@ -9,6 +9,12 @@
 	name = "5th National Guard Engineer Battallion: Final log"
 	info = "This is the last entry I will make, when finished I will take the single dose of experimental 'Behemoth' serum we have. When our food stores ran low we opened the Vault-Tec crisis package and started distributing the special serum that causes controlled mutations, in order to make the soldiers able to survive. Sadly, it turned out the serum caused massive loss of mental ability in most subjects, but we literally have no choice, we lack the gear to survive in the radioactive dust and have no food. We have intercepted what appears to be chinese radio traffic, if I can retain my mind after taking the serum I will lead my troops as they were, to destroy the enemies of liberty. God bless America! - signed Major Jackson"
 
+/obj/structure/reagent_dispensers/barrel/diethylamine
+	name = "barrel with prewar fertilizer"
+	desc = "A metal barrel with 'Fertilizer' stamped on it"
+	pixel_x = 9;
+	pixel_y = -8;
+	reagent_id = /datum/reagent/diethylamine
 
 
 // Heavy Wrench			Keywords: Damage 25/45
@@ -262,10 +268,7 @@
 	desc = "Old but well maintained military-grade autolathe."
 
 
-/obj/machinery/button/door/simple
-	icon_state = "alt_doorctrl"
-	icon = 'icons/fallout/module_riverton/items/items.dmi'
-	skin = "alt_doorctrl"
+
 
 
 /obj/machinery/porta_turret/syndicate/army
