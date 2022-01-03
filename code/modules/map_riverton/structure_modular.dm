@@ -455,21 +455,77 @@
 	id = "autorepair"
 	pixel_x = 26
 
+/obj/structure/closet/crate/large/warehouse
+
+/obj/structure/closet/crate/large/warehouse/PopulateContents()
+	..()
+
+	switch (pickweight(list("construction" = 15, "carparts" = 10, "electronics" = 10, "china" = 10, "nothing" = 40, "materials" = 10, "puppylove" = 5, "badseed" = 5)))
+		if ("construction")
+			new /obj/item/stack/sheet/mineral/wood/twenty(src)
+			new /obj/item/clothing/shoes/sneakers/white(src)
+
+		if ("carparts")
+			new /obj/item/stack/crafting/metalparts/three(src)
+			new /obj/item/stack/crafting/goodparts(src)
+			new /obj/structure/wreck/trash/engine(src)
+
+		if ("electronics")
+			new /obj/item/crafting/transistor(src)
+		
+
+		if ("nerd")
+			new /obj/item/clothing/glasses/regular/hipster(src)
+			new /obj/item/reagent_containers/food/snacks/candy(src)
+
+		if ("nothing")
+			// doot
+
+		if ("materials")
+			new /obj/item/stack/sheet/prewar/five(src)
 
 
+		if ("puppylove")
+			new /obj/item/storage/fancy/heart_box(src)
+			new /obj/item/paper/crumpled(src)
+
+		if ("badseed")
+			new /obj/item/clothing/mask/cigarette/rollie/cannabis(src)
+			new /obj/item/melee/onehanded/knife/switchblade(src)
+
+			return
 
 
+/obj/structure/closet/cardboard/warehouse
 
+/obj/structure/closet/cardboard/warehouse/PopulateContents()
+	..()
 
+	switch (pickweight(list("electronics" = 10, "toys" = 5, "abraxo" = 5, "sweets" = 10, "nothing" = 70)))
+		if ("electronics")
+			new /obj/item/crafting/transistor(src)
+			new /obj/item/crafting/resistor(src)
+			new /obj/item/crafting/timer
+			new /obj/item/crafting/fuse(src)
+			new /obj/item/stack/crafting/electronicparts/three(src)			
 
+		if ("toys")
+			new /obj/item/toy/figure/ninja(src)
+			new /obj/item/toy/figure/borg(src)
+			new /obj/item/crafting/wonderglue(src)	
+			new /obj/item/crafting/wonderglue(src)	
 
+		if ("nothing")
+			// doot
 
+		if ("abraxo")
+			new /obj/item/crafting/abraxo(src)
+			new /obj/item/crafting/abraxo(src)
+			new /obj/item/crafting/abraxo(src)
 
+		if ("sweets")
+			new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
+			new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
+			new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
 
-
-
-
-
-
-
-
+			return

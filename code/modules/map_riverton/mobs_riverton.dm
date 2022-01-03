@@ -680,7 +680,7 @@
 /mob/living/simple_animal/radstag/riverton
 	name = "radstag"
 	icon = 'icons/fallout/module_riverton/mobs/animals.dmi'
-
+	faction = list("neutral", "bighorner")
 
 ///////////////////////////
 // SECURITRON "Riverton" //
