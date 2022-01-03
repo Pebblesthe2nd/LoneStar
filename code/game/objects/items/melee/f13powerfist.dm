@@ -170,7 +170,7 @@
 	add_fingerprint(user)
 
 
-//Warhammer chainsword			Keywords: Damage 10/50, Wound bonus, Block, Bonus AP + 0.15
+//Warhammer chainsword			Keywords: Damage 10/45, Wound bonus, Block, Bonus AP + 0.1
 /obj/item/melee/powered/ripper/prewar
 	name = "pre-war military ripper"
 	desc = "A hand-held, militarized chainsaw, popular with Army units requiring a compact engineering tool for cutting. Just what material is intended to be cut with the weapon remains open to debate."
@@ -179,8 +179,8 @@
 	off_icon_state = "prewarrip_off"
 	on_item_state = "prewarrip_on"
 	off_item_state = "prewarrip_off"
-	force_on = 50
-	armour_penetration = 0.15
+	force_on = 45
+	armour_penetration = 0.1
 
 
 // Shishkebab backpack				The shishkebab weapon base unit
@@ -276,7 +276,7 @@
 	..()
 	remove_sword()
 
-// Shishkebab sword				Keywords: Damage 55 (fire), Tool welder
+// Shishkebab sword				Keywords: Damage 52 (fire), Tool welder
 /obj/item/weapon/melee/shishkebab //This should never exist without the backpack.
 	name = "shishkebab"
 	desc = "A deadly flaming sword covered in fuel. You're not sure this is entirely safe."
@@ -288,7 +288,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	item_flags = ABSTRACT  // don't put in storage
 	slot_flags = 0
-	force = 55
+	force = 52
 	damtype = "fire"
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.3
