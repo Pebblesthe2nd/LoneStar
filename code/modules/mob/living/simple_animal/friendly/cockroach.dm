@@ -1,6 +1,6 @@
 /mob/living/simple_animal/cockroach
 	name = "cockroach"
-	desc = "This station is just crawling with bugs."
+	desc = "This place is just crawling with bugs."
 	icon_state = "cockroach"
 	icon_dead = "cockroach"
 	blood_volume = 50

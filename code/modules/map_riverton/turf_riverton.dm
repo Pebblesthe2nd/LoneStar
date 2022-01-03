@@ -343,9 +343,7 @@
 /turf/open/floor/plating/tunnel/chess2
 	icon_state = "tunnelchess2"
 
-/turf/open/floor/indestructible/fakeplate
-	icon_state = "tunneldirty"
-	icon = 'icons/fallout/turfs/ground.dmi'
+
 
 /turf/open/water/toxic
 	name = "toxic sludge"
@@ -549,6 +547,42 @@
 /obj/effect/overlay/cliff/corner
 	icon_state = "snowcliff_corner"
 
+
+// OUTDOORS CONCRETE PLATFORM
+
+/turf/open/indestructible/ground/outside/concrete
+	name = "concrete platform"
+	icon = 'icons/fallout/module_riverton/turfs/floortiles.dmi'
+	icon_state = "concrete"
+
+/turf/open/indestructible/ground/outside/concrete/edge
+	icon_state = "concrete_edge"
+
+/turf/open/indestructible/ground/outside/concrete/stairs
+	icon_state = "concrete_stairs"
+
+
+// CAFETERIA FLOOR //
+
+/turf/open/floor/plasteel/f13/vault_floor/cafeteria_grime
+	name = "floor tiles"
+	icon = 'icons/fallout/module_riverton/turfs/floortiles.dmi'
+	icon_state = "cafeteria_grime"
+
+
+// MAP EDGES AND OTHER DECORATIVE BLOCKERS
+
+/turf/open/floor/indestructible/fakeplate
+	name = "chasm"
+	icon_state = "tunneldirty"
+	icon = 'icons/fallout/turfs/ground.dmi'
+
+
+/turf/open/floor/indestructible/fence
+	name = "fenced limits"
+	icon_state = "tunneldirty"
+	icon = 'icons/fallout/structures/fences.dmi'
+	dir = 4
 
 /*
 /turf/open/indestructible/ground/outside/dirt/fertile/sandedge

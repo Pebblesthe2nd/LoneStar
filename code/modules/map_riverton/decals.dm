@@ -129,23 +129,30 @@
 //McKinley Junior High signs
 /obj/structure/signs/school
 	name = "McKinley Junior High"
-	icon_state = "memorial"
-	color = "#e8dd7d"
+	icon_state = "school"
 
 /obj/structure/signs/school/teacher
-	name = "Teachers room"
-	icon_state = "vault_admin"
+	name = "teachers room"
+	icon_state = "school_teacher"
 
 /obj/structure/signs/school/restroom
-	name = "Restrooms"
-	icon_state = "vault_toilet"
+	name = "restrooms"
+	icon_state = "school_toilet"
 
 /obj/structure/signs/school/classroom
-	name = "Classroom"
-	icon_state = "vault_class"
+	name = "classroom"
+	icon_state = "school_class"
 
 /obj/structure/signs/school/classroom/lab
-	icon_state = "vault_lab"
+	icon_state = "school_lab"
+
+/obj/structure/signs/school/mess
+	name = "school cafeteria"
+	icon_state = "school_mess"
+
+/obj/structure/signs/school/gym
+	name = "school gym hall"
+	icon_state = "school_gym"
 
 //National Guard signs
 /obj/structure/signs/national

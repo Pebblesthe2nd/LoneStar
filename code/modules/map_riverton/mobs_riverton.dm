@@ -707,3 +707,19 @@
 	icon_state = "wolf"
 	icon_living = "wolf"
 	icon_dead = "wolf_dead"
+
+
+/mob/living/simple_animal/hostile/handy/barber
+	name = "mr. handy"
+	desc = "Equipped with various curling irons, shavers and razors, this Beauty-bot has long since malfunctioned and is more likely to skin you than give you a shave."
+	icon = 'icons/fallout/module_riverton/mobs/robots.dmi'
+	icon_state = "handy_barber"
+	icon_living = "handy_barber"
+	icon_dead = "gib"
+	del_on_death = TRUE
+	attack_sound = 'sound/items/welder.ogg'
+	melee_damage_type = BURN
+	emote_taunt = list("heats up a curling iron")
+	attack_verb_simple = "aggressively curls the hair of"
+	emote_taunt = list("waves a comb")
+	speak = list("Welcome madam. Allow me to curl those beautiful locks.", "Welcome sir! Let us trim that fine moustache a little, shall we?", "May I interest you in some moisturizer?", "Uncombed hair? Really, this will not do.", "Stand still please, I need precision to pluck your eyebrows properly.")

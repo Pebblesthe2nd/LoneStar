@@ -231,6 +231,7 @@
 	light_color = "#dd99a4"
 
 
+// --------------------------------------------------------------- //
 // CLOSETS
 /obj/structure/closet/old
 	name = "locker"
@@ -245,13 +246,28 @@
 	desc = "Old fridge, but in good condition for its age."
 	icon_state = "fridger"
 
-/obj/structure/lattice/overpipe
-	layer = 3
-	plane = ABOVE_WALL_PLANE
-	name = "catwalk"
-	desc = "A catwalk for easy access to the machinery below."
-	icon = 'icons/obj/smooth_structures/catwalk.dmi'
-	icon_state = "catwalk"
+/obj/structure/closet/old/fridge/bad
+
+/obj/structure/closet/old/fridge/bad/PopulateContents()
+	..()
+
+	switch (pickweight(list("yuck" = 20, "blech" = 25, "ugh" = 25, "aaaah" = 15, "nothing" = 15)))
+		if ("yuck")
+			new /obj/item/reagent_containers/food/snacks/f13/blamco/large(src)
+
+		if ("blech")
+			new /obj/item/reagent_containers/food/snacks/badrecipe(src)
+
+		if ("ugh")
+			new /obj/item/reagent_containers/food/snacks/f13/steak(src)
+
+		if ("aaaah")
+			new /mob/living/simple_animal/cockroach(src)
+
+		if ("nothing")
+			// doot
+
+			return
 
 // Becomes dense when opened then closed. Key is in the close proc in closet but I don't know how to just make exception for this.
 /obj/structure/closet/wallcabinet/medicine
@@ -263,7 +279,82 @@
 	mob_storage_capacity = 0
 	max_mob_size = MOB_SIZE_TINY
 
+/obj/structure/closet/locker/oldstyle/school_sports
+	name = "sports gear"
 
+/obj/structure/closet/locker/oldstyle/school_sports/PopulateContents()
+	..()
+
+	switch (pickweight(list("base" = 20, "baseplus" = 25, "boxer" = 25, "weird" = 15, "nothing" = 15)))
+		if ("base")
+
+			new /obj/item/clothing/head/soft/f13/baseball(src)
+			new /obj/item/twohanded/baseball(src)
+			new /obj/item/soap(src)
+
+		if ("baseplus")
+			new /obj/item/twohanded/baseball/louisville(src)
+			new /obj/item/clothing/gloves/f13/baseball(src)
+			new /obj/item/reagent_containers/rag/towel(src)
+
+		if ("boxer")
+			new /obj/item/clothing/gloves/boxing/yellow(src)
+			new /obj/item/clothing/gloves/boxing(src)
+			new /obj/item/clothing/under/shorts/red(src)
+
+		if ("weird")
+			new /obj/item/toy/tennis(src)
+			new /obj/item/clothing/shoes/f13/swimfins(src)
+			new /obj/item/storage/backpack/duffelbag(src)
+
+		if ("nothing")
+			// doot
+
+			return
+
+
+/obj/structure/closet/locker/oldstyle/school
+	name = "school locker"
+
+/obj/structure/closet/locker/oldstyle/school/PopulateContents()
+	..()
+
+	switch (pickweight(list("candy" = 15, "britney" = 10, "chad" = 10, "nerd" = 10, "nothing" = 40, "ruben" = 10, "puppylove" = 5, "badseed" = 5)))
+		if ("candy")
+			new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
+			new /obj/item/clothing/shoes/sneakers/white(src)
+
+		if ("britney")
+			new /obj/item/clothing/under/schoolgirl(src)
+			new /obj/item/lipstick/random(src)
+
+		if ("chad")
+			new /obj/item/clothing/under/f13/relaxedwear/schoolboy(src)
+			new /obj/item/lighter(src)
+
+		if ("nerd")
+			new /obj/item/clothing/glasses/regular/hipster(src)
+			new /obj/item/reagent_containers/food/snacks/candy(src)
+
+		if ("nothing")
+			// doot
+
+		if ("ruben")
+			new /obj/item/reagent_containers/food/snacks/lollipop(src)
+			new /obj/item/storage/backpack(src)
+
+		if ("puppylove")
+			new /obj/item/storage/fancy/heart_box(src)
+			new /obj/item/paper/crumpled(src)
+
+		if ("badseed")
+			new /obj/item/clothing/mask/cigarette/rollie/cannabis(src)
+			new /obj/item/melee/onehanded/knife/switchblade(src)
+
+			return
+
+
+// --------------------------------------------- //
 // CHAIR
 /obj/machinery/door/unpowered/militarydoor
 	name = "military secure door"
@@ -338,6 +429,14 @@
 	max_integrity = 120
 
 
+/obj/structure/lattice/overpipe
+	layer = 3
+	plane = ABOVE_WALL_PLANE
+	name = "catwalk"
+	desc = "A catwalk for easy access to the machinery below."
+	icon = 'icons/obj/smooth_structures/catwalk.dmi'
+	icon_state = "catwalk"
+
 
 /obj/machinery/button/door/simple
 	icon = 'icons/fallout/module_riverton/items/items.dmi'
@@ -355,3 +454,22 @@
 	icon_state = "alt_doorctrl"
 	id = "autorepair"
 	pixel_x = 26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

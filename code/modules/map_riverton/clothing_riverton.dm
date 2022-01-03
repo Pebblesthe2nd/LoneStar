@@ -92,3 +92,8 @@
 	item_state = "whiteface"
 	w_class = WEIGHT_CLASS_TINY
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 25, "rad" = 0, "fire" = 0, "acid" = 0)
+
+
+/obj/item/clothing/under/f13/relaxedwear/schoolboy
+	name = "schoolboy uniform"
+	desc = "Prim and proper."

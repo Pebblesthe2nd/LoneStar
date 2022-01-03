@@ -60,47 +60,6 @@
 	fuel = 2000
 	light_range = 4
 
-
-
-/obj/machinery/vending/kink
-	name = "KinkMate"
-	desc = "A vending machine for all your unmentionable desires."
-	icon_state = "kink"
-	product_slogans = "Kinky!;Sexy!;Check me out, big boy!"
-	vend_reply = "Have fun, you shameless pervert!"
-	products = list(
-				/obj/item/clothing/head/maid = 1,
-				/obj/item/clothing/neck/petcollar/choker = 1,
-				/obj/item/restraints/handcuffs/fake/kinky = 2,
-				/obj/item/clothing/glasses/sunglasses/blindfold = 1,
-				/obj/item/clothing/mask/muzzle = 1,
-				/obj/item/clothing/under/misc/stripper = 3,
-				/obj/item/clothing/under/misc/stripper/green = 3,
-				/obj/item/clothing/under/misc/gear_harness = 1,
-				/obj/item/dildo/custom = 2,
-				/obj/item/clothing/under/shorts/polychromic/pantsu = 1,
-				/obj/item/clothing/under/misc/poly_bottomless = 1,
-				/obj/item/clothing/under/misc/poly_tanktop = 1,
-				/obj/item/clothing/under/misc/poly_tanktop/female = 1,
-				)
-	contraband = list(
-				/obj/item/clothing/neck/petcollar/locked = 1,
-				/obj/item/key/collar = 1,
-				/obj/item/clothing/under/misc/keyholesweater = 1,
-				/obj/item/clothing/under/misc/stripper/mankini = 1,
-				/obj/item/dildo/flared/huge = 1
-				)
-	premium = list(
-				/obj/item/clothing/accessory/skullcodpiece/fake = 1,
-				)
-	default_price = PRICE_CHEAP
-	extra_price = PRICE_BELOW_NORMAL
-	payment_department = NO_FREEBIES
-
-
-
-
-
 /obj/machinery/computer/shuttle/riverbarge
 	name = "long-wave radio set"
 	desc = "Tuned to the channels used by the traders on the Kanawha river."
@@ -380,3 +339,24 @@
 // Locked iron door - mercenary commander
 /obj/machinery/door/unpowered/padlockirondoor/merc/commander
 	req_one_access_txt = "65" // Mercenary commander access
+
+
+// RIVERTON CHAIRS
+/obj/structure/chair/riverton
+	icon = 'icons/fallout/furniture/chairs.dmi'
+
+/obj/structure/chair/folding/riverton
+	icon = 'icons/fallout/furniture/chairs.dmi'
+	icon_state = "folding"
+	item_chair = /obj/item/chair/folding/riverton
+
+/obj/item/chair/folding/riverton
+	icon = 'icons/fallout/furniture/chairs.dmi'
+	icon_state = "folding_toppled"
+	origin_type = /obj/structure/chair/folding/riverton
+
+/obj/structure/chair/comfy/synthetic
+	name = "synthetic chair"
+	icon = 'icons/fallout/furniture/chairs.dmi'
+	desc = "Once the height of space-futuristic comfortable furniture fashion."
+	icon_state = "synthetic_chair"
