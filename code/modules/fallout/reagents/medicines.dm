@@ -1,3 +1,6 @@
+// ---------------------------
+// STIMPAK FLUID REAGENT
+
 /datum/reagent/medicine/stimpak
 	name = "Stimpak Fluid"
 	description = "Rapidly heals damage when injected. Deals minor toxin damage if ingested."
@@ -52,6 +55,9 @@
 	M.jitteriness += 3
 	..()
 	. = TRUE
+
+// ---------------------------
+// SUPER STIMPAK FLUID REAGENT
 
 /datum/reagent/medicine/stimpakimitation
 	name = "Imitation Stimpak Fluid"
@@ -112,8 +118,11 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	..()
 	. = TRUE
 	
+// ---------------------------
+// LONGPORK STEW REAGENT
+
 /datum/reagent/medicine/longpork_stew
-	name = "longpork stew"
+	name = "Longpork stew"
 	description = "A dish sworn by some to have unusual healing properties. To most it just tastes disgusting. What even is longpork anyways?..."
 	reagent_state = LIQUID
 	color =  "#915818"
@@ -144,7 +153,7 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 
 
 /datum/reagent/medicine/berserker_powder
-	name = "berserker powder"
+	name = "Berserker powder"
 	description = "a combination of psychadelic mushrooms and tribal drugs used by the legion. Induces a trancelike state, allowing them much greater pain resistance. Extremely dangerous, even for those who are trained to use it. It's a really bad idea to use this if you're not initiated in the rites of the berserker. Even if you are, taking it for too long causes extreme symptoms when the trance ends."
 	reagent_state = SOLID
 	color =  "#7f7add"
@@ -209,8 +218,11 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	..()
 	. = TRUE
 
+// ---------------------------
+// BITTER DRINK REAGENT
+
 /datum/reagent/medicine/bitter_drink
-	name = "bitter drink"
+	name = "Bitter drink"
 	description = "An herbal healing concoction which enables wounded soldiers and travelers to tend to their wounds without stopping during journeys."
 	reagent_state = LIQUID
 	color ="#A9FBFB"
@@ -241,8 +253,12 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	..()
 	. = TRUE
 
+
+// ---------------------------
+// HEALING POWDER REAGENT
+
 /datum/reagent/medicine/healing_powder
-	name = "healing powder"
+	name = "Healing powder"
 	description = "A healing powder derived from a mix of ground broc flowers and xander roots. Consumed orally, and produces a euphoric high."
 	reagent_state = SOLID
 	color = "#A9FBFB"
@@ -280,13 +296,19 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	..()
 	. = TRUE
 
+// ---------------------------
+// HEALING POULTICE REAGENT
+
 /datum/reagent/medicine/healing_powder/poultice
-	name = "healing poultice"
+	name = "ealing poultice"
 	description = "Restores limb condition and heals rapidly."
 	color = "#C8A5DC"
 	overdose_threshold = 20
 	heal_factor = -2
 	heal_factor_perk = -4
+
+// ---------------------------
+// RAD-X REAGENT
 
 /datum/reagent/medicine/radx
 	name = "Rad-X"
@@ -302,6 +324,10 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
+
+
+// ---------------------------
+// RADAWAY REAGENT
 
 /datum/reagent/medicine/radaway
 	name = "Radaway"
@@ -320,6 +346,9 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	. = TRUE
 	..()
 
+// ---------------------------
+// MED-X REAGENT
+
 /datum/reagent/medicine/medx
 	name = "Med-X"
 
@@ -336,32 +365,29 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		to_chat(M, "<span class='notice'>You feel tougher, able to shrug off pain more easily.</span>")
 		M.maxHealth += 100
 		M.health += 100
-		ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 
 /datum/reagent/medicine/medx/on_mob_delete(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, "<span class='notice'>You feel as vulnerable to pain as a normal person.</span>")
 		M.maxHealth -= 100
 		M.health -= 100
-		REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 	switch(current_cycle)
-		if(1 to 25)
+		if(1 to 40)
 			M.confused += 10
 			M.blur_eyes(20)
 			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")
-		if(26 to 50)
+		if(41 to 80)
 			M.confused +=20
 			M.blur_eyes(30)
 			M.losebreath += 8
-//			M.adjust_eye_damage(6)
 			M.set_disgust(12)
 			M.adjustStaminaLoss(30*REAGENTS_EFFECT_MULTIPLIER)
 			to_chat(M, "<span class='danger'>Your stomach churns, your eyes cloud and you're pretty sure you just popped a lung. You shouldn't take so much med-X at once. </span>")
-		if(51 to INFINITY)
+		if(81 to 120)
 			M.confused +=40
 			M.blur_eyes(30)
 			M.losebreath += 10
-//			M.adjust_eye_damage(12)
+			M.adjustOrganLoss(ORGAN_SLOT_EYES, 3)
 			M.set_disgust(25)
 			M.adjustStaminaLoss(40*REAGENTS_EFFECT_MULTIPLIER)
 			M.vomit(30, 1, 1, 5, 0, 0, 0, 60)
@@ -369,14 +395,14 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 			M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)
 			M.visible_message("<span class='userdanger'>[M] clutches their stomach and vomits violently onto the ground, bloody froth covering their lips!</span>")
 			to_chat(M, "<span class='userdanger'>You throw up everything you've eaten in the past week and some blood to boot. You're pretty sure your heart just stopped for a second, too. </span>")
-/*		if(101 to INFINITY)
-//			M.adjust_eye_damage(30)
+		if(121 to INFINITY)
+			M.adjustOrganLoss(ORGAN_SLOT_EYES, 3)
 			M.Unconscious(400)
 			M.Jitter(1000)
 			M.set_heartattack(TRUE)
 			M.visible_message("<span class='userdanger'>[M] clutches at their chest as if their heart stopped!</span>")
 			to_chat(M, "<span class='danger'>Your vision goes black and your heart stops beating as the amount of drugs in your system shut down your organs one by one. Say hello to Elvis in the afterlife. </span>")
-			*/
+			
 	..()
 
 /datum/reagent/medicine/medx/on_mob_life(mob/living/carbon/M)
@@ -391,12 +417,11 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	M.set_blurriness(30)
 	M.Unconscious(400)
 	M.Jitter(1000)
-	M.set_heartattack(TRUE)
 	M.drop_all_held_items()
 	M.Dizzy(2)
-	M.visible_message("<span class='userdanger'>[M] clutches at their chest as if their heart stopped!</span>")
+	M.visible_message("<span class='userdanger'>[M] suddenly passes out!</span>")
 	if(prob(10))
-		to_chat(M, "<span class='danger'>Your vision goes black and your heart stops beating as the amount of drugs in your system shut down your organs one by one. Say hello to Elvis in the afterlife. </span>")
+		to_chat(M, "<span class='userdanger'>Too much med-x! </span>")
 	..()
 
 /datum/reagent/medicine/medx/addiction_act_stage1(mob/living/M)
@@ -504,6 +529,9 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		M.Jitter(5)
 	..()
 
+// ---------------------------
+// MENTAT REAGENT
+
 /datum/reagent/medicine/mentat
 	name = "Mentat Powder"
 
@@ -580,6 +608,9 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		M.Jitter(5)
 	..()
 
+// ---------------------------
+// FIXER REAGENT
+
 /datum/reagent/medicine/fixer
 	name = "Fixer Powder"
 
@@ -600,6 +631,9 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		H.vomit(10)
 	..()
 	. = TRUE
+
+// ---------------------------
+// GAIA EXTRACT REAGENT
 
 /datum/reagent/medicine/gaia
 	name = "Gaia Extract"

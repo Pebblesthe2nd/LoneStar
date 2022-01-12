@@ -40,7 +40,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -100,7 +99,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13enforcer,
 		),
 	)
 
@@ -164,7 +162,7 @@ Mayor
 
 	loadout_options = list(
 	/datum/outfit/loadout/thelaw,
-	/datum/outfit/loadout/dacommissioner,
+	/datum/outfit/loadout/thechief,
 	)
 
 	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
@@ -175,7 +173,6 @@ Mayor
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/oasis,
-			/datum/job/wasteland/f13mobboss,
 		),
 	)
 
@@ -190,7 +187,7 @@ Mayor
 
 	ears = 			/obj/item/radio/headset/headset_town
 	uniform =  		/obj/item/clothing/under/f13/sheriff
-	neck =			/obj/item/storage/belt/holster
+	belt =			/obj/item/storage/belt/military/army
 	shoes = 		/obj/item/clothing/shoes/f13/cowboy
 	glasses =		/obj/item/clothing/glasses/sunglasses
 	l_pocket =		/obj/item/storage/bag/money/small/den
@@ -198,13 +195,14 @@ Mayor
 		/obj/item/storage/box/deputy_badges = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
-		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
 
 /datum/outfit/loadout/thelaw
 	name = "The Law Man"
 	suit = /obj/item/clothing/suit/armor/f13/town/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
+	neck = /obj/item/storage/belt/holster
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	belt = /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	backpack_contents = list(
@@ -212,16 +210,17 @@ Mayor
 		/obj/item/ammo_box/m44 = 2,
 		)
 
-/datum/outfit/loadout/dacommissioner
-	name = "The Commissioner"
-	uniform = /obj/item/clothing/under/f13/detectivealt
-	suit = /obj/item/clothing/suit/armor/f13/town/commissioner
-	head = /obj/item/clothing/head/f13/town/commissioner
-	shoes = /obj/item/clothing/shoes/combat
+/datum/outfit/loadout/thechief
+	name = "The Chief"
+	uniform = /obj/item/clothing/under/f13/police/formal
+	suit = /obj/item/clothing/suit/armor/f13/town/chief
+	head = /obj/item/clothing/head/f13/town/chief
+	neck = /obj/item/storage/belt/holster/legholster
+	shoes = /obj/item/clothing/shoes/jackboots
 	r_hand = /obj/item/gun/energy/laser/aer9
-	belt = /obj/item/gun/ballistic/automatic/pistol/sig/commissioner
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/gun/ballistic/automatic/pistol/sig/commissioner = 1,
 		/obj/item/ammo_box/magazine/m9mm = 3,
 		)
 
@@ -229,6 +228,18 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmormk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_salvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
@@ -273,59 +284,75 @@ Mayor
 	id = /obj/item/card/id/dogtag/deputy
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
+	belt = /obj/item/storage/belt/security
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/melee/onehanded/knife/hunting
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
-		/obj/item/storage/belt/holster = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
 
 /datum/outfit/loadout/frontierjustice
 	name = "Frontier Justice"
 	suit = /obj/item/clothing/suit/armor/f13/town/deputy
 	head = /obj/item/clothing/head/f13/town/deputy
+	neck =	/obj/item/storage/belt/holster
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	belt = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/ammo_box/m44 = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
 		)
 
 /datum/outfit/loadout/police
 	name = "Oasis PD"
 	uniform = /obj/item/clothing/under/f13/police/officer
-	suit = /obj/item/clothing/suit/armor/vest/alt
-	head = /obj/item/clothing/head/f13/police/officer
+	suit = /obj/item/clothing/suit/armor/bulletproof
+	head = /obj/item/clothing/head/f13/town/officer
+	neck = /obj/item/storage/belt/holster/legholster
 	r_hand = /obj/item/gun/ballistic/shotgun/police
-	belt = /obj/item/gun/ballistic/revolver/police
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/a357 = 3,
 		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/revolver/police = 1,
 		)
 
 /datum/outfit/loadout/swat
 	name = "S.W.A.T. Officer"
 	uniform = /obj/item/clothing/under/f13/police/swat
 	suit = /obj/item/clothing/suit/armor/bulletproof
-	head = /obj/item/clothing/head/helmet
+	head = /obj/item/clothing/head/helmet/alt
+	neck = /obj/item/storage/belt/holster/legholster
 	l_hand = /obj/item/gun/ballistic/automatic/marksman/policerifle
-	belt = /obj/item/melee/onehanded/knife/switchblade
-	shoes = /obj/item/clothing/shoes/combat
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
+		/obj/item/ammo_box/magazine/m45exp=2,
+		/obj/item/flashlight/seclite = 1,
 		)
 
 /datum/outfit/job/den/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmormk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_salvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /*--------------------------------------------------------------*/
@@ -731,7 +758,6 @@ Mayor
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
 			/datum/job/oasis/f13detective,
-			/datum/job/wasteland/f13mobboss,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander,

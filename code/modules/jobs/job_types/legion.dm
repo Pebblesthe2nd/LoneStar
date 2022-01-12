@@ -39,6 +39,15 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmormk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_salvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
+	
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/military/assault/legion
@@ -495,6 +504,7 @@ commented out pending rework*/
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/melee/onehanded/machete/forgedmachete = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
+		/obj/item/melee/onehanded/knife/bayonet = 1,
 		)
 
 
@@ -624,6 +634,7 @@ commented out pending rework*/
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
+		/obj/item/restraints/handcuffs = 1,
 		)
 
 /datum/outfit/loadout/expambusher
@@ -700,6 +711,7 @@ commented out pending rework*/
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
+		/obj/item/restraints/handcuffs = 1,
 		)
 
 /datum/outfit/loadout/vetshielder
@@ -727,6 +739,7 @@ commented out pending rework*/
 		/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/twohanded/spear/lance = 1,
+		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/restraints/legcuffs/bola = 2,
 		)
 
@@ -747,7 +760,7 @@ commented out pending rework*/
 	loadout_options = list(
 		/datum/outfit/loadout/primelancer,	// .45 Revolver, Buckler, Forged machete, Bola
 		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Machete, Firebomb
-		/datum/outfit/loadout/primebrave,	// Hunting shotgun, Throwing spears, Machete
+		/datum/outfit/loadout/primebrave,	// Trench shotgun, Throwing spears, Machete
 		)
 
 	matchmaking_allowed = list(
@@ -803,9 +816,10 @@ commented out pending rework*/
 
 /datum/outfit/loadout/primebrave
 	name = "Brave"
-	suit_store = /obj/item/gun/ballistic/shotgun/hunting
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		)
@@ -1008,7 +1022,7 @@ commented out pending rework*/
 	name = "Legion Auxilia"
 	jobtype = /datum/job/CaesarsLegion/auxilia
 	id = /obj/item/card/id/dogtag/legauxilia
-	head = /obj/item/clothing/head/f13/legion/auxilia
+	head = /obj/item/clothing/head/f13/auxilia
 	uniform = /obj/item/clothing/under/f13/legauxiliaf
 	shoes = /obj/item/clothing/shoes/roman
 	ears = /obj/item/radio/headset/headset_legion
@@ -1103,7 +1117,7 @@ commented out pending rework*/
 //Servants cook, clean, help with medical tasks.
 /datum/outfit/loadout/slaveservant
 	name = "Servant"
-	head = /obj/item/clothing/head/f13/legion/servant
+	head = /obj/item/clothing/head/f13/servant
 	uniform	= /obj/item/clothing/under/f13/campfollowermale
 	gloves = /obj/item/clothing/gloves/f13/crudemedical
 	shoes =	/obj/item/clothing/shoes/roman
@@ -1111,7 +1125,7 @@ commented out pending rework*/
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
-		/obj/item/smelling_salts/crafted = 1,
+		/obj/item/smelling_salts = 1,
 		/obj/item/book/granter/trait/lowsurgery = 1,
 		/obj/item/reagent_containers/food/condiment/flour = 2,
 		/obj/item/storage/box/bowls = 1,

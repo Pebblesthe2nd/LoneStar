@@ -242,7 +242,7 @@
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_LIGHT
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
@@ -254,22 +254,24 @@
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 //Compliance Regulator
+
 /obj/item/gun/energy/laser/complianceregulator
 	name = "AEP5-CR"
 	desc = "A laser pistol that has been modified for less-than-lethal work."
-	ammo_type = list(/obj/item/projectile/beam/laser/pistol/hitscan/stun)
+	slowdown = 0.2
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
+	icon_state = "AEP5CR"
+	icon_state = "AEP5CR"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = ITEM_SLOT_BELT
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/stun)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	fire_delay = 0
-	slowdown = 0.2
-	icon_state = "AEP5CR"
-	icon_state = "AEP5CR"
-	slot_flags = ITEM_SLOT_BELT
-	w_class = WEIGHT_CLASS_NORMAL
-	w_class = WEIGHT_CLASS_SMALL
+	can_scope = FALSE
+	scope_state = "AEP7_scope"
+	scope_x_offset = 7
+	scope_y_offset = 22
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 //Solar Scorcher
@@ -317,6 +319,7 @@
 /obj/item/gun/energy/laser/wattz2k
 	name = "wattz 2000"
 	desc = "Wattz 2000 Laser Rifle. Uses micro fusion cells for more powerful lasers, and an extended barrel for additional range."
+	slowdown = 0.3
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -339,7 +342,6 @@
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "wattz2k"
 	item_state = "sniper_rifle"
-	fire_delay = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/wattz2k/extended/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	zoomable = TRUE
