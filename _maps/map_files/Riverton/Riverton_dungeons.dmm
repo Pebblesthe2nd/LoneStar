@@ -1027,9 +1027,6 @@
 	},
 /area/indoors/bunker)
 "em" = (
-/obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas{
-	pixel_x = -7
-	},
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
 	dir = 8
 	},
@@ -1506,9 +1503,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/indoors/bunker)
 "gB" = (
-/obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas{
-	pixel_x = -7
-	},
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer3{
 	dir = 8
 	},

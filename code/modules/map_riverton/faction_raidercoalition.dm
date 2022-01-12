@@ -632,7 +632,7 @@ Tribals - Tinker, hobo guns
 	box = /obj/item/storage/survivalkit_tribal
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder/berserker = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		)

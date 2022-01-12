@@ -520,6 +520,23 @@
 /obj/effect/overlay/snow/sidetaper
 	icon_state = "snow_sidetaper"
 
+/obj/effect/overlay/snow/roadside
+	icon = 'icons/fallout/module_riverton/turfs/smoothing.dmi'
+	icon_state = "asphalt_sidesnowN"
+	pixel_y = 4
+
+/obj/effect/overlay/snow/roadside/s
+	icon_state = "asphalt_sidesnowS"
+	pixel_y = -4
+
+/obj/effect/overlay/snow/roadside/w
+	icon_state = "asphalt_sidesnowW"
+	pixel_x = 4
+
+/obj/effect/overlay/snow/roadside/e
+	icon_state = "asphalt_sidesnowE"
+	pixel_x = -4
+
 //Cliffedge turf
 /turf/open/indestructible/ground/outside/snow/cliffcorner
 	icon = 'icons/fallout/module_riverton/turfs/snow.dmi'
@@ -578,11 +595,14 @@
 	icon = 'icons/fallout/turfs/ground.dmi'
 
 
-/turf/open/floor/indestructible/fence
-	name = "fenced limits"
-	icon_state = "tunneldirty"
-	icon = 'icons/fallout/structures/fences.dmi'
+/obj/structure/fence/indestructible
+	name = "border fence"
+	desc = "Marks the limit of the region. Nothing of interest lies outside."
+	cuttable = FALSE
 	dir = 4
+	color = "#D7D2CB"
+	invulnerable = TRUE
+	resistance_flags = INDESTRUCTIBLE
 
 /*
 /turf/open/indestructible/ground/outside/dirt/fertile/sandedge

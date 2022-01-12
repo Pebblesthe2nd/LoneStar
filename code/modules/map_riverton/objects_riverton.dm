@@ -1,9 +1,10 @@
 //Riverton object file. -Pebbles
 
-
+/* Some issues, possibly obsolete 
 /obj/machinery/atmospherics/components/unary/tank/f13chemtank/poisongas
 	icon_state = "grey"
 	gas_type = /datum/gas/methyl_bromide
+*/
 
 /obj/item/paper/journal/page1
 	name = "5th National Guard Engineer Battallion: Final log"
