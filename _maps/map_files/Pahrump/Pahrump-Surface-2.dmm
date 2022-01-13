@@ -2805,7 +2805,7 @@
 "bix" = (
 /obj/structure/rack,
 /obj/effect/spawner/bundle/f13/greasegun,
-/obj/effect/spawner/bundle/f13/greasegun,
+/obj/effect/spawner/bundle/f13/guns/rockwell,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
@@ -5497,11 +5497,13 @@
 	},
 /area/f13/building)
 "crg" = (
-/obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug{
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/smartfridge/bottlerack/alchemy_rack{
+	name = "drug storage"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "crp" = (
@@ -15351,6 +15353,9 @@
 "gun" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/twohanded/baseball/spiked,
+/obj/item/melee/unarmed/punchdagger,
+/obj/item/melee/onehanded/club/tireiron,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "gus" = (
@@ -17617,8 +17622,10 @@
 /area/f13/village)
 "hoH" = (
 /obj/structure/rack,
-/obj/item/melee/classic_baton/telescopic,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/gun/ballistic/revolver/hobo/piperifle,
+/obj/item/gun/ballistic/revolver/hobo/knucklegun,
+/obj/item/ammo_box/c45/improvised,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "hoR" = (
@@ -49407,16 +49414,8 @@
 /area/f13/building)
 "uVT" = (
 /obj/structure/table,
-/obj/item/melee/onehanded/knife/survival{
-	pixel_x = -6;
-	pixel_y = 5
-	},
 /obj/item/reagent_containers/pill/patch/jet,
 /obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/food/drinks/bottle/molotov{
-	pixel_x = 7;
-	pixel_y = 7
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 8;
