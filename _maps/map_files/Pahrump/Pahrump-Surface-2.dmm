@@ -4844,6 +4844,7 @@
 "cbM" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/food/drinks/bottle/molotov/filled,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
 	},
@@ -25426,6 +25427,8 @@
 /obj/structure/rack,
 /obj/item/camera,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "krX" = (
