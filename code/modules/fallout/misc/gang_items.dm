@@ -55,6 +55,7 @@
 /datum/gang_item/clothing
 	category = "Purchase Clothes:"
 
+// ---------------------------
 //Great Khans
 
 /datum/gang_item/clothing/khan_boots
@@ -65,15 +66,15 @@
 
 /datum/gang_item/clothing/khan_peltboots
 	name = "Great Khan pelt boots"
-	id = "khan_boots_2"
+	id = "khan_peltboots"
 	cost = 20
 	item_path = /obj/item/clothing/shoes/f13/military/khan_pelt
 
 /datum/gang_item/clothing/khan_helmet
-	name = "Great Khan helmet"
+	name = "Great Khan fur-trimmed helmet"
 	id = "khan_helmet"
 	cost = 20
-	item_path = /obj/item/clothing/head/helmet/f13/khan
+	item_path = /obj/item/clothing/head/helmet/f13/khan/pelt
 
 /datum/gang_item/clothing/khan_bandana
 	name = "Great Khan bandana"
@@ -92,6 +93,9 @@
 	id = "khan_jacket_armored"
 	cost = 100
 	item_path = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket_armored
+
+
+// ---------------------------
 
 /datum/gang_item/clothing/prostitute_dress
 	name = "Prostitute dress"
@@ -178,6 +182,12 @@
 	id = "switchblade"
 	cost = 20
 	item_path = /obj/item/melee/onehanded/knife/switchblade
+
+/datum/gang_item/weapon/spikedbaseball
+	name = "Spiked baseball bat"
+	id = "spikedbaseball"
+	cost = 20
+	item_path = /obj/item/twohanded/baseball/spiked
 
 /datum/gang_item/weapon/sappers
 	name = "Sappers"

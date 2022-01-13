@@ -607,7 +607,7 @@
 // BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
-	desc = "A bandolier for holding shotgun boxes, flasks or various grenades."
+	desc = "A bandolier for holding shotgun boxes, flasks, las musket cells or various grenades."
 	icon_state = "bandolier"
 	item_state = "bandolier"
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
@@ -618,7 +618,8 @@
 	STR.max_items = 3
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
-		/obj/item/ammo_box/shotgun/loaded,
+		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/lasmusket,
 		/obj/item/reagent_containers/food/drinks/flask,
 		/obj/item/grenade/f13,
 		/obj/item/reagent_containers/food/drinks/bottle/molotov,

@@ -9766,7 +9766,7 @@
 "eoI" = (
 /obj/effect/landmark/start/f13/pusher,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13/housewoodbroken2,
+/turf/open/floor/wood/f13/oakbroken2,
 /area/f13/raiders)
 "epd" = (
 /obj/item/stack/ore/slag,
@@ -12298,7 +12298,7 @@
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /obj/item/stack/medical/gauze,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13/housewoodbroken2,
+/turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "fpJ" = (
 /obj/structure/table/wood,
@@ -13086,8 +13086,7 @@
 /area/f13/wasteland)
 "fFS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13/housewoodbroken2,
+/turf/open/floor/wood/f13/oakbroken3,
 /area/f13/raiders)
 "fFZ" = (
 /obj/machinery/chem_master/primitive,
@@ -16034,7 +16033,7 @@
 "gSx" = (
 /obj/machinery/iv_drip,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13/housewoodbroken2,
+/turf/open/floor/wood/f13/oakbroken4,
 /area/f13/raiders)
 "gSB" = (
 /obj/structure/flora/tree/tall,
@@ -23461,7 +23460,7 @@
 /area/f13/ncr)
 "jQz" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13/housewoodbroken2,
+/turf/open/floor/wood/f13/oakbroken4,
 /area/f13/raiders)
 "jQC" = (
 /obj/structure/window/fulltile/house{
@@ -23470,6 +23469,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"jQF" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/f13/oakbroken,
+/area/f13/raiders)
 "jQS" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -24818,8 +24821,10 @@
 /area/f13/wasteland)
 "krS" = (
 /obj/structure/rack,
-/obj/item/binoculars,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/binoculars,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "krX" = (
@@ -33873,6 +33878,7 @@
 /obj/machinery/light/small,
 /obj/item/gun/ballistic/revolver/hobo/knucklegun,
 /obj/item/gun/ballistic/revolver/hobo/piperifle,
+/obj/item/ammo_box/c45/improvised,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "osH" = (
@@ -68378,7 +68384,7 @@ uKu
 akA
 iRv
 iRv
-jQz
+jQF
 qlW
 iRv
 egU
@@ -68891,7 +68897,7 @@ dLB
 iRv
 iRv
 jQz
-jQz
+fFS
 osF
 cYz
 dsL
@@ -69146,7 +69152,7 @@ cYz
 iRv
 jQz
 iRv
-fFS
+urJ
 iRv
 iRv
 hoH

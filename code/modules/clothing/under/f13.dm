@@ -600,14 +600,46 @@
 
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
-	desc = "Clothing marker the wearer as one of the the Great Khans."
+	desc = "Clothing marking the wearer as one of the the Great Khans."
 	icon = 'icons/fallout/clothing/khans.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_uniform"
 	item_state = "khan_uniform"
 	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
-	can_adjust = TRUE
+	var/uniformtoggled = FALSE
+
+// Testing fixed toggle uniform so icon updates properly
+/obj/item/clothing/under/f13/khan/AltClick(mob/user)
+	. = ..()
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	uniform_toggle(user)
+	return TRUE
+
+/obj/item/clothing/under/f13/khan/ui_action_click()
+	uniform_toggle()
+
+/obj/item/clothing/under/f13/khan/proc/uniform_toggle()
+	set src in usr
+
+	if(!can_use(usr))
+		return 0
+
+	to_chat(usr, "<span class='notice'>You adjust the [src].</span>")
+	if(src.uniformtoggled)
+		src.icon_state = "[initial(icon_state)]"
+		src.item_state = "[initial(icon_state)]"
+		src.uniformtoggled = FALSE
+	else if(!src.uniformtoggled)
+		src.icon_state = "[initial(icon_state)]_t"
+		src.item_state = "[initial(icon_state)]_t"
+		src.uniformtoggled = TRUE
+	usr.update_inv_w_uniform()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 
 //WAYFARER TRIBAL
 /obj/item/clothing/under/f13/tribe

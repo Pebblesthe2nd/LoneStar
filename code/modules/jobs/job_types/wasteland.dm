@@ -255,13 +255,12 @@
 	uniform = /obj/item/clothing/under/f13/khan
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/storage/bag/money/small/khan
 	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack_contents = list(
-		/obj/item/restraints/handcuffs = 1,
 		/obj/item/reagent_containers/pill/patch/jet = 2,
 		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/bag/money/small/khan = 1
 		)
 	head = /obj/item/clothing/head/helmet/f13/khan
 	shoes = /obj/item/clothing/shoes/f13/military/khan
@@ -295,8 +294,10 @@
 
 /datum/outfit/loadout/pusher
 	name = "Chemist"
+	r_hand = /obj/item/gun/ballistic/revolver/m29/snub
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/beaker/large=2, \
+		/obj/item/ammo_box/m44 = 3,
 		/obj/item/book/granter/trait/chemistry=1)
 
 /datum/outfit/loadout/enforcer
@@ -305,7 +306,7 @@
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck=1, \
-		/obj/item/ammo_box/shotgun/bean=1, \
+		/obj/item/ammo_box/shotgun/improvised=1,
 		/obj/item/restraints/legcuffs/bola/tactical=1)
 
 /datum/outfit/loadout/khanskirmisher

@@ -1165,7 +1165,6 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-
 	access = list(ACCESS_KHAN)
 
 /obj/item/card/id/khantattoo/Initialize()
