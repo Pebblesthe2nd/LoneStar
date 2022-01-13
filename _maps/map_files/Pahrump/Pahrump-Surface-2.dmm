@@ -2725,7 +2725,7 @@
 /area/f13/legion)
 "bix" = (
 /obj/structure/rack,
-/obj/effect/spawner/bundle/f13/greasegun,
+/obj/effect/spawner/bundle/f13/guns/rockwell,
 /obj/effect/spawner/bundle/f13/greasegun,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/oak,
@@ -4728,6 +4728,7 @@
 "cbM" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/food/drinks/bottle/molotov/filled,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "cbS" = (
@@ -8319,9 +8320,9 @@
 	},
 /area/f13/building)
 "dIj" = (
-/obj/structure/closet,
-/obj/item/defibrillator/primitive,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/locker,
+/obj/item/defibrillator/primitive,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "dIA" = (
@@ -15987,6 +15988,12 @@
 	icon_state = "verticalinnermain2bottom"
 	},
 /area/f13/wasteland)
+"gRz" = (
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/toolbox/mechanical/old,
+/turf/open/floor/wood/f13/oak,
+/area/f13/raiders)
 "gRD" = (
 /obj/structure/chair/comfy/black,
 /turf/open/floor/wood,
@@ -17210,8 +17217,11 @@
 /area/f13/village)
 "hoH" = (
 /obj/structure/rack,
-/obj/item/melee/classic_baton/telescopic,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/melee/unarmed/punchdagger,
+/obj/item/twohanded/baseball/spiked,
+/obj/item/melee/onehanded/club/tireiron,
+/obj/item/melee/onehanded/knife/switchblade,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "hoR" = (
@@ -22118,6 +22128,12 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"jmj" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/bag/chemistry,
+/turf/open/floor/wood/f13/oak,
+/area/f13/raiders)
 "jmn" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_6";
@@ -24802,9 +24818,7 @@
 /area/f13/wasteland)
 "krS" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox/mechanical/old,
 /obj/item/binoculars,
-/obj/item/camera,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
@@ -33857,6 +33871,8 @@
 /obj/item/restraints/legcuffs/bola,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
+/obj/item/gun/ballistic/revolver/hobo/knucklegun,
+/obj/item/gun/ballistic/revolver/hobo/piperifle,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "osH" = (
@@ -47551,9 +47567,10 @@
 	},
 /area/f13/building)
 "uFJ" = (
-/obj/structure/table,
+/obj/machinery/smartfridge/bottlerack/alchemy_rack{
+	name = "product storage"
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/wood/f13/oak,
 /area/f13/raiders)
 "uFT" = (
@@ -48339,16 +48356,8 @@
 /area/f13/building)
 "uVT" = (
 /obj/structure/table,
-/obj/item/melee/onehanded/knife/survival{
-	pixel_x = -6;
-	pixel_y = 5
-	},
 /obj/item/reagent_containers/pill/patch/jet,
 /obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/food/drinks/bottle/molotov{
-	pixel_x = 7;
-	pixel_y = 7
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 8;
@@ -67856,7 +67865,7 @@ qiN
 iRv
 iRv
 cbM
-qiN
+jmj
 ybp
 dZK
 fpv
@@ -68626,7 +68635,7 @@ gVt
 bgd
 urJ
 iRv
-cbM
+gRz
 uKu
 dlX
 qHX

@@ -600,11 +600,14 @@
 
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
-	desc = "The uniform of the the Great Khans."
-	icon_state = "khan"
-	item_state = "khan"
-	item_color = "khan"
+	desc = "Clothing marker the wearer as one of the the Great Khans."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_uniform"
+	item_state = "khan_uniform"
+	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+	can_adjust = TRUE
 
 //WAYFARER TRIBAL
 /obj/item/clothing/under/f13/tribe
@@ -1340,13 +1343,6 @@
 	desc = "A pair of wide dusty cargo pants.<br>Commonly worn by caravanners or caravan robbers."
 	icon_state = "caravan"
 	item_color = "caravan"
-
-/obj/item/clothing/under/pants/f13/khan
-	name = "Great Khan pants"
-	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by the Great Khans raiders."
-	icon_state = "khan"
-	item_color = "khan"
-	body_parts_covered = LEGS
 
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
 	name = "war boy pants"

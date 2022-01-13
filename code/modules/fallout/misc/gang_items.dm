@@ -61,7 +61,13 @@
 	name = "Great Khan boots"
 	id = "khan_boots"
 	cost = 15
-	item_path = /obj/item/clothing/shoes/f13/military/plated
+	item_path = /obj/item/clothing/shoes/f13/military/khan
+
+/datum/gang_item/clothing/khan_peltboots
+	name = "Great Khan pelt boots"
+	id = "khan_boots_2"
+	cost = 20
+	item_path = /obj/item/clothing/shoes/f13/military/khan_pelt
 
 /datum/gang_item/clothing/khan_helmet
 	name = "Great Khan helmet"
@@ -69,11 +75,11 @@
 	cost = 20
 	item_path = /obj/item/clothing/head/helmet/f13/khan
 
-/datum/gang_item/clothing/khan_pants
-	name = "Great Khan pants"
-	id = "khan_pants"
+/datum/gang_item/clothing/khan_bandana
+	name = "Great Khan bandana"
+	id = "khan_bandana"
 	cost = 25
-	item_path = /obj/item/clothing/under/pants/f13/khan
+	item_path = /obj/item/clothing/head/helmet/f13/khan/bandana
 
 /datum/gang_item/clothing/khan_uniform
 	name = "Great Khan uniform"

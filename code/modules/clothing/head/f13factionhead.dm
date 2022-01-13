@@ -840,15 +840,55 @@
 /obj/item/clothing/head/helmet/f13/khan
 	name = "Great Khan helmet"
 	desc = "(IV) A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
-	icon_state = "khan"
-	item_state = "khan"
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_helmet"
+	item_state = "khan_helmet"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = null
 	strip_delay = 20
+	var/helmettoggled = FALSE
 
 /obj/item/clothing/head/helmet/f13/khan/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+
+// Testing toggling helmets for aesthetics
+/obj/item/clothing/head/helmet/f13/khan/AltClick(mob/user)
+	. = ..()
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	helmet_toggle(user)
+	return TRUE
+
+/obj/item/clothing/head/helmet/f13/khan/ui_action_click()
+	helmet_toggle()
+
+/obj/item/clothing/head/helmet/f13/khan/proc/helmet_toggle()
+	set src in usr
+
+	if(!can_use(usr))
+		return 0
+
+	to_chat(usr, "<span class='notice'>You adjust the [src].</span>")
+	if(src.helmettoggled)
+		src.icon_state = "[initial(icon_state)]"
+		src.helmettoggled = FALSE
+	else if(!src.helmettoggled)
+		src.icon_state = "[initial(icon_state)]_t"
+		src.helmettoggled = TRUE
+	usr.update_inv_wear_suit()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/clothing/head/helmet/f13/khan/bandana
+	name = "Great Khan bandana"
+	desc = "(IV) A bandana. Tougher than it looks"
+	icon_state = "khan_bandana"
+	item_state = "khan_bandana"
+	flags_inv = null
 
 
 //Wayfarer

@@ -205,9 +205,10 @@
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
 
-/*
-Great Khan
-*/
+
+////////////////
+// GREAT KHAN //
+////////////////
 
 /datum/job/wasteland/f13pusher
 	title = "Great Khan"
@@ -247,16 +248,15 @@ Great Khan
 	name = "Great Khan"
 	jobtype = /datum/job/wasteland/f13pusher
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/ninemil
 	id = /obj/item/card/id/khantattoo
 	ears = /obj/item/radio/headset/headset_khans
-	belt = /obj/item/melee/onehanded/machete
 	backpack =	/obj/item/storage/backpack/satchel/explorer
-	satchel = 	/obj/item/storage/backpack/satchel/explorer
+	satchel = 	/obj/item/storage/backpack/satchel/old
 	uniform = /obj/item/clothing/under/f13/khan
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/storage/bag/money/small/khan
+	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/reagent_containers/pill/patch/jet = 2,
@@ -264,7 +264,7 @@ Great Khan
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		)
 	head = /obj/item/clothing/head/helmet/f13/khan
-	shoes = /obj/item/clothing/shoes/f13/military/plated
+	shoes = /obj/item/clothing/shoes/f13/military/khan
 
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -301,7 +301,7 @@ Great Khan
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck=1, \
@@ -311,7 +311,6 @@ Great Khan
 /datum/outfit/loadout/khanskirmisher
 	name = "Skirmisher"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
-	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack_contents = list(/obj/item/ammo_box/magazine/uzim9mm=3)
 
 

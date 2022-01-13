@@ -158,6 +158,26 @@
 	item_state = "legion_legate"
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
 
+// ---------------------------------------------------------
+// Great Khan boots
+
+/obj/item/clothing/shoes/f13/military/khan
+	name = "steel-tipped boots"
+	desc = "A pair of leather boots reinforced with metal toe caps."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_boots"
+	item_state = "khan_boots"
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+
+/obj/item/clothing/shoes/f13/military/khan_pelt
+	name = "tall pelt boots"
+	desc = "A pair of soft pelt boots with fur lining."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_peltboots"
+	item_state = "khan_peltboots"
+
 
 
 //Fluff
