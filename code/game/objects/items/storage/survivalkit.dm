@@ -11,12 +11,14 @@
 	new /obj/item/flashlight/flare(src)
 	new /obj/item/reagent_containers/pill/radx(src)
 
-/obj/item/storage/survivalkit/khan
+/obj/item/storage/survivalkit_khan
 	name = "survival kit"
 	desc = "A robust leather pouch containing essentials a Khan might need in the wasteland."
 	icon = 'icons/fallout/clothing/khans.dmi'
+	icon_state = "survivalkit"
+	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/storage/survivalkit/khan/PopulateContents()
+/obj/item/storage/survivalkit_khan/PopulateContents()
 	. = ..()
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)

@@ -257,8 +257,9 @@
 	uniform = /obj/item/clothing/under/f13/khan
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
+	l_pocket = /obj/item/storage/survivalkit_khan
 	gloves = /obj/item/melee/unarmed/brass/spiked
-	box = /obj/item/storage/survivalkit/khan
+	box = null
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/jet = 2,
 		/obj/item/storage/bag/money/small/khan = 1

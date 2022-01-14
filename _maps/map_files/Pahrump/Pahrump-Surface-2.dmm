@@ -4844,6 +4844,9 @@
 "cbM" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/flashlight/glowstick/red,
+/obj/item/flashlight/glowstick/red,
+/obj/item/flashlight/glowstick/red,
 /obj/item/reagent_containers/food/drinks/bottle/molotov/filled,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
@@ -18805,9 +18808,6 @@
 	},
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/flashlight/glowstick/red,
-/obj/item/flashlight/glowstick/red,
-/obj/item/flashlight/glowstick/red,
 /obj/item/storage/toolbox/mechanical/old,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
@@ -25428,6 +25428,8 @@
 /obj/item/ammo_box/shotgun/bean,
 /obj/item/restraints/legcuffs/bola,
 /obj/item/restraints/legcuffs/bola,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "krX" = (
@@ -38605,6 +38607,8 @@
 /obj/machinery/smartfridge/bottlerack/alchemy_rack{
 	name = "drug storage"
 	},
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/pill/patch/jet,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "qiO" = (
@@ -48618,8 +48622,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
 /obj/item/camera,
-/obj/item/restraints/handcuffs,
-/obj/item/restraints/handcuffs,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "uFT" = (
@@ -49421,13 +49423,12 @@
 /area/f13/building)
 "uVT" = (
 /obj/structure/table,
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/pill/patch/jet,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 8;
 	light_color = "#d8b1b1"
 	},
+/obj/item/flashlight,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "uVW" = (
