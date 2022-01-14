@@ -15356,7 +15356,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/twohanded/baseball/spiked,
 /obj/item/melee/unarmed/punchdagger,
-/obj/item/melee/onehanded/club/tireiron,
+/obj/item/melee/onehanded/knife/hunting,
+/obj/item/melee/onehanded/machete,
+/obj/item/melee/onehanded/machete,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "gus" = (
@@ -19553,6 +19555,7 @@
 "iad" = (
 /obj/machinery/workbench,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/crafting/duct_tape,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "iam" = (
@@ -25425,10 +25428,8 @@
 /area/f13/wasteland)
 "krS" = (
 /obj/structure/rack,
-/obj/item/camera,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/restraints/handcuffs,
-/obj/item/restraints/handcuffs,
+/obj/item/ammo_box/shotgun/bean,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "krX" = (
@@ -48616,6 +48617,9 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/camera,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "uFT" = (

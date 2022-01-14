@@ -871,7 +871,7 @@
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
 	name = "Great Khan bandana"
-	desc = "(IV) A bandana. Tougher than it looks. Inside of the cloth is dark, so it can be reversed."
+	desc = "(IV) A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
 	icon_state = "khan_bandana"
 	item_state = "khan_bandana"
 	flags_inv = null
