@@ -861,8 +861,6 @@
 	icon_state = "khan_helmetpelt"
 	item_state = "khan_helmetpelt"
 	flags_inv = null
-	dynamic_hair_suffix = null
-	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/helmet/f13/khan/pelt/Initialize()
 	. = ..()

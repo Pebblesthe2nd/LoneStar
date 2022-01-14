@@ -5498,13 +5498,9 @@
 	},
 /area/f13/building)
 "crg" = (
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug{
-	pixel_y = 10
-	},
+/obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/smartfridge/bottlerack/alchemy_rack{
-	name = "drug storage"
-	},
+/obj/item/binoculars,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "crp" = (
@@ -25430,6 +25426,8 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_box/shotgun/bean,
+/obj/item/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "krX" = (
@@ -34650,8 +34648,6 @@
 /area/f13/building)
 "osF" = (
 /obj/structure/rack,
-/obj/item/restraints/legcuffs/bola,
-/obj/item/restraints/legcuffs/bola,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
 /turf/open/floor/f13/wood,
@@ -38602,9 +38598,13 @@
 	},
 /area/f13/building)
 "qiN" = (
-/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug{
+	pixel_y = 10
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/binoculars,
+/obj/machinery/smartfridge/bottlerack/alchemy_rack{
+	name = "drug storage"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "qiO" = (
@@ -68862,7 +68862,7 @@ gcK
 uKu
 dxJ
 cOU
-urJ
+buD
 hMz
 gin
 dkW

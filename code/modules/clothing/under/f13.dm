@@ -600,7 +600,7 @@
 
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
-	desc = "Clothing marking the wearer as one of the the Great Khans."
+	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
 	icon = 'icons/fallout/clothing/khans.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_uniform"

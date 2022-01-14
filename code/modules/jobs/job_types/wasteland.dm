@@ -250,20 +250,19 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket
 	id = /obj/item/card/id/khantattoo
 	ears = /obj/item/radio/headset/headset_khans
+	head = /obj/item/clothing/head/helmet/f13/khan
+	shoes = /obj/item/clothing/shoes/f13/military/khan
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
 	uniform = /obj/item/clothing/under/f13/khan
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	gloves = /obj/item/melee/unarmed/brass/spiked
+	box = /obj/item/storage/survivalkit/khan
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/jet = 2,
-		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/storage/bag/money/small/khan = 1
 		)
-	head = /obj/item/clothing/head/helmet/f13/khan
-	shoes = /obj/item/clothing/shoes/f13/military/khan
 
 
 /datum/outfit/job/wasteland/f13pusher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -291,14 +290,6 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
 
-
-/datum/outfit/loadout/pusher
-	name = "Chemist"
-	r_hand = /obj/item/gun/ballistic/revolver/m29/snub
-	backpack_contents = list(
-		/obj/item/reagent_containers/glass/beaker/large=2, \
-		/obj/item/ammo_box/m44 = 3,
-		/obj/item/book/granter/trait/chemistry=1)
 
 /datum/outfit/loadout/enforcer
 	name = "Enforcer"
