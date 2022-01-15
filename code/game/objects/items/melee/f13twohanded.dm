@@ -4,8 +4,12 @@
 	icon = 'icons/fallout/objects/melee/twohanded.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	attack_speed = CLICK_CD_MELEE * 1.1
 	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	max_integrity = 200
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 30)
 	var/icon_prefix = null
 	var/wielded = FALSE
 
@@ -33,18 +37,15 @@
 // Fire Axe			Keywords: Damage 25/46
 /obj/item/twohanded/fireaxe
 	name = "fire axe"
-	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel."
+	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors."
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
-	slot_flags = ITEM_SLOT_BACK
 	force = 26
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED
 	resistance_flags = FIRE_PROOF
-	max_integrity = 200
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 30)
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
@@ -140,7 +141,6 @@
 	icon_state = "spear-metal"
 	icon_prefix = "spear-metal"
 	force = 10
-	slot_flags = ITEM_SLOT_BACK
 	throwforce = 30
 	throw_speed = 4
 	embedding = list("embed_chance" = 0)
@@ -247,10 +247,10 @@
 // Scrap spear		Keywords: Damage 17/28, Reach, Throw bonus
 /obj/item/twohanded/spear/scrapspear
 	name = "scrap spear"
-	desc = "Made from two rods, a glass shard and some duct tape. For the modern tribal or the truly desperate."
+	desc = "Made from two rods, a glass shard and some duct tape. For the modern tribal or the truly desperate. Surprisingly effective when thrown."
 	icon_state = "spear-scrap"
 	icon_prefix = "spear-scrap"
-	throwforce = 24
+	throwforce = 28
 	embedding = list("pain_mult" = 2, "embed_chance" = 35, "fall_chance" = 20)
 
 /obj/item/twohanded/spear/scrapspear/ComponentInitialize()
@@ -264,7 +264,6 @@
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
 	icon_state = "spear-bone"
 	icon_prefix = "spear-bone"
-	slot_flags = ITEM_SLOT_BACK
 	force = 15
 	throwforce = 25
 	throw_speed = 4
@@ -309,7 +308,6 @@
 	icon_prefix = "baseball"
 	force = 24
 	throwforce = 12
-	slot_flags = ITEM_SLOT_BACK
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_NONE
@@ -390,13 +388,12 @@
 // Sledgehammer			Keywords: Damage 25/45
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
-	desc = "A heavy sledgehammer that lost most of its use besides caving in heads."
+	desc = "A heavy sledgehammer that lost most of its use besides caving in heads and barricades."
 	icon_state = "hammer-sledge"
 	icon_prefix = "hammer-sledge"
 	attack_speed = CLICK_CD_MELEE * 1.2
 	force = 25
 	throwforce = 30
-	slot_flags = ITEM_SLOT_BACK
 	sharpness = SHARP_NONE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 
@@ -421,7 +418,7 @@
 // Thermic Lance		Keywords: Damage 5/60, AP 0.1 Special Damage Type - Burn, bonus damage metal door
 /obj/item/twohanded/thermic_lance
 	name = "thermic lance"
-	desc = "A versatile power-welding tool. Useful for cutting apart metal and limbs."
+	desc = "A versatile power-welding tool. Useful for cutting apart metal things like doors and bars, and also limbs."
 	icon = 'icons/fallout/objects/melee/twohanded.dmi'
 	icon_state = "thermiclance"
 	icon_prefix = "thermiclance"
@@ -429,7 +426,6 @@
 	righthand_file = 'icons/fallout/onmob/weapons/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	slot_flags = ITEM_SLOT_BACK
 	damtype = "fire"
 	force = 5
 	armour_penetration = 0.1
@@ -482,7 +478,7 @@
 	AddElement(/datum/element/update_icon_updates_onmob)
 
 
-// Super Sledge			Keywords: Damage 25/55
+// Super Sledge			Keywords: Damage 25/60
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
@@ -492,7 +488,7 @@
 
 obj/item/twohanded/sledgehammer/supersledge/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 55, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 60, icon_wielded="[icon_prefix]2")
 
 obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -638,13 +634,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 			user.Knockdown(50)
 		return
 
-// Chainsaw			Keywords: Damage 25/49, big bonus vs wooden barricades
+// Chainsaw			Keywords: Damage 25/51, big bonus vs wooden barricades
 /obj/item/twohanded/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon_state = "chainsaw"
 	icon_prefix = "chainsaw"
-	slot_flags = ITEM_SLOT_BACK
 	force = 8
 	wound_bonus = 15
 	bare_wound_bonus = 15
@@ -661,7 +656,6 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
-	AddComponent(/datum/component/two_handed, force_unwielded=8, force_wielded=49, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/chainsaw/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
