@@ -660,7 +660,7 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-//Great Khan
+//Great Khan OBSOLETE, the labcoat one is the one used.
 /obj/item/clothing/suit/armor/khan_jacket
 	name = "Great Khan jacket"
 	desc = "(IV) The symbol of the greatest pushers."
@@ -668,6 +668,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HANDS|FEET
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/armor/khan_jacket/Initialize()
