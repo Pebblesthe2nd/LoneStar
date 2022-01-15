@@ -418,7 +418,7 @@
 // Thermic Lance		Keywords: Damage 5/60, AP 0.1 Special Damage Type - Burn, bonus damage metal door
 /obj/item/twohanded/thermic_lance
 	name = "thermic lance"
-	desc = "A versatile power-welding tool. Useful for cutting apart metal things like doors and bars, and also limbs."
+	desc = "A versatile power-welding tool. Useful for cutting apart metal things like airlocks, bars, and probably limbs."
 	icon = 'icons/fallout/objects/melee/twohanded.dmi'
 	icon_state = "thermiclance"
 	icon_prefix = "thermiclance"
@@ -446,14 +446,21 @@
 	if(istype(A, /obj/machinery/door/airlock))
 		var/obj/machinery/door/airlock/M = A
 		M.take_damage(40, BRUTE, "melee", 0)
+		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /obj/structure/simple_door/metal))
 		var/obj/structure/simple_door/metal/G = A
 		G.take_damage(30, BRUTE, "melee", 0)
+		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /obj/machinery/door/unpowered))
 		var/obj/machinery/door/unpowered/U = A
 		U.take_damage(20, BRUTE, "melee", 0)
-
-
+		playsound(loc, hitsound, 70, TRUE)
+	else if(istype(A, /obj/structure))
+		playsound(loc, hitsound, 70, TRUE)
+	else if(istype(A, /obj/machinery))
+		playsound(loc, hitsound, 70, TRUE)
+	else if(istype(A, /turf/closed))
+		playsound(loc, hitsound, 70, TRUE)
 
 // Proton axe			Keywords: Damage 20/32, AP 0.7
 /obj/item/melee/transforming/energy/axe/protonaxe
@@ -496,8 +503,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		return
 	if(istype(A, /obj/structure)) 
 		var/obj/structure/W = A
-		W.take_damage(20, BRUTE, "melee", 0)
-
+		W.take_damage(25, BRUTE, "melee", 0)
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /obj/machinery))
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /turf/closed))
+		playsound(loc, hitsound, 80, TRUE)
 
 // Rocket-assisted Sledgehammer			Keywords: Damage 20/52, Mining  Issues left: mining only when dual wielded, sound to play always on hit
 /obj/item/twohanded/sledgehammer/rockethammer
@@ -527,7 +538,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		return
 	if(istype(A, /obj/structure)) 
 		var/obj/structure/W = A
-		W.take_damage(20, BRUTE, "melee", 0)
+		W.take_damage(10, BRUTE, "melee", 0)
+		playsound(loc, hitsound, 50, TRUE)
+	else if(istype(A, /obj/machinery))
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /turf/closed))
+		playsound(loc, hitsound, 80, TRUE)
 
 // The Court Martial	Keywords: UNIQUE, Damage 20/52, Inferior mining
 /obj/item/twohanded/sledgehammer/rockethammer/courtmartial
@@ -545,7 +561,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		return
 	if(istype(A, /obj/structure)) 
 		var/obj/structure/W = A
-		W.take_damage(20, BRUTE, "melee", 0)
+		W.take_damage(10, BRUTE, "melee", 0)
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /obj/machinery))
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /turf/closed))
+		playsound(loc, hitsound, 80, TRUE)
 
 // Atom's Judgement			Keywords: UNIQUE, Damage 25/55, Damage bonus Rad
 /obj/item/twohanded/sledgehammer/atomsjudgement
@@ -634,7 +655,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 			user.Knockdown(50)
 		return
 
-// Chainsaw			Keywords: Damage 25/51, big bonus vs wooden barricades
+// Chainsaw			Keywords: Damage 25/55, big bonus vs wooden barricades
 /obj/item/twohanded/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
@@ -656,6 +677,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
+	AddComponent(/datum/component/two_handed, force_unwielded = 8, force_wielded = 55, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/chainsaw/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -664,7 +686,13 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	if(istype(A, /obj/structure/barricade/wooden)) //destroys windows and grilles in one hit (or more if it has a ton of health like plasmaglass)
 		var/obj/structure/barricade/wooden/K = A
 		K.take_damage(40, BRUTE, "melee", 0)
-
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /obj/structure))
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /obj/machinery))
+		playsound(loc, hitsound, 80, TRUE)
+	else if(istype(A, /turf/closed))
+		playsound(loc, hitsound, 80, TRUE)
 
 /* Testing new chainsaw thats less broken but also missing some cool stuff
 // Chainsaw				Keywords: Damage 13/55, Wound bonus, Tool saw-off

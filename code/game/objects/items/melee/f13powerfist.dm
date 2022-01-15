@@ -170,7 +170,7 @@
 	add_fingerprint(user)
 
 
-//Warhammer chainsword			Keywords: Damage 10/45, Wound bonus, Block, Bonus AP + 0.1
+//Warhammer chainsword			Keywords: Damage 10/50, Wound bonus, Block, Bonus AP + 0.15
 /obj/item/melee/powered/ripper/prewar
 	name = "pre-war military ripper"
 	desc = "A hand-held, militarized chainsaw, popular with Army units requiring a compact engineering tool for cutting. Just what material is intended to be cut with the weapon remains open to debate."
