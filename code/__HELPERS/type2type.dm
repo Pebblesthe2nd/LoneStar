@@ -690,4 +690,4 @@
 		if('icons/mob/screen_midnight.dmi')
 			return 'modular_citadel/icons/ui/screen_midnight.dmi'
 		else
-			return 'modular_citadel/icons/ui/screen_fallout2.dmi'
+			return 'icons/fallout/UI/buttons_fallout2.dmi'
