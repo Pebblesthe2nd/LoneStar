@@ -185,6 +185,10 @@ also: most hitscan weapons have more charge than their normal projectile counter
 	projectile_type = /obj/item/projectile/beam/laser/rcw/hitscan
 	e_cost = 50 //it's actually 24 shots now, as it fires in a burst of 2
 
+/obj/item/ammo_casing/energy/laser/gatling/hitscan
+	projectile_type = /obj/item/projectile/beam/laser/gatling/hitscan
+	e_cost = 10 //it's actually 240 shots now, as it fires in a burst of 5
+
 /obj/item/ammo_casing/energy/laser/laer
 	projectile_type = /obj/item/projectile/beam/laser/laer
 	e_cost = 125 //16 shots
@@ -223,11 +227,11 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/wattz2k/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k/hitscan
-	e_cost = 80 //25 //32.5 shots
+	e_cost = 166.6 //12 shots
 
 /obj/item/ammo_casing/energy/wattz2k/extended
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k
-	e_cost = 62.5 //32.5 shots
+	e_cost = 83.3 //24
 
 /obj/item/ammo_casing/energy/wattz2k/extended/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k/hitscan

@@ -279,6 +279,18 @@ Great Khan
 		H.gang = GK
 
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombatarmormk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legioncombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvaged_salvaged)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionsalvagedhelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
 
 
 /datum/outfit/loadout/pusher
@@ -314,8 +326,8 @@ Raider
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 12
-	spawn_positions = 12
+	total_positions = 16
+	spawn_positions = 16
 	description = "You are an undesirable figure of some kind- perhaps a corrupt official, or a cannibalistic bartender, or a devious conman, to name a few examples. You have more freedom than anyone else in the wastes, and are not bound by the same moral code as others, but though you may only be interested in self-gain, you still have a responsibility to make your time here interesting, fun, and engaging for others- this means that whatever path you pursue should be more nuanced and flavorful than simple highway robbery or slavery. (Adminhelp if you require help setting up your character for the round.)"
 	supervisors = "Your desire to make things interesting and fun"
 	selection_color = "#ff4747"
@@ -360,6 +372,7 @@ Raider
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/quack_doctor,
 	/datum/outfit/loadout/raider_mobster,
+	/datum/outfit/loadout/raider_cannibal
 	)
 
 
@@ -472,6 +485,7 @@ Raider
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/grenade/homemade/coffeepotbomb = 4,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
+		/obj/item/book/granter/trait/explosives = 1
 		)
 
 /datum/outfit/loadout/raider_sadist
@@ -516,14 +530,16 @@ Raider
 	name = "Quack Doctor"
 	suit = /obj/item/clothing/suit/toggle/labcoat/f13/followers
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
-	r_hand = /obj/item/book/granter/trait/medical
+	r_hand = /obj/item/book/granter/trait/midsurgery
 	suit_store = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec=1,
 		/obj/item/reagent_containers/pill/patch/jet = 3,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/storage/pill_bottle/aranesp = 1,
-		/obj/item/storage/pill_bottle/happy = 1
+		/obj/item/storage/pill_bottle/happy = 1,
+		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/stack/sheet/mineral/silver=2,
 		)
 
 /datum/outfit/loadout/raider_ncr
@@ -583,8 +599,9 @@ Raider
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
-		/obj/item/ammo_box/magazine/m10mm_adv = 2,
+		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/ext = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation = 2,
 		)
 
 /datum/outfit/loadout/raider_cannibal
@@ -630,6 +647,7 @@ Raider
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/gun/ballistic/automatic/smg/rockwell = 1,
 		/obj/item/ammo_box/magazine/uzim9mm/rockwell = 2,
+		/obj/item/card/id/dogtag/town/mafia=1,
 		)
 
 /datum/job/wasteland/f13wastelander
@@ -759,7 +777,7 @@ Raider
 	backpack_contents =  list(/obj/item/reagent_containers/medspray/synthflesh=2,
 							/obj/item/stack/medical/suture/emergency/fifteen=1,
 							/obj/item/stack/medical/ointment/twelve=1,
-							/obj/item/smelling_salts/crafted=1,
+							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
 							/obj/item/stack/sheet/mineral/silver=1,
 							/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,

@@ -685,11 +685,11 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
 	name = "mid tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 30,
-				/obj/effect/spawner/bundle/f13/aer12 = 12,
-				/obj/effect/spawner/bundle/f13/wattz2k = 12,
-				/obj/effect/spawner/bundle/f13/wattz2kext = 8,
-				/obj/effect/spawner/bundle/f13/plasmapistol = 18,
+	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
+				/obj/effect/spawner/bundle/f13/aer12 = 13,
+				/obj/effect/spawner/bundle/f13/wattz2k = 26,
+				/obj/effect/spawner/bundle/f13/wattz2kext = 15,
+				/obj/effect/spawner/bundle/f13/plasmapistol = 15,
 				/obj/effect/spawner/bundle/f13/ionrifle = 5
 				)
 
@@ -771,31 +771,33 @@
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
 				/obj/effect/spawner/bundle/f13/revolver45,
 				/obj/effect/spawner/bundle/f13/thatgun,
+				/obj/effect/spawner/bundle/f13/marksman,
+				/obj/effect/spawner/bundle/f13/dkssniper,
 				/obj/item/gun/ballistic/automatic/smg/american180
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high
 	name = "high tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/marksman = 15,
-				/obj/effect/spawner/bundle/f13/assault_rifle = 20,
-				/obj/effect/spawner/bundle/f13/r84 = 5,
-				/obj/effect/spawner/bundle/f13/guns/tommygun = 10,
-				/obj/effect/spawner/bundle/f13/brushgun = 10,
-				/obj/effect/spawner/bundle/f13/hunting = 5,
-				/obj/effect/spawner/bundle/f13/pistol14 = 10,
-				/obj/effect/spawner/bundle/f13/m1garand = 5,
-				/obj/effect/spawner/bundle/f13/dkssniper = 10
+	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
+				/obj/effect/spawner/bundle/f13/r84 = 10,
+				/obj/effect/spawner/bundle/f13/hunting = 15,
+				/obj/effect/spawner/bundle/f13/guns/tommygun = 15,
+				/obj/effect/spawner/bundle/f13/m1garand = 15,
+				/obj/effect/spawner/bundle/f13/pistol14 = 15,
+				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/citykiller = 15,
-				/obj/effect/spawner/bundle/f13/riotshotgun = 23,
-				/obj/effect/spawner/bundle/f13/bozar = 8,
-				/obj/effect/spawner/bundle/f13/amr = 16,
-				/obj/effect/spawner/bundle/f13/rangemaster = 20,
+	loot = list(/obj/effect/spawner/bundle/f13/citykiller = 12,
+				/obj/effect/spawner/bundle/f13/riotshotgun = 13,
+				/obj/effect/spawner/bundle/f13/bozar = 6,
+				/obj/effect/spawner/bundle/f13/amr = 10,
+				/obj/effect/spawner/bundle/f13/brushgun = 15,
+				/obj/effect/spawner/bundle/f13/rangemaster = 18,
 				/obj/effect/spawner/bundle/f13/gauss = 10,
-				/obj/effect/spawner/bundle/f13/fnfal = 8
+				/obj/effect/spawner/bundle/f13/fnfal = 6,
+				/obj/item/gun/ballistic/rocketlauncher = 10,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique
@@ -1382,6 +1384,20 @@
 				/obj/item/ammo_box/magazine/m762/ext
 	)
 
+/obj/effect/spawner/bundle/f13/rocketlauncher
+	name = "rocket launcher and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/rocketlauncher,
+				/obj/item/ammo_casing/caseless/rocket
+	)
+
+/obj/effect/spawner/bundle/f13/grenadelauncher
+	name = "grenade launcher and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/grenadelauncher,
+				/obj/item/ammo_box/a40mm
+	)
+
 
 
 /*	------------------------------------------------
@@ -1460,7 +1476,9 @@
 				/obj/item/ammo_box/tube/c4570,
 				/obj/item/ammo_box/a50MG,
 				/obj/item/ammo_box/a762/doublestacked,
-				/obj/item/stock_parts/cell/ammo/mfc
+				/obj/item/stock_parts/cell/ammo/mfc,
+				/obj/item/ammo_casing/caseless/rocket,
+				/obj/item/ammo_box/a40mm
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier4/Initialize(mapload) //on mapload, pick how many shit to spawn
@@ -1476,12 +1494,61 @@
 				/obj/item/ammo_box/a50MG/incendiary,
 				/obj/item/ammo_box/magazine/m556/rifle/extended,
 				/obj/item/ammo_box/magazine/m762/ext,
-				/obj/item/ammo_box/magazine/d12g
+				/obj/item/ammo_box/magazine/d12g,
+				/obj/item/ammo_box/a50MG/penetrator,
+				/obj/item/ammo_casing/caseless/rocket/big,
+				/obj/item/ammo_casing/caseless/rocket/incendiary = 10,
+				/obj/item/ammo_casing/caseless/rocket/chem = 3,
+				/obj/item/ammo_box/a40mm
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5/Initialize(mapload) //on mapload, pick how many shit to spawn
 	lootcount = pick(1, 2, 3, 4)
 	. = ..()
+
+//BOMBS N GRENADES
+/obj/effect/spawner/loot/f13/bomb
+	name = "DO NOT USE THIS BASIC SPAWNER"
+	icon_state = "ammo_loot"
+
+/obj/effect/spawner/lootdrop/f13/bomb/tier1
+	name = "tier 1 grenade spawner"
+	icon_state = "ammo_loot"
+	lootdoubles = TRUE
+	lootcount = 2 //2 random grenades
+	loot = list(
+				/obj/item/grenade/homemade/coffeepotbomb,
+				/obj/item/grenade/homemade/firebomb,
+				/obj/item/grenade/flashbang,
+				/obj/item/reagent_containers/food/drinks/bottle/molotov,
+				/obj/item/grenade/smokebomb
+				)
+
+/obj/effect/spawner/lootdrop/f13/bomb/tier2
+	loot = list(
+				/obj/item/grenade/f13/frag = 30,
+				/obj/item/grenade/flashbang,
+				/obj/item/grenade/f13/stinger,
+				/obj/item/grenade/empgrenade = 50
+				)
+
+/obj/effect/spawner/lootdrop/f13/bomb/tier3
+	loot = list(
+				/obj/item/grenade/syndieminibomb/concussion,
+				/obj/item/grenade/plastic/c4,
+				/obj/item/grenade/empgrenade,
+				/obj/item/grenade/f13/radiation,
+				/obj/item/grenade/f13/frag
+				)
+/obj/effect/spawner/lootdrop/f13/bomb/top_tier
+	lootcount = 1
+	loot = list(
+				/obj/item/grenade/f13/plasma,
+				/obj/item/grenade/f13/incendiary,
+				/obj/item/grenade/f13/radiation,
+				/obj/item/grenade/plastic/x4,
+				/obj/item/grenade/stingbang/shred = 1
+				)
 
 
 /obj/effect/spawner/lootdrop/f13/junkspawners //TIER 4 GARBAGE
@@ -1638,7 +1705,6 @@
 				/obj/item/reagent_containers/food/snacks/beans,
 				/obj/item/reagent_containers/food/snacks/cracker,
 				/obj/item/reagent_containers/food/snacks/lollipop,
-				"" // a chance to spawn nothing
 				)
 
 
@@ -1846,8 +1912,11 @@
 	loot = list(/obj/item/book/granter/trait/lowsurgery = 10,
 				/obj/item/book/granter/trait/chemistry = 10,
 				/obj/item/book/granter/trait/trekking = 10,
+				/obj/item/book/granter/trait/techno = 10,
 				/obj/item/book/granter/trait/pa_wear = 1,
-				/obj/item/book/granter/crafting_recipe/gunsmith_one = 50,
+				/obj/item/book/granter/trait/explosives = 10,
+				/obj/item/book/granter/trait/explosives_advanced = 1,
+				/obj/item/book/granter/crafting_recipe/gunsmith_one = 29,
 				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
 				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10
@@ -1875,9 +1944,6 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/marksman,
-		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
-		/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
 		/obj/item/book/granter/crafting_recipe/blueprint/r82,
 		/obj/item/book/granter/crafting_recipe/blueprint/service,
@@ -1886,7 +1952,8 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/uzi,
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
-		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine
+		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
+		/obj/item/book/granter/crafting_recipe/blueprint/commando,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
@@ -1894,15 +1961,16 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
 		/obj/item/book/granter/crafting_recipe/blueprint/r91,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84,
 		/obj/item/book/granter/crafting_recipe/blueprint/deagle,
-		/obj/item/book/granter/crafting_recipe/blueprint/commando,
-		/obj/item/book/granter/crafting_recipe/blueprint/pps,
-		/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
-		/obj/item/book/granter/crafting_recipe/blueprint/aep7
+		/obj/item/book/granter/crafting_recipe/blueprint/marksman,
+		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
+		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
+		/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh
@@ -1910,12 +1978,9 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
-		/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
-		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
+		/obj/item/book/granter/crafting_recipe/blueprint/gauss,
 		/obj/item/book/granter/crafting_recipe/blueprint/neostead,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
-		/obj/item/book/granter/crafting_recipe/blueprint/gauss
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
@@ -1923,7 +1988,6 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle,
 		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 		/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
