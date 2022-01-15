@@ -2068,8 +2068,10 @@
 /obj/machinery/workbench/bottler,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
-	dir = 1
+	dir = 1;
+	pixel_y = 31
 	},
+/obj/structure/table,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "aSY" = (
@@ -2328,15 +2330,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "aZF" = (
-/obj/structure/table,
-/obj/structure/closet/crate/large,
-/obj/item/stack/ore/blackpowder/twenty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/hay/twenty,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/autolathe/ammo/unlocked_basic,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
@@ -2665,10 +2659,9 @@
 /area/f13/building)
 "bgd" = (
 /obj/structure/table,
-/obj/item/stack/sheet/cardboard/fifty,
-/obj/structure/bedsheetbin,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/metal/five,
+/obj/item/stack/sheet/glass/five,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
 	},
@@ -3271,7 +3264,8 @@
 "bqF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_x = 6
 	},
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
@@ -8388,7 +8382,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 8;
-	light_color = "#d8b1b1"
+	light_color = "#d8b1b1";
+	pixel_x = -6
 	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
@@ -11742,10 +11737,17 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "eZI" = (
-/obj/machinery/autolathe/ammo,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/structure/table,
+/obj/structure/closet/crate/large,
+/obj/item/stack/ore/blackpowder/twenty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/hay/twenty,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/cloth/five,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "eZW" = (
@@ -18804,7 +18806,8 @@
 "hMz" = (
 /obj/machinery/light/small{
 	dir = 8;
-	light_color = "#d8b1b1"
+	light_color = "#d8b1b1";
+	pixel_x = -8
 	},
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
@@ -34651,7 +34654,9 @@
 "osF" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small,
+/obj/machinery/light/small{
+	pixel_y = -10
+	},
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
 "osH" = (
@@ -37328,6 +37333,11 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/tunnel)
+"pGq" = (
+/obj/structure/table/wood,
+/obj/structure/bedsheetbin,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "pGH" = (
 /obj/structure/rack,
 /obj/item/paper/pamphlet{
@@ -48621,6 +48631,7 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/stack/sheet/cardboard/fifty,
 /obj/item/camera,
 /turf/open/floor/f13/wood,
 /area/f13/raiders)
@@ -69392,7 +69403,7 @@ qOV
 cWG
 daU
 mvv
-pSC
+pGq
 tsv
 mvv
 tpD
