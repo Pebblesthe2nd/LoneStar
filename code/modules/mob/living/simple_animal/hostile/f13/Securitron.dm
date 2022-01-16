@@ -23,7 +23,7 @@
 	maxHealth = 150
 	health = 150
 	blood_volume = 0
-	del_on_death = FALSE
+	del_on_death = TRUE
 	healable = FALSE
 	faction = list("wastebot")
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
