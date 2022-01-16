@@ -20,7 +20,7 @@
 	time = 60
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legiongate
 	name = "Legion iron gate"
@@ -29,7 +29,7 @@
 	time = 60
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/gate_bos
 	name = "Brotherhood steel door"
@@ -38,7 +38,7 @@
 	time = 60
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/plant
 	name = "Potted plant"
