@@ -22,9 +22,6 @@ General thoughts: More traits possible to add? Like resists to energy weapons/ba
 to produce smoke or slow down victims? Stuff like that added to a couple would be fun.
 */
 
-/mob/living/simple_animal/hostile
-	icon = 'icons/fallout/mob/hostile_east.dmi'
-
 /mob/living/simple_animal/hostile/ghoulrotter
 	name = "rotting ghoul"
 	desc = "A bloated ghoul that has lost its mind and become aggressive."
@@ -66,11 +63,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/skolf
 	name = "skull wolf"
 	desc = "Half rotted by radiation, blind, hunting by smell and sound."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
-	icon_state = "skolf"
-	icon_living = "skolf"
-	icon_dead = "skolf_dead"
-	icon_gib = "gib"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	turns_per_move = 1
 	response_help_simple = "pets"
@@ -101,10 +93,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/yaoguai
 	name = "Yao Guai"
 	desc = "Radiation has caused the brown bear to lose its pelt, grow large with ulcers and a rage fueled by agony. The chinese name for them has stuck."
-	icon = 'icons/fallout/mob/mob_32x64.dmi'
-	icon_state = "yaoguai"
-	icon_living = "yaoguai"
-	icon_dead = "yaoguai_dead"
 	icon_gib = null
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
@@ -136,10 +124,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/aradnid
 	name = "aradnid"
 	desc = "Deeply disturbing creature, they can only consume radiated meat and drag their prey to contaminated areas to tenderize them."
-	icon = 'icons/fallout/mob/hostile_east.dmi'
-	icon_state = "aradnid"
-	icon_living = "aradnid"
-	icon_dead = "aradnid_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	speak_emote = list("chitters")
 	emote_hear = list("chitters")
@@ -183,10 +167,6 @@ to produce smoke or slow down victims? Stuff like that added to a couple would b
 /mob/living/simple_animal/hostile/scolopendra
 	name = "Scolopendra"
 	desc = "The clicking of chitin and multitudes of legs is all you hear before the huge centipede rushes in to catch its prey."
-	icon = 'icons/fallout/mob/mob_32x64.dmi'
-	icon_state = "scolopendra"
-	icon_living = "scolopendra"
-	icon_dead = "scolopendra_dead"
 	icon_gib = null
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
