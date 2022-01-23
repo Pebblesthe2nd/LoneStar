@@ -29,6 +29,8 @@
 /obj/item/storage/survivalkit_tribal
 	name = "survival kit"
 	desc = "A robust leather pouch containing the essentials for wasteland survival."
+	icon_state = "survivalkit"
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/survivalkit_tribal/PopulateContents()
 	. = ..()

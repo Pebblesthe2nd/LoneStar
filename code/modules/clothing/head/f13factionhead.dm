@@ -845,7 +845,7 @@
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
 	armor = list("tier" = 4, "energy" = 20, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
 	dynamic_hair_suffix = ""
@@ -860,7 +860,6 @@
 	desc = "(IV) A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
 	icon_state = "khan_helmetpelt"
 	item_state = "khan_helmetpelt"
-	flags_inv = null
 
 /obj/item/clothing/head/helmet/f13/khan/pelt/Initialize()
 	. = ..()
@@ -872,8 +871,6 @@
 	desc = "(IV) A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
 	icon_state = "khan_bandana"
 	item_state = "khan_bandana"
-	flags_inv = null
-	flags_cover = null
 	strip_delay = 10
 	dynamic_hair_suffix = null
 	dynamic_fhair_suffix = null

@@ -38872,9 +38872,7 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/smartfridge/bottlerack/alchemy_rack{
-	name = "drug storage"
-	},
+/obj/machinery/smartfridge/bottlerack/drug_storage,
 /obj/item/reagent_containers/pill/patch/jet,
 /obj/item/reagent_containers/pill/patch/jet,
 /turf/open/floor/f13/wood,
