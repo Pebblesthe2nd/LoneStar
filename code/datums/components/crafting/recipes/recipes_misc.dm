@@ -11,6 +11,35 @@
 /////////////////
 //Large Objects//
 /////////////////
+
+/datum/crafting_recipe/ncrgate
+	name = "NCR reinforced door"
+	result = /obj/machinery/door/unpowered/secure_NCR
+	reqs = list(/obj/item/stack/sheet/metal = 20,
+				/obj/item/stack/sheet/mineral/wood = 20,)
+	time = 60
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	always_available = FALSE
+
+/datum/crafting_recipe/legiongate
+	name = "Legion iron gate"
+	result = /obj/machinery/door/unpowered/secure_legion
+	reqs = list(/obj/item/stack/sheet/metal = 25)
+	time = 60
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	always_available = FALSE
+
+/datum/crafting_recipe/gate_bos
+	name = "Brotherhood steel door"
+	result = /obj/machinery/door/unpowered/secure_bos
+	reqs = list(/obj/item/stack/sheet/metal = 35)
+	time = 60
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	always_available = FALSE
+
 /datum/crafting_recipe/plant
 	name = "Potted plant"
 	result = /obj/item/kirbyplants/random
@@ -113,7 +142,7 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_SCAVENGING
 	time = 15
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/set_vrboard/bos
 	name = "Modify VR Sleeper Board (BoS)"
@@ -260,7 +289,7 @@
 	time = 150
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	always_availible = FALSE	// Disabled until learned
+	always_available = FALSE	// Disabled until learned
 */
 
 ///////////////////
@@ -334,7 +363,7 @@
 	time = 5
 	subcategory = CAT_TOOL
 	category = CAT_MISC
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/heretic/codex
 	name = "Codex Cicatrix"
@@ -347,8 +376,8 @@
 	time = 150
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	always_availible = FALSE
-	always_availible = FALSE
+	always_available = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/plunger
 	name = "Plunger"

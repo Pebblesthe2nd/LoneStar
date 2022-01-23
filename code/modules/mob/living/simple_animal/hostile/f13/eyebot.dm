@@ -1,13 +1,14 @@
-//Fallout 13 eyebot directory
+/////////////
+// EYEBOTS //
+/////////////
 
 /mob/living/simple_animal/hostile/eyebot
 	name = "eyebot"
 	desc = "A hovering, propaganda-spewing reconnaissance and surveillance robot with radio antennas pointing out its back and loudspeakers blaring out the front."
-	icon = 'icons/fallout/mobs/animal.dmi'
+	icon = 'icons/fallout/mobs/robots/eyebots.dmi'
 	icon_state = "eyebot"
 	icon_living = "eyebot"
 	icon_dead = "eyebot_d"
-	icon_gib = "eyebot_d"
 	speak_chance = 0
 	turns_per_move = 6
 	environment_smash = 0
@@ -22,9 +23,7 @@
 	healable = 0
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	blood_volume = 0
-
 	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")
-
 	harm_intent_damage = 8
 	melee_damage_lower = 2
 	melee_damage_upper = 3
@@ -41,7 +40,6 @@
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam/laser/lasgun
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
-
 	aggrosound = list('sound/f13npc/eyebot/aggro.ogg', )
 	idlesound = list('sound/f13npc/eyebot/idle1.ogg', 'sound/f13npc/eyebot/idle2.ogg')
 	death_sound = 'sound/f13npc/eyebot/robo_death.ogg'
@@ -75,7 +73,6 @@
 	icon_state = "floatingeye"
 	icon_living = "floatingeye"
 	icon_dead = "floatingeye_d"
-	icon_gib = "floatingeye_d"
 
 	retreat_distance = 4
 	faction = list("hostile", "bs")
@@ -90,7 +87,7 @@
 /mob/living/simple_animal/pet/dog/eyebot //It's a propaganda eyebot, not a dog, but...
 	name = "propaganda eyebot"
 	desc = "This eyebot's weapons module has been removed and replaced with a loudspeaker. It appears to be shouting Pre-War propaganda."
-	icon = 'icons/fallout/mobs/animal.dmi'
+	icon = 'icons/fallout/mobs/robots/eyebots.dmi'
 	icon_state = "eyebot"
 	icon_living = "eyebot"
 	icon_dead = "eyebot_d"
@@ -101,16 +98,21 @@
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC
 	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")
-	speak = list("America will never fall to communist invasion.", "Democracy is truth. Communism is death.", "Communism is the very definition of failure!", "Freedom is always worth fighting for.", "Memorial site recognized. Patriotism subroutines engaged. Honoring the fallen is the duty of every red blooded American.", "Cultural database accessed. Quoting New England poet Robert Frost: 'Freedom lies in being bold.'", "Defending Life, Liberty, and the pursuit of Happiness.")
+	speak = list()
 	speak_emote = list("states")
 	emote_hear = list()
-	emote_see = list()
+	emote_see = list("buzzes.","pings.","floats in place")
 	response_help_simple  = "shakes the radio of"
 	response_disarm_simple = "pushes"
 	response_harm_simple   = "punches"
 	attack_sound = 'sound/voice/liveagain.ogg'
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
 	blood_volume = 0
+	
+/mob/living/simple_animal/pet/dog/eyebot/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/wuv, "beeps happily!", EMOTE_AUDIBLE)
+	AddElement(/datum/element/mob_holder, held_icon)
 
 /mob/living/simple_animal/pet/dog/eyebot/playable
 	health = 200
