@@ -694,8 +694,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	else if(istype(A, /turf/closed))
 		playsound(loc, hitsound, 80, TRUE)
 
-/* Testing new chainsaw thats less broken but also missing some cool stuff
-// Chainsaw				Keywords: Damage 13/55, Wound bonus, Tool saw-off
+// Chainsaw				Keywords: Damage 13/55, Wound bonus, Tool saw-off - Testing new chainsaw thats less broken but also missing some cool stuff
 /obj/item/twohanded/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
