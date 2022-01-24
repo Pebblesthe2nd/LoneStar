@@ -79,8 +79,10 @@
 
 /turf/open/indestructible/ground/outside/savannah
 	name = "savannah"
-	icon_state = "savannahcenter"
 	desc = "Some savannah."
+	icon = 'icons/fallout/turfs/savannah.dmi'
+	icon_state = "savannahcenter"
+
 	slowdown = 1
 	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 	footstep = FOOTSTEP_SAND
@@ -115,6 +117,12 @@
 	icon_state = "savannah13"
 /turf/open/indestructible/ground/outside/savannah/edgesnew
 	icon_state = "savannah14"
+
+// Copies of above assets but merged with the dark dirt. If you wanna map with it just copy above and add _dark and there you go.
+/turf/open/indestructible/ground/outside/savannah_dark
+	name = "savannah"
+	icon_state = "savannahcenter_dark"
+
 
 /turf/open/indestructible/ground/outside/desert
 	name = "desert"
