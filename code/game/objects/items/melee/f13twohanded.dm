@@ -694,48 +694,41 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	else if(istype(A, /turf/closed))
 		playsound(loc, hitsound, 80, TRUE)
 
-// Chainsaw				Keywords: Damage 13/55, Wound bonus, Tool saw-off - Testing new chainsaw thats less broken but also missing some cool stuff
-/obj/item/twohanded/chainsaw
-	name = "chainsaw"
-	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
-	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+
+//Steel Saw		Keywords: Damage 14/40, Fast, Wound Bonus, Tool saw-off
+/obj/item/twohanded/steelsaw
+	name = "steel saw"
+	desc = "A long, heavy circular saw with reinforced blades, designed for cutting through I-beams."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
-	icon_state = "chainsaw"
-	item_state = "chainsaw"
-	icon_prefix = "chainsaw"
-	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = null
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
-	force = 7
-	wound_bonus = 25
-	throw_speed = 2
-	throw_range = 2
-	throwforce = 10
+	icon_state = "steelsaw"
+	item_state = "steelsaw"
+	icon_prefix = "steelsaw"
+	force = 4
 	toolspeed = 0.5
+	wound_bonus = 15
+	attack_speed = CLICK_CD_MELEE * 0.9
+	hitsound = 'sound/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
 	resistance_flags = FIRE_PROOF
-	hitsound = 'sound/weapons/chainsawhit.ogg'
-	var/on_icon_state = "chainsaw_on"
-	var/off_icon_state = "chainsaw"
-	var/on_item_state = "chainsaw_on"
-	var/off_item_state = "chainsaw"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = null
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
+	var/on_icon_state = "steelsaw_on"
+	var/off_icon_state = "steelsaw"
+	var/on_item_state = "steelsaw_on"
+	var/off_item_state = "steelsaw"
 	var/weight_class_on = WEIGHT_CLASS_HUGE
 	var/on = FALSE
-	var/force_on = 55
-	var/force_off = 7
+	var/force_on = 40
+	var/force_off = 14
 	var/description_on = "<span class ='warning'>You pull the cord, starting up the chainsaw with a roar and letting the blades spin up.</span>"
 	var/description_off = "<span class ='notice'>You press the off button, stopping the noise and the carnage.</span>"
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
 
-/obj/item/twohanded/chainsaw/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
-	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
-	update_icon()
-
-/obj/item/twohanded/chainsaw/attack_self(mob/user)
+/obj/item/twohanded/steelsaw/attack_self(mob/user)
 	on = !on
 	if(on)
 		to_chat(user, description_on)
@@ -754,7 +747,13 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		attack_verb = list("poked", "scraped")
 	add_fingerprint(user)
 
-/obj/item/twohanded/chainsaw/suicide_act(mob/living/carbon/user)
+/obj/item/twohanded/steelsaw/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/chainsawhit.ogg', TRUE)
+	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
+	update_icon()
+
+/obj/item/twohanded/steelsaw/suicide_act(mob/living/carbon/user)
 	if(on)
 		user.visible_message("<span class='suicide'>[user] begins to tear [user.p_their()] head off with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
@@ -766,25 +765,8 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		playsound(src, 'sound/weapons/genhit1.ogg', 100, 1)
 	return(BRUTELOSS)
 
-//Steel Saw		Keywords: Damage 14/40, Fast, Wound Bonus, Tool saw-off
-/obj/item/twohanded/chainsaw/steelsaw
-	name = "steel saw"
-	desc = "A long, heavy circular saw with reinforced blades, designed for cutting through I-beams."
-	icon_state = "steelsaw"
-	item_state = "steelsaw"
-	icon_prefix = "steelsaw"
-	force = 4
-	force_on = 40
-	force_off = 14
-	on_icon_state = "steelsaw_on"
-	off_icon_state = "steelsaw"
-	on_item_state = "steelsaw_on"
-	off_item_state = "steelsaw"
-	wound_bonus = 15
-	attack_speed = CLICK_CD_MELEE * 0.9
-
 //Auto Axe 		Keywords: Damage 14/40, AP 0.5, Wound Bonus
-/obj/item/twohanded/chainsaw/autoaxe
+/obj/item/twohanded/steelsaw/autoaxe
 	name = "auto axe"
 	desc = "A reinforced and heavier steel saw, upgraded using the parts of a car engine."
 	icon_state = "autoaxe"
@@ -800,6 +782,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	off_item_state = "autoaxe"
 	wound_bonus = 10
 	tool_behaviour = null
+
 
 /*
 CODE ARCHIVE
