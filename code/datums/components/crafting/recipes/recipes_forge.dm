@@ -180,6 +180,19 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
+	
+/datum/crafting_recipe/melee/forged/throwing
+	name = "Throwing Knife"
+	result = /obj/item/melee/onehanded/knife/throwing
+	time = 90
+	reqs = list(
+		/obj/item/stack/sheet/prewar = 3,
+		/obj/item/stack/sheet/leather = 1,
+		)
+	tools = list(TOOL_FORGE)
+	category = CAT_WEAPONRY
+	subcategory = CAT_MELEE
+
 
 /datum/crafting_recipe/melee/forged/bayonet
 	name = "Bayonet Knife"
@@ -292,7 +305,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE
 
 
 // LEGION SPECIFIC
@@ -310,7 +323,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/gladius
 	name = "Gladius"
@@ -319,12 +332,12 @@
 		/obj/item/stack/sheet/metal = 15,
 		/obj/item/stack/sheet/cloth = 1,
 		/obj/item/swordhandle = 1,
-		) 
+		)
 	time = 280
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionshield
 	name = "Legion Shield"
@@ -338,7 +351,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/legionlance
 	name = "Legion Lance"
@@ -352,7 +365,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE
 
 
 //polearms
@@ -515,4 +528,4 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	always_availible = FALSE
+	always_available = FALSE

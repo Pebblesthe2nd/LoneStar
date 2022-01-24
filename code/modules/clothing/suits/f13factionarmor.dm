@@ -61,9 +61,10 @@
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
+// Edited desc to help the player figure out it got pockets, the "gimmick" it has.
 /obj/item/clothing/suit/armor/f13/raider/badlands
 	name = "badlands raider armor"
-	desc = "(III*) A leather top with a bandolier over it and a straps that cover the arms."
+	desc = "(III*) A leather top with a bandolier over it and a leather straps. Can store some ammo or other things."
 	icon_state = "badlands"
 	item_state = "badlands"
 	armor = list("tier" = 3, "linebullet" = -10, "linelaser" = -10, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25)
@@ -274,10 +275,10 @@
 	name = "ranger-hunter centurion armor"
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	desc = "(V) Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
+	desc = "(VI) Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
 	icon_state = "legion_rangercent"
 	item_state = "legion_rangercent"
-	armor = list("tier" = 5, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/suit/armor/f13/legion/legate
 	name = "legion legate armor"
@@ -312,7 +313,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
 	icon_state = "legion_slaveleather"
 	item_state = "legion_slaveleather"
-
+	allowed = list(/obj/item/hatchet, /obj/item/scythe, /obj/item/cultivator, /obj/item/shovel)
 
 /*
 /obj/item/clothing/suit/armor/f13/legion/vet/orator
@@ -659,6 +660,15 @@
 /obj/item/clothing/suit/armor/f13/town/deputy/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+	
+/obj/item/clothing/suit/armor/f13/metalarmor/steelbib/oasis
+	name = "heavy steel breastplate"
+	desc = "(V*) a steel breastplate, inspired by a pre-war design. Looks like oasis citiznes added an additional layer of metal on the front face."
+	icon_state = "steel_bib"
+	item_state = "steel_bib"
+	armor = list("tier" = 3, "linebullet" = 75, "linemelee" = 35, "linelaser" = 5, "energy" = 15, "bomb" = 20, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = 0.07
+	strip_delay = 5
 
 //Great Khan
 /obj/item/clothing/suit/armor/khan_jacket
@@ -738,7 +748,7 @@
 
 /obj/item/clothing/suit/armor/f13/wayfarer/tribal_pa
 	name = "tribal full plate armor"
-	desc = "(VI) A set of power armor, now reborn in the paints of the Wayfarers, it serves its new owners as an idol to Kwer, as well as being a piece of heavy covering, with removed parts to allow for quick nimble speed, its hardly what it used to be long ago."
+	desc = "(VII) A set of power armor, now reborn in the paints of the Wayfarers, it serves its new owners as an idol to Kwer, as well as being a piece of heavy covering, with removed parts to allow for quick nimble speed, its hardly what it used to be long ago."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
 	armor = list("tier" = 7, "energy" = 50, "bomb" = 40, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
