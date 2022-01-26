@@ -47,24 +47,16 @@
 
 ///////////////////////
 // FALLOUT TRASH BIN //
-/////////////////////// Low tech
+/////////////////////// Low tech, no displays, don't block movement
 
-/obj/structure/closet/crate/bin/trash_fallout
+/obj/structure/closet/crate/bin/trashbin
 	desc = "Beat up old trash bin."
 	icon = 'icons/fallout/objects/crates.dmi'
 	icon_state = "trashbin"
-
-/obj/structure/closet/crate/bin/trash_fallout/New()
-	..()
-	update_icon()
-
-/obj/structure/closet/crate/bin/trash_fallout/closet_update_overlays(list/new_overlays)
-	. = new_overlays
-	cut_overlays()
-	if(contents.len == 0)
-		. += "trashbin_empty"
-	else
-		. += "trashbin_stuff"
+	density = FALSE
+	dense_when_open = FALSE
+	barricade = FALSE
+	anchorable = FALSE
 
 /obj/structure/closet/crate/bin/trash_fallout/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/storage/bag/trash))
@@ -83,4 +75,3 @@
 	flick("animate_trashbin", src)
 	spawn(13)
 		playsound(loc, close_sound, 15, 1, -3)
-		update_icon()
