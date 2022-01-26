@@ -844,6 +844,7 @@
 /obj/item/clothing/head/helmet/f13/khan
 	name = "Great Khan helmet"
 	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	icon = 'icons/fallout/clothing/khans.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
