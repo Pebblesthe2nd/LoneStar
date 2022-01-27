@@ -11,7 +11,7 @@
 	icon = 'icons/fallout/mobs/humans/raider.dmi'
 	icon_state = "raider_melee"
 	icon_living = "raider_melee"
-	icon_dead = "raider_generic_dead"
+	icon_dead = "raider_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	turns_per_move = 5
 	maxHealth = 140
@@ -116,9 +116,9 @@
 // RAIDER BOSS
 /mob/living/simple_animal/hostile/raider/ranged/boss
 	name = "Raider Boss"
-	icon_state = "raider_boss"
-	icon_living = "raider_boss"
-	icon_dead = "raider_boss_dead"
+	icon_state = "raiderboss"
+	icon_living = "raiderboss"
+	icon_dead = "raiderboss_dead"
 	maxHealth = 170
 	health = 170
 	extra_projectiles = 3
