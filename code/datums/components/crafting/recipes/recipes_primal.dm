@@ -372,7 +372,7 @@
 	name = "Light Armored Cloak"
 	result = /obj/item/clothing/suit/armor/f13/lightcloak
 	time = 120
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 8,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 8,
 				/obj/item/stack/sheet/leather = 6,
 				/obj/item/stack/crafting/goodparts = 1,
 				/obj/item/stack/sheet/cloth = 5)

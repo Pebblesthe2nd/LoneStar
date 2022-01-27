@@ -37,7 +37,7 @@
 	bare_wound_bonus = 0 
 	sharpness = SHARP_EDGED
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 4,
-							/obj/item/stack/sheet/animalhide/deathclaw = 2,
+							/obj/item/stack/sheet/animalhide/deathclaw = 2, /obj/item/stack/sheet/deathclaw = 1,
 							/obj/item/stack/sheet/bone = 4)
 	response_help_simple  = "pets"
 	response_disarm_simple = "gently pushes aside"
@@ -75,7 +75,7 @@
 	armour_penetration = 0.35
 	color = rgb(95,104,94)
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/deathclaw = 6,
-							/obj/item/stack/sheet/animalhide/deathclaw = 3)
+							/obj/item/stack/sheet/animalhide/deathclaw = 3, /obj/item/reagent_containers/food/snacks/f13/deathclawegg = 1, /obj/item/stack/sheet/deathclaw = 2)
 
 //Legendary Deathclaw
 /mob/living/simple_animal/hostile/deathclaw/legendary

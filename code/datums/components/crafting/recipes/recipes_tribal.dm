@@ -147,29 +147,6 @@
 	reqs = list(/obj/item/stack/sheet/bone = 1)
 	tools = list(TOOL_WORKBENCH)
 
-//Gecko outfits already exist, see below.
-/*datum/crafting_recipe/tribal/maletribal
-	//name = "Coarse Tribal outfit"
-	//result = /obj/item/clothing/under/f13/tribal
-	//reqs = list(/obj/item/stack/sheet/cloth = 3)
-	//tools = list(TOOL_WORKBENCH)
-	//time = 30
-*/
-
-/datum/crafting_recipe/tribal/tribaloutfit
-	name = "Male Tribal Outfit"
-	result = /obj/item/clothing/under/f13/tribal
-	time = 20
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2)
-	tools = list(TOOL_WORKBENCH)
-
-/datum/crafting_recipe/tribal/tribaloutfitfemale
-	name = "Female Tribal Outfit"
-	result = /obj/item/clothing/under/f13/female/tribal
-	time = 20
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2)
-	tools = list(TOOL_WORKBENCH)
-
 /datum/crafting_recipe/tribal/tribalarmoredcloth
 	name = "Patched Tribal Loincloth"
 	result = /obj/item/clothing/under/f13/wayfarer/hunter
@@ -238,7 +215,7 @@
 	name = "White Legs Light Armour"
 	result = /obj/item/clothing/suit/f13/tribal/light/whitelegs
 	time = 30
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 2,
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/crafting/metalparts = 4)
 
@@ -246,7 +223,7 @@
 	name = "White Legs Armour"
 	result = /obj/item/clothing/suit/f13/tribal/whitelegs
 	time = 60
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 3,
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/crafting/goodparts = 5)
 
@@ -255,7 +232,7 @@
 	result = /obj/item/clothing/suit/f13/tribal/heavy/whitelegs
 	time = 60
 	reqs = list(/obj/item/clothing/suit/f13/tribal/whitelegs = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 3,
+				/obj/item/stack/sheet/animalhide/gecko_tanned = 3,
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/crafting/goodparts = 5)
 
@@ -263,14 +240,14 @@
 	name = "White Legs Garb"
 	result = /obj/item/clothing/under/f13/whitelegs
 	time = 30
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 1,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 1,
 				/obj/item/stack/sheet/cloth = 2)
 
 /datum/crafting_recipe/tribalwar/whitelegs/femalegarb
 	name = "Female White Legs Garb"
 	result = /obj/item/clothing/under/f13/female/whitelegs
 	time = 30
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 1,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 1,
 				/obj/item/stack/sheet/cloth = 2)
 
 //Rustwalkers
@@ -362,7 +339,7 @@
 	name = "Dead Horses Light Armour"
 	result = /obj/item/clothing/suit/f13/tribal/light/deadhorses
 	time = 30
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko_tanned = 2,
 				/obj/item/stack/sheet/cloth = 1)
 
 /datum/crafting_recipe/tribalwar/deadhorses/armour
@@ -370,7 +347,7 @@
 	result = /obj/item/clothing/suit/f13/tribal/deadhorses
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/animalhide/gecko = 3,
+				/obj/item/stack/sheet/animalhide/gecko_tanned = 3,
 				/obj/item/stack/sheet/cloth = 2)
 
 /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour

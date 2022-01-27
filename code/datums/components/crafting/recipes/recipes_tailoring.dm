@@ -17,8 +17,8 @@
 	name = "Combat Jacket"
 	result = /obj/item/clothing/suit/armor/f13/leather_jacket/combat
 	reqs = list(/obj/item/clothing/suit/armor/f13/leather_jacket = 1,
-				/obj/item/stack/sheet/animalhide/brahmin = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 1,
+				/obj/item/stack/sheet/animalhide/brahmin_tanned = 1,
+				/obj/item/stack/sheet/animalhide/gecko_tanned = 1,
 				/obj/item/stack/sheet/leather = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
@@ -71,18 +71,8 @@
 	name = "Gecko Hide Armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
 	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 3
+				/obj/item/stack/sheet/animalhide/gecko_tanned = 3
 	)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-
-/datum/crafting_recipe/leather_jacket
-	name = "Leather Jacket"
-	result = /obj/item/clothing/suit/armor/f13/leather_jacket
-	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 2,
-				/obj/item/weaponcrafting/string = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -668,36 +658,6 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 
-/datum/crafting_recipe/cowboyhat
-	name = "Cowboy Hat"
-	result = /obj/item/clothing/head/f13/cowboy
-	reqs = list(/obj/item/stack/sheet/leather = 2,
-				/obj/item/stack/sheet/cloth = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
-/datum/crafting_recipe/cowboyhatrustic
-	name = "Rustic Cowboy Hat"
-	result = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	reqs = list(/obj/item/stack/sheet/leather = 2,
-				/obj/item/stack/sheet/cloth = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
-/datum/crafting_recipe/mantle
-	name = "Hide mantle"
-	result = /obj/item/clothing/suit/f13/mantle_liz
-	reqs = list(/obj/item/stack/sheet/leather = 3,
-				/obj/item/stack/sheet/hay = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_WASTELAND
-
 /datum/crafting_recipe/poncho
 	name = "Poncho"
 	result = /obj/item/clothing/neck/mantle/poncho
@@ -760,33 +720,6 @@ datum/crafting_recipe/steelbib/heavy
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
-/datum/crafting_recipe/cowboyg
-	name = "Grey Prospector outfit"
-	result = /obj/item/clothing/under/f13/cowboyg
-	reqs = list(/obj/item/stack/sheet/cloth = 4)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
-/datum/crafting_recipe/cowboyb
-	name = "Brown Prospector outfit"
-	result = /obj/item/clothing/under/f13/cowboyb
-	reqs = list(/obj/item/stack/sheet/cloth = 4)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
-/datum/crafting_recipe/cowboyt
-	name = "Tan Prospector outfit"
-	result = /obj/item/clothing/under/f13/cowboyt
-	reqs = list(/obj/item/stack/sheet/cloth = 4)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 
@@ -853,15 +786,6 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 
-/datum/crafting_recipe/roving
-	name = "Roving Trader Outfit"
-	result = /obj/item/clothing/under/f13/roving
-	reqs = list(/obj/item/stack/sheet/cloth = 4)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/bennys
 	name = "Fancy Suit"
 	result = /obj/item/clothing/under/f13/bennys
@@ -871,37 +795,10 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 
-/datum/crafting_recipe/mercadv
-	name = "Merc Adventurer outfit"
-	result = /obj/item/clothing/under/f13/mercadv
-	reqs = list(/obj/item/stack/sheet/cloth = 3)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
 /datum/crafting_recipe/fmercadv
 	name = "Female Merc Adventurer outfit"
 	result = /obj/item/clothing/under/f13/female/mercadv
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
-/datum/crafting_recipe/brahmin
-	name = "Brahmin-skin outfit (male)"
-	result = /obj/item/clothing/under/f13/mercadv
-	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-
-/datum/crafting_recipe/fbrahmin
-	name = "Brahmin-skin outfit (female)"
-	result = /obj/item/clothing/under/f13/female/brahmin
-	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
@@ -1063,14 +960,6 @@ datum/crafting_recipe/steelbib/heavy
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/fannypack
-	name = "Fannypack"
-	result = /obj/item/storage/belt/fannypack
-	reqs = list(/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/leather = 1)
-	time = 20
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
 //f13 additions
 /datum/crafting_recipe/metalarmor
 	name = "metal armor"
@@ -1093,189 +982,5 @@ datum/crafting_recipe/steelbib/heavy
 	time = 120
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/IImetalarmor
-	name = "upgrading metal armor"
-	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
-	reqs = list(/obj/item/clothing/suit/armor/f13/bmetalarmor = 1,
-				/obj/item/stack/cable_coil = 1,
-				/obj/item/stack/sheet/plasteel = 2)
-	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	time = 120
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-//Tribal armors
-/datum/crafting_recipe/tribalgeckoarmor
-	name = "Gecko Armor"
-	result = /obj/item/clothing/suit/armor/f13/tribal
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2,
-				/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/hay = 3)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
 */
-
-/*
-/datum/crafting_recipe/supaflyhelm_reinforced
-	name = "reinforced supafly helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/r/supafly
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider/supafly = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/supafly_reinforced
-	name = "reinforced supafly armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/supafly
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/supafly = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/yankeehelm_reinforced
-	name = "reinforced yankee helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/r/yankee/
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider/yankee = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/yankee_reinforced
-	name = "reinforced yankee armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/yankee
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/yankee = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/blasterhelm_reinforced
-	name = "reinforced blaster helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/r/blastmaster
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider/blastmaster = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/blaster_reinforced
-	name = "reinforced blaster armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/blastmaster
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/blastmaster = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/sadisthelm_reinforced
-	name = "reinforced sadist helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/r/arclight
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider/arclight = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/sadist_reinforced
-	name = "reinforced sadist armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/sadist
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/sadist = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/fiendshelm_reinforced
-	name = "reinforced fiend helmet"
-	result = /obj/item/clothing/head/helmet/f13/fiend_reinforced
-	reqs = list(/obj/item/clothing/head/helmet/f13/fiend = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/badlands_reinforced
-	name = "reinforced badlands armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/badlands
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/badlands = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/painspikehelm_reinforced
-	name = "reinforced painspike helmet"
-	result = /obj/item/clothing/head/helmet/f13/raider/r/psychotic
-	reqs = list(/obj/item/clothing/head/helmet/f13/raider/psychotic = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/painspike_reinforced
-	name = "reinforced painspike armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/painspike
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/painspike = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/iconoclast_reinforced
-	name = "reinforced iconoclast armor"
-	result = /obj/item/clothing/suit/armor/f13/raider/r/iconoclast
-	reqs = list(/obj/item/clothing/suit/armor/f13/raider/iconoclast = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/ncrexile_reinforced
-	name = "reinforced NCR deserter armor"
-	result = /obj/item/clothing/suit/armor/f13/exile/r/ncr
-	reqs = list(/obj/item/clothing/suit/armor/f13/exile/ncrexile = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/legion_reinforced
-	name = "reinforced punished Legion armor"
-	result = /obj/item/clothing/suit/armor/f13/exile/r/legion
-	reqs = list(/obj/item/clothing/suit/armor/f13/exile/legexile = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-/datum/crafting_recipe/bos_reinforced
-	name = "reinforced BoS exile armor"
-	result = /obj/item/clothing/suit/armor/f13/exile/r/bos
-	reqs = list(/obj/item/clothing/suit/armor/f13/exile/bosexile = 1,
-				/obj/item/stack/crafting/goodparts = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-*/
-
 

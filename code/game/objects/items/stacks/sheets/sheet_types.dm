@@ -11,7 +11,6 @@
  * Brass (clockwork cult)
  * Bronze (bake brass)
  * Gems
- * Bones
  * Plastic
  * Paper Frames
  * Cotton/Duracotton
@@ -115,19 +114,6 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new /datum/stack_recipe("Black King", /obj/structure/chess/blackking, 2, time = 10, one_per_turf = 1, on_floor = 1), \
 	)),
 ))
-
-/* Temp cache of commented out metal stack stuff.
-		new /datum/stack_recipe("science airlock assembly", /obj/structure/door_assembly/door_assembly_science, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-		new /datum/stack_recipe("mining airlock assembly", /obj/structure/door_assembly/door_assembly_min, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-		new /datum/stack_recipe("atmospherics airlock assembly", /obj/structure/door_assembly/door_assembly_atmo, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-		new /datum/stack_recipe("virology airlock assembly", /obj/structure/door_assembly/door_assembly_viro, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-		new /datum/stack_recipe("external maintenance airlock assembly", /obj/structure/door_assembly/door_assembly_extmai, 4, time = 50, one_per_turf = 1, on_floor = 1), \
-
-	new/datum/stack_recipe("reflector frame", /obj/structure/reflector, 5, time = 25, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("apc frame", /obj/item/wallframe/apc, 2), \
-	new/datum/stack_recipe("air alarm frame", /obj/item/wallframe/airalarm, 2), \
-	new/datum/stack_recipe("fire alarm frame", /obj/item/wallframe/firealarm, 2), \
-*/
 
 /obj/item/stack/sheet/metal
 	name = "metal"
@@ -745,44 +731,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	item_state = "sheet-greatergem"
 	novariants = TRUE
 	merge_type = /obj/item/stack/sheet/greatergem
-
-// Bones
-
-GLOBAL_LIST_INIT(bone_recipes, list(
-	new /datum/stack_recipe("bone dagger", /obj/item/melee/onehanded/knife/bone, 2, time = 20),
-	null, \
-	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/bone, 6, time = 30),
-	new /datum/stack_recipe("skull helmet", /obj/item/clothing/head/helmet/skull, 4, time = 30),
-	null, \
-	new/datum/stack_recipe_list("medicine", list( \
-		new /datum/stack_recipe("bone pestle", /obj/item/pestle, 1, time = 20),\
-		new /datum/stack_recipe("bone mortar", /obj/item/reagent_containers/glass/mortar, 3, time = 20),\
-		new /datum/stack_recipe("bone chemical isolator", /obj/item/reagent_containers/glass/primitive_chem_isolator, 3, time = 20),\
-	)), \
-	null, \
-))
-
-/obj/item/stack/sheet/bone
-	name = "bones"
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "bone"
-	item_state = "sheet-bone"
-	custom_materials = list(/datum/material/bone = MINERAL_MATERIAL_AMOUNT)
-	singular_name = "bone"
-	desc = "Someone's been drinking their milk."
-	force = 7
-	throwforce = 5
-	max_amount = 12
-	w_class = WEIGHT_CLASS_NORMAL
-	throw_speed = 1
-	throw_range = 3
-	grind_results = list(/datum/reagent/carbon = 10)
-	merge_type = /obj/item/stack/sheet/bone
-	material_type = /datum/material/bone
-
-/obj/item/stack/sheet/bone/get_main_recipes()
-	. = ..()
-	. += GLOB.bone_recipes
 
 
 // Plastic

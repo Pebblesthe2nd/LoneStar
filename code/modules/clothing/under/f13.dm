@@ -184,7 +184,7 @@
 	item_color = "doctor_f"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-/obj/item/clothing/under/f13/caravan
+/obj/item/clothing/under/f13/caravan // leather inhand
 	name = "caravan pants"
 	desc = "Brown thick caravaneer pants."
 	icon_state = "caravan"
@@ -502,14 +502,7 @@
 	item_color = "mercc"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-/obj/item/clothing/under/f13/cowboyb
-	name = "cowboy outfit"
-	desc = "A dirt brown cowboy outfit. Specially usefull for herding brahmins."
-	icon_state = "cowboyb"
-	item_state = "cowboyb"
-	item_color = "cowboyb"
-
-/obj/item/clothing/under/f13/cowboyg
+/obj/item/clothing/under/f13/cowboyg // Leather inhand crafting
 	name = "cowboy outfit"
 	desc = "A dirt grey cowboy outfit. Specially usefull for herding brahmins."
 	icon_state = "cowboyg"
@@ -603,7 +596,7 @@
 	icon_state = "xenon"
 	item_state = "xenon"
 
-/obj/item/clothing/under/f13/roving
+/obj/item/clothing/under/f13/roving // leather inhand
 	name = "roving trader outfit "
 	desc = "It's an outfit commonly worn by the roving traders."
 	icon_state = "roving"
@@ -619,7 +612,7 @@
 	item_color = "follower"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-/obj/item/clothing/under/f13/raider_leather
+/obj/item/clothing/under/f13/raider_leather // leather inhand
 	name = "raider leathers"
 	desc = "Scraps of material thrown together and typically worn by raiders."
 	icon_state = "raider_leather"
@@ -987,7 +980,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
 
-/obj/item/clothing/under/f13/cowboyt //Originally cowboy and mafia stuff by Nienhaus
+/obj/item/clothing/under/f13/cowboyt //Originally cowboy and mafia stuff by Nienhaus  // Leather inhand crafting
 	name = "dusty prospector outfit"
 	desc = "A white shirt with shiny brass buttons and a pair of tan trousers, commonly worn by prospectors."
 	icon_state = "cowboyt"
@@ -995,7 +988,7 @@
 	item_color = "cowboyt"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 20, "fire" = 20, "acid" = 40)
 
-/obj/item/clothing/under/f13/cowboyb
+/obj/item/clothing/under/f13/cowboyb // Leather inhand crafting
 	name = "sleek prospector outfit"
 	desc = "A white shirt with brass buttons and a pair of brown trousers, commonly worn by prospectors."
 	icon_state = "cowboyb"
@@ -1153,7 +1146,7 @@
 	item_color = "doctor_f"
 	fitted = NO_FEMALE_UNIFORM
 
-/obj/item/clothing/under/f13/mercadv //Male version
+/obj/item/clothing/under/f13/mercadv //Male version, broken sprite
 	name = "male merc adventurer outfit"
 	desc = "A large leather jacket with torn-off sleeves, paired with a red sweater, a necklace with three teeth of unknown origin strung on, and a pair of brown leather pants.<br>There is also a rough leather bandolier for additional storage capacity.<br>Fitted for male wastelanders."
 	icon_state = "merca_m"

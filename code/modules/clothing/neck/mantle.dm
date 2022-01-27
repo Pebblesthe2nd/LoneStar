@@ -83,23 +83,26 @@
 	desc = "A fine mantle marking the wearer as a Commander of some long lost nation."
 	icon_state = "commander"
 
+// Treasurers mantle - special pockets
 /obj/item/clothing/neck/mantle/treasurer
 	name = "treasurers mantle"
 	desc = "The grey and black mantle with gold thread trimming shows the wearer is entrusted with matters of money and records. Hidden inner pockets can store money, keys and documents safely, and a discrete sheath for a knife for self defence is also attached."
 	icon_state = "treasurer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 
+// Bighorner mantle - no pockets, small melee defence
 /obj/item/clothing/neck/mantle/peltfur
-	name = "fur pelt"
-	desc = "A pelt made from longhorner fur."
-	icon_state = "peltfur"
+	name = "bighoner mantle"
+	desc = "A mantle made from a bighorner pelt."
+	icon_state = "peltbighorner"
 	cold_protection = CHEST|GROIN|ARMS
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/neck/mantle/peltmountain
-	name = "fur pelt"
-	desc = "A pelt made from a mountain bear, brought in from Colorado."
-	icon_state = "peltmountain"
+// Wolf mantle - no pockets, small melee defence
+/obj/item/clothing/neck/mantle/peltwolf
+	name = "wolf mantle"
+	desc = "A mantle made from a wolf pelt, brought in from someplace north."
+	icon_state = "peltwolf"
 	cold_protection = CHEST|GROIN|ARMS
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 

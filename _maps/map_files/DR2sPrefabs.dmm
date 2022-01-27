@@ -6035,7 +6035,7 @@
 /area/space)
 "rN" = (
 /obj/structure/bed/mattress/pregame,
-/obj/item/stack/sheet/animalhide/molerat,
+/obj/item/stack/sheet/animalhide,
 /obj/effect/landmark/start/f13/vetlegionary,
 /turf/open/indestructible/ground/inside/mountain,
 /area/space)
@@ -6083,7 +6083,7 @@
 "rV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/mattress/pregame,
-/obj/item/stack/sheet/animalhide/molerat,
+/obj/item/stack/sheet/animalhide,
 /obj/effect/landmark/start/f13/vetlegionary,
 /turf/open/indestructible/ground/inside/mountain,
 /area/space)
@@ -6165,7 +6165,7 @@
 /area/space)
 "si" = (
 /obj/structure/bed/mattress/pregame,
-/obj/item/stack/sheet/animalhide/molerat,
+/obj/item/stack/sheet/animalhide,
 /obj/effect/landmark/start/f13/explorer,
 /turf/open/indestructible/ground/inside/mountain,
 /area/space)

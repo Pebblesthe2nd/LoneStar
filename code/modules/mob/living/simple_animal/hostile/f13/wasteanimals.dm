@@ -13,7 +13,7 @@
 	speak_chance = 0
 	turns_per_move = 5
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2, /obj/item/stack/sheet/animalhide/gecko = 1)
-	butcher_results = list(/obj/item/stack/sheet/bone = 1)
+	butcher_results = list( /obj/item/stack/sheet/sinew = 2)
 	butcher_difficulty = 1
 	response_help_simple = "pets"
 	response_disarm_simple = "gently pushes aside"
@@ -53,9 +53,9 @@
 	melee_damage_upper = 45
 
 
-//////////////////////////
-// NIGHTSTALKERS & PELT //
-//////////////////////////
+///////////////////
+// NIGHTSTALKERS //
+///////////////////
 
 /mob/living/simple_animal/hostile/stalker
 	name = "nightstalker"
@@ -68,8 +68,8 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
 	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/bone = 2)
-	butcher_results = list(/obj/item/clothing/head/f13/stalkerpelt = 1)
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/item/stack/sheet/bone = 3)
+	butcher_results = list(/obj/item/stack/sheet/animalhide/raw_stalkerpelt = 1)
 	butcher_difficulty = 3
 	response_help_simple = "pets"
 	response_disarm_simple = "gently pushes aside"
@@ -126,7 +126,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
 	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/bone = 1)
 	response_help_simple = "pets"
 	response_disarm_simple = "pushes aside"
 	response_harm_simple = "kicks"
@@ -176,12 +176,6 @@
 		M.adjustToxLoss(5, 0)
 	..()
 
-/obj/item/clothing/head/f13/stalkerpelt
-	name = "nightstalker pelt"
-	desc = "A hat made from nightstalker pelt which makes the wearer feel both comfortable and elegant."
-	icon_state = "stalkerpelt"
-	item_state = "stalkerpelt"
-
 /obj/structure/stalkeregg
 	name = "nightstalker egg"
 	desc = "A shiny egg coming from a nightstalker."
@@ -193,7 +187,7 @@
 
 /////////////
 // MOLERAT //
-/////////////
+///////////// - butchery gives meat, sinew
 
 /mob/living/simple_animal/hostile/molerat
 	name = "molerat"
@@ -205,8 +199,8 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_chance = 0
 	turns_per_move = 5
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2, /obj/item/stack/sheet/sinew = 1,/obj/item/stack/sheet/animalhide/molerat = 1, /obj/item/stack/sheet/bone = 1)
-	butcher_results = list(/obj/item/stack/sheet/bone = 1)
+	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2, /obj/item/stack/sheet/sinew = 2)
+	butcher_results = list(/obj/item/stack/sheet/animalhide = 1)
 	butcher_difficulty = 1.5
 	response_help_simple = "pets"
 	response_disarm_simple = "gently pushes aside"

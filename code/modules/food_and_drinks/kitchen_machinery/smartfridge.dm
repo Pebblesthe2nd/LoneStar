@@ -323,7 +323,7 @@
 		var/obj/item/reagent_containers/food/snacks/S = O
 		if(S.dried_type)
 			return TRUE
-	if(istype(O, /obj/item/stack/sheet/wetleather/)) //no wethide
+	if(istype(O, /obj/item/stack/sheet/wetleather) || istype(O, /obj/item/stack/sheet/animalhide/raw_bigpelt) || istype(O, /obj/item/stack/sheet/animalhide/raw_stalkerpelt) || istype(O, /obj/item/stack/sheet/animalhide/brahmin) || istype(O, /obj/item/stack/sheet/animalhide/raw_wolfpelt) || istype(O, /obj/item/stack/sheet/animalhide/gecko))
 		return TRUE
 	return FALSE
 
@@ -351,7 +351,30 @@
 		new /obj/item/stack/sheet/leather(drop_location(), WL.amount)
 		qdel(WL)
 		return TRUE
+	for(var/obj/item/stack/sheet/animalhide/raw_bigpelt/BH in src)
+		new /obj/item/stack/sheet/animalhide/pelt_horner(drop_location(), BH.amount)
+		qdel(BH)
+		return TRUE
+	for(var/obj/item/stack/sheet/animalhide/raw_stalkerpelt/NS in src)
+		new /obj/item/stack/sheet/animalhide/pelt_stalker(drop_location(), NS.amount)
+		qdel(NS)
+		return TRUE
+	for(var/obj/item/stack/sheet/animalhide/brahmin/BR in src)
+		new /obj/item/stack/sheet/animalhide/brahmin_tanned(drop_location(), BR.amount)
+		qdel(BR)
+		return TRUE
+	for(var/obj/item/stack/sheet/animalhide/raw_wolfpelt/WP in src)
+		new /obj/item/stack/sheet/animalhide/wolfpelt(drop_location(), WP.amount)
+		qdel(WP)
+		return TRUE
+	for(var/obj/item/stack/sheet/animalhide/gecko/GK in src)
+		new /obj/item/stack/sheet/animalhide/gecko_tanned(drop_location(), GK.amount)
+		qdel(GK)
+		return TRUE
 	return FALSE
+
+
+
 
 /obj/machinery/smartfridge/drying_rack/emp_act(severity)
 	. = ..()

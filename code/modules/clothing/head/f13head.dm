@@ -644,6 +644,7 @@
 	desc = "Pretty yellow hairband"
 	icon_state = "50shairband"
 	item_state = "50shairband"
+	flags_inv = null
 
 /obj/item/clothing/head/f13/nursehat
 	name = "nursehat"
@@ -669,7 +670,7 @@
 	icon_state = "trilby"
 	item_state = "fedora"
 
-/obj/item/clothing/head/f13/stormchaser
+/obj/item/clothing/head/f13/stormchaser // leather inhand
 	name = "stormchaser hat"
 	desc = "Home, home on the wastes,<br>Where the mole rat and the fire gecko play.<br>Where seldom is heard a discouraging word,<br>And my skin is not glowing all day."
 	icon_state = "stormchaser"
@@ -686,6 +687,18 @@
 /obj/item/clothing/head/f13/headscarf/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
+
+// Added some armor and dynamic hair
+/obj/item/clothing/head/f13/stalkerpelt
+	name = "nightstalker headwear"
+	desc = "Headwear made from nightstalker pelt which makes the wearer feel both comfortable and elegant."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "hat_nightstalker"
+	item_state = "hat_nightstalker"
+	flags_inv = null
+	dynamic_hair_suffix = "generic"
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 20, "energy" = 10, "bomb" = 5, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
 
 /obj/item/clothing/head/f13/pot
 	name = "metal cooking pot"
@@ -770,20 +783,24 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+// Brahmin cowboy hat - made from tanned brahmin hide
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	name = "brahmin leather cowboy hat"
-	desc = "A cowboy hat made from brahmin hides."
+	name = "brahmin cowboy hat"
+	desc = "A cowboy hat made from brahmin hide."
 	icon_state = "brahmin_leather_cowboy_hat"
 	item_state = "brahmin_leather_cowboy_hat"
 	armor = list("tier" = 2, "energy" = 15, "bomb" = 70, "bio" = 70, "rad" = 70, "fire" = 70, "acid" = 15)
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS
+	dynamic_hair_suffix = "generic"
 
+// Basic cowboy hat - leather inhand
 /obj/item/clothing/head/helmet/f13/rustedcowboyhat
-	name = "Rusted Cowboy Hat"
+	name = "rustic cowboy hat"
 	desc = "A hat made from tanned leather hide."
 	icon_state = "rusted_cowboy"
 	item_state = "rusted_cowboy"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS
+	dynamic_hair_suffix = "generic"
 
 /obj/item/clothing/head/f13/police
 	name = "police hat"

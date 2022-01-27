@@ -96,15 +96,6 @@
 //SHOES//
 /////////
 
-/datum/crafting_recipe/laceup
-	name = "Laceup shoes"
-	result = /obj/item/clothing/shoes/laceup
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
 /datum/crafting_recipe/sneakers
 	name = "Sneakers"
 	result = /obj/item/clothing/shoes/sneakers/black
@@ -120,51 +111,6 @@
 	reqs = list(/obj/item/stack/sheet/cloth = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 5
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
-/datum/crafting_recipe/cowboy
-	name = "Cowboy boots"
-	result = /obj/item/clothing/shoes/f13/cowboy
-	reqs = list(/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
-/datum/crafting_recipe/explorer
-	name = "Work boots"
-	result = /obj/item/clothing/shoes/f13/explorer
-	reqs = list(/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
-/datum/crafting_recipe/fancy
-	name = "Leather shoes, black"
-	result = /obj/item/clothing/shoes/f13/fancy
-	reqs = list(/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
-/datum/crafting_recipe/brownie
-	name = "Leather shoes, brown"
-	result = /obj/item/clothing/shoes/f13/brownie
-	reqs = list(/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_CLOTHING
-	subcategory = CAT_SHOES
-
-/datum/crafting_recipe/tan
-	name = "Leather shoes, tan"
-	result = /obj/item/clothing/shoes/f13/tan
-	reqs = list(/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_SHOES
 
