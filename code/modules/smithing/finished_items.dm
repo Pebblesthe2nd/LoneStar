@@ -2,7 +2,7 @@
 /obj/item/melee/smith
 	name = "base class obj/item/melee/smith" //tin. handles overlay and quality and shit.
 	desc = "cringe"
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "claymore"
 	item_state = "claymore"
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
@@ -10,8 +10,8 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 6
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	var/quality
 	var/overlay_state = "stick"
 	var/mutable_appearance/overlay
@@ -30,6 +30,8 @@
 
 
 /obj/item/melee/smith/twohand
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	item_flags = NEEDS_PERMIT //it's a bigass sword/spear. beepsky is going to give you shit for it.
 	sharpness = SHARP_EDGED
 	obj_flags = UNIQUE_RENAME
@@ -110,59 +112,26 @@
 //        Spears         //
 ///////////////////////////
 
-
-/obj/item/melee/smith/twohand/halberd
-	name = "halberd"
-	icon_state = "halberd"
-	w_class = WEIGHT_CLASS_HUGE
-	overlay_state = "spearhandle"
-	max_reach = 2
-	slot_flags = ITEM_SLOT_BACK
-	obj_flags = UNIQUE_RENAME
-	wielded_mult = 1.8
-
-/obj/item/melee/smith/twohand/halberd/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/jousting)
-	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
-
 /obj/item/melee/smith/twohand/javelin
 	name = "javelin"
 	icon_state = "javelin"
 	overlay_state = "longhandle"
-	wielded_mult = 1.5
+	item_state = "spear-metal"
+	wielded_mult = 1.6
 	slot_flags = ITEM_SLOT_BACK
 	obj_flags = UNIQUE_RENAME
 	sharpness = SHARP_POINTY
 
-
-/obj/item/melee/smith/twohand/javelin/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/jousting)
-
-/obj/item/melee/smith/twohand/glaive
-	name = "glaive"
-	icon_state = "glaive"
-	overlay_state = "longhandle"
+/obj/item/melee/smith/twohand/spear
+	name = "spear"
+	icon_state = "spear"
+	overlay_state = "shaft_spear"
+	item_state = "spear-metal"
 	max_reach = 2
 	slot_flags = ITEM_SLOT_BACK
 	obj_flags = UNIQUE_RENAME
-	wielded_mult = 1.5
-
-/obj/item/melee/smith/twohand/glaive/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/jousting)
-
-
-/obj/item/melee/smith/twohand/pike
-	name = "pike"
-	icon_state = "pike"
-	overlay_state = "longhandle"
-	max_reach = 2 //yeah ok
 	wielded_mult = 1.3
-	slot_flags = ITEM_SLOT_BACK
-	obj_flags = UNIQUE_RENAME
-	sharpness = SHARP_POINTY
+
 
 //////////////////////////
 //      Other Melee     //
@@ -175,38 +144,70 @@
 	overlay_state = "hammerhandle"
 	var/qualitymod = 0
 
-/obj/item/scythe/smithed //we need to inherit scythecode, but that's about it.
-	obj_flags = UNIQUE_RENAME
-	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 
-
-/obj/item/melee/smith/cogheadclub
-	name = "coghead club"
-	icon_state = "coghead"
-	item_flags = NEEDS_PERMIT
-	obj_flags = UNIQUE_RENAME
-	overlay_state = "stick"
-
-/obj/item/melee/smith/shortsword
-	name = "gladius"
+//Machete
+/obj/item/melee/smith/machete
+	name = "machete"
+	icon_state = "machete"
+	overlay_state = "hilt_machete"
+	item_state = "machete"
 	force = 9
+	armour_penetration = 0.1
 	item_flags = NEEDS_PERMIT
 	obj_flags = UNIQUE_RENAME
 	sharpness = SHARP_EDGED
-	icon_state = "gladius"
-	overlay_state = "gladiushilt"
 
-/obj/item/melee/smith/shortsword/scimitar
-	name = "scimitar"
+/obj/item/melee/smith/machete/simple
+	name = "simple machete"
+	icon_state = "simplemachete"
+	overlay_state = "hilt_simplemachete"
+	item_state = "salvagedmachete"
 	sharpness = SHARP_EDGED
 	obj_flags = UNIQUE_RENAME
-	icon_state = "scimitar"
-	overlay_state = "scimitarhilt"
 
+/obj/item/melee/smith/sword
+	name = "sword"
+	icon_state = "sword"
+	overlay_state = "hilt_sword"
+	item_state = "spatha"
+	sharpness = SHARP_EDGED
+	armour_penetration = 0.1
+	force = 9
+	hitsound = 'sound/weapons/rapierhit.ogg'
+	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
+	obj_flags = UNIQUE_RENAME
+	block_parry_data = /datum/block_parry_data/captain_saber //yeah this is fine i guess
+
+/obj/item/melee/smith/twohand/axe
+	name = "axe"
+	icon_state = "axe"
+	overlay_state = "shaft_axe"
+	item_state = "fireaxe"
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
+	force = 8
+	obj_flags = UNIQUE_RENAME
+	wielded_mult = 2 //affected more by quality. a -1 is 25% less damage, a +1 is 25% more. These bonuses are tripled when wielded.
+
+/obj/item/melee/smith/twohand/sabre
+	name = "heavy sabre"
+	icon_state = "sabre"
+	overlay_state = "hilt_sabre"
+	item_state = "scrapsabre"
+	sharpness = SHARP_EDGED
+	force = 7
+	wielded_mult = 2
+	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT //want to name your katana "DEMON BLADE" or some shit? go ahead, idiot.
+	obj_flags = UNIQUE_RENAME
+	block_parry_data = /datum/block_parry_data/captain_saber //todo
+
+	item_state = "spear-metal"
+
+/*
 /obj/item/melee/smith/wakizashi
 	name = "wakizashi"
 	sharpness = SHARP_EDGED
 	force = 7
+	armour_penetration = 0.1
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	obj_flags = UNIQUE_RENAME
 	icon_state = "waki"
@@ -227,52 +228,13 @@
 	parry_failed_stagger_duration = 3 SECONDS
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
 
-/obj/item/melee/smith/twohand/broadsword
-	name = "broadsword"
-	icon_state = "broadsword"
-	overlay_state = "broadhilt"
-	obj_flags = UNIQUE_RENAME
-	wielded_mult = 1.8
-
-/obj/item/melee/smith/twohand/zweihander
-	name = "zweihander"
-	icon_state = "zwei"
-	overlay_state = "zweihilt"
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
-	force = 4
-	obj_flags = UNIQUE_RENAME
-	wielded_mult = 2 //affected more by quality. a -1 is 25% less damage, a +1 is 25% more. These bonuses are tripled when wielded.
-
-/obj/item/melee/smith/twohand/katana
-	name = "katana"
-	icon_state = "katana"
-	overlay_state = "katanahilt"
-	force = 7
-	wielded_mult = 2
-	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT //want to name your katana "DEMON BLADE" or some shit? go ahead, idiot.
-	obj_flags = UNIQUE_RENAME
-	block_parry_data = /datum/block_parry_data/captain_saber //todo
-
-/obj/item/melee/smith/sabre
-	name = "sabre"
-	icon_state = "sabre"
-	sharpness = SHARP_EDGED
-	overlay_state = "sabrehilt"
-	armour_penetration = 0.3
-	force = 9
-	hitsound = 'sound/weapons/rapierhit.ogg'
-	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
-	obj_flags = UNIQUE_RENAME
-	block_parry_data = /datum/block_parry_data/captain_saber //yeah this is fine i guess
-
-/obj/item/melee/smith/sabre/rapier
+/obj/item/melee/smith/sword/rapier
 	name = "rapier"
 	icon_state = "rapier"
 	sharpness = SHARP_EDGED
 	overlay_state = "rapierhilt"
 	force = 6 //less force, stronger parry
 	sharpness = SHARP_POINTY
-	armour_penetration = 0.6
 	obj_flags = UNIQUE_RENAME
 	block_parry_data = /datum/block_parry_data/smithrapier
 
@@ -290,6 +252,18 @@
 	parry_efficiency_considered_successful = 120
 	parry_efficiency_perfect = 120
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
+
+/obj/item/scythe/smithed //we need to inherit scythecode, but that's about it.
+	obj_flags = UNIQUE_RENAME
+	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
+
+/obj/item/melee/smith/cogheadclub
+	name = "coghead club"
+	icon_state = "coghead"
+	item_flags = NEEDS_PERMIT
+	obj_flags = UNIQUE_RENAME
+	overlay_state = "stick"
+*/
 
 //unique hammers
 /obj/item/melee/smith/hammer/toolbox

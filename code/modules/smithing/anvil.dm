@@ -49,24 +49,21 @@
 	var/artifactrolled = FALSE
 	var/itemqualitymax = 20
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
-	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
 	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
-	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
-	RECIPE_SHORTSWORD = /obj/item/smithing/shortswordblade,
-	RECIPE_SCIMITAR = /obj/item/smithing/scimitarblade,
-	RECIPE_WAKI = /obj/item/smithing/wakiblade,
-	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
-	RECIPE_SABRE = /obj/item/smithing/sabreblade,
+	RECIPE_MACHETE = /obj/item/melee/smith/machete,
+	RECIPE_SIMPLEMACHETE = /obj/item/melee/smith/machete/simple,
 	RECIPE_SMALLKNIFE = /obj/item/smithing/knifeblade,
-	RECIPE_BROADSWORD = /obj/item/smithing/broadblade,
-	RECIPE_ZWEIHANDER = /obj/item/smithing/zweiblade,
-	RECIPE_KATANA = /obj/item/smithing/katanablade,
-	RECIPE_HALBERD = /obj/item/smithing/halberdhead,
-	RECIPE_GLAIVE = /obj/item/smithing/glaivehead,
-	RECIPE_PIKE = /obj/item/smithing/pikehead)
+	RECIPE_SWORD = /obj/item/smithing/swordblade,
+	RECIPE_AXE = /obj/item/melee/smith/twohand/axe,
+	RECIPE_HEAVYSABRE = /obj/item/smithing/heavysabreblade,
+	RECIPE_SPEAR = /obj/item/smithing/spearhead)
+//	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+//	RECIPE_WAKI = /obj/item/smithing/wakiblade,
+//	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
+//	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
+//	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
 
 /obj/structure/anvil/Initialize()
 	. = ..()
