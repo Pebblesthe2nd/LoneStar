@@ -32,7 +32,7 @@
 	faction = list("vault", "city")
 	check_friendly_fire = 1
 	status_flags = CANPUSH
-	del_on_death = 1
+	del_on_death = TRUE
 	speak_chance = 1
 
 /obj/effect/mob_spawn/human/corpse/vault
@@ -116,6 +116,7 @@
 	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
 	icon_state = "enclave_specialist"
 	icon_living = "enclave_specialist"
+	del_on_death = TRUE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	speak_chance = 0
 	turns_per_move = 5
@@ -131,7 +132,6 @@
 	ranged = TRUE
 	robust_searching = TRUE
 	healable = TRUE
-
 	maxHealth = 250
 	health = 250
 	melee_damage_lower = 35
@@ -254,7 +254,7 @@
 	unsuitable_atmos_damage = 15
 	check_friendly_fire = 1
 	status_flags = CANPUSH
-	del_on_death = 1
+	del_on_death = TRUE
 	speak = list("Semper Invicta!")
 	speak_emote = list("rushes")
 	speak_chance = 1
@@ -343,7 +343,7 @@
 	unsuitable_atmos_damage = 15
 	check_friendly_fire = 1
 	status_flags = CANPUSH
-	del_on_death = 1
+	del_on_death = TRUE
 	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
 	speak_emote = list("says")
 	speak_chance = 1
@@ -430,7 +430,7 @@
 	unsuitable_atmos_damage = 15
 	check_friendly_fire = 1
 	status_flags = CANPUSH
-	del_on_death = 1
+	del_on_death = TRUE
 	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
 	speak_emote = list("says")
 	speak_chance = 1
