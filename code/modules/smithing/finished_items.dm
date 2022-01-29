@@ -200,9 +200,19 @@
 	obj_flags = UNIQUE_RENAME
 	block_parry_data = /datum/block_parry_data/captain_saber //todo
 
-	item_state = "spear-metal"
+/obj/item/melee/smith/twohand/katana
+	name = "heavy sabre"
+	icon_state = "sabre"
+	overlay_state = "hilt_sabre"
+	item_state = "scrapsabre"
+	sharpness = SHARP_EDGED
+	force = 7
+	wielded_mult = 2
+	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT //want to name your katana "DEMON BLADE" or some shit? go ahead, idiot.
+	obj_flags = UNIQUE_RENAME
+	block_parry_data = /datum/block_parry_data/captain_saber //todo
 
-/*
+
 /obj/item/melee/smith/wakizashi
 	name = "wakizashi"
 	sharpness = SHARP_EDGED
@@ -227,7 +237,7 @@
 	parry_efficiency_perfect = 120
 	parry_failed_stagger_duration = 3 SECONDS
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
-
+/*
 /obj/item/melee/smith/sword/rapier
 	name = "rapier"
 	icon_state = "rapier"

@@ -3,31 +3,32 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_SMALLPICK "dbp" //draw bend punch
+
 #define RECIPE_LARGEPICK "ddbp" //draw draw bend punch
 #define RECIPE_SHOVEL "dfup" //draw fold upset punch
 #define RECIPE_HAMMER "sfp" //shrink fold punch
 
-
 #define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
-#define RECIPE_SHORTSWORD "dff" //draw fold fold
+#define RECIPE_SIMPLEMACHETE "dff" //draw fold fold
 #define RECIPE_WAKI "dfsf" //draw  fold shrink fold
-#define RECIPE_SCIMITAR "dfb" //draw fold bend
+#define RECIPE_HEAVYSABRE "dfb" //draw fold bend
 #define RECIPE_SABRE "ddsf" //draw draw shrink fold
 #define RECIPE_RAPIER "sdfd" //shrink draw  fold draw
-#define RECIPE_BROADSWORD "dfuf" //draw fold upset fold
-#define RECIPE_ZWEIHANDER "udfsf" //upset draw fold shrink fold
+#define RECIPE_SWORD "dfuf" //draw fold upset fold
+#define RECIPE_AXE "udfsf" //upset draw fold shrink fold
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
 
 
+/*
 #define RECIPE_SCYTHE "bdf" //bend draw fold
 #define RECIPE_COGHEAD "bsf" //bend shrink fold.
-
-
-#define RECIPE_JAVELIN "dbf" //draw bend fold
 #define RECIPE_HALBERD "duffp" //draw upset fold fold punch
 #define RECIPE_GLAIVE "usfp" //upset shrink fold punch
-#define RECIPE_PIKE "ddbf" //draw draw bend fold
+#define RECIPE_SMALLPICK "dbp" //draw bend punch
+*/
+
+#define RECIPE_JAVELIN "dbf" //draw bend fold
+#define RECIPE_SPEAR "ddbf" //draw draw bend fold
 
 /obj/structure/anvil
 	name = "anvil"
@@ -58,9 +59,10 @@
 	RECIPE_SWORD = /obj/item/smithing/swordblade,
 	RECIPE_AXE = /obj/item/melee/smith/twohand/axe,
 	RECIPE_HEAVYSABRE = /obj/item/smithing/heavysabreblade,
-	RECIPE_SPEAR = /obj/item/smithing/spearhead)
+	RECIPE_SPEAR = /obj/item/smithing/spearhead,
+	RECIPE_WAKI = /obj/item/smithing/wakiblade,
+	RECIPE_KATANA = /obj/item/melee/smith/twohand/katana,)
 //	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
-//	RECIPE_WAKI = /obj/item/smithing/wakiblade,
 //	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
 //	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 //	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
