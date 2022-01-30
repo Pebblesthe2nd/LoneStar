@@ -384,7 +384,7 @@
 // SLEDGEHAMMERS //
 ///////////////////			-Bonus damage to all structures, such as barricades
 
-// Sledgehammer			Keywords: Damage 25/45
+// template
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads and barricades."
@@ -392,15 +392,19 @@
 	icon_prefix = "hammer-sledge"
 	attack_speed = CLICK_CD_MELEE * 1.2
 	force = 25
-	throwforce = 30
+	throwforce = 20
 	sharpness = SHARP_NONE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 
-/obj/item/twohanded/sledgehammer/ComponentInitialize()
+// Sledgehammer			Keywords: Damage 25/45
+/obj/item/twohanded/sledgehammer/classic
+	var/qualitymod = 0
+
+/obj/item/twohanded/sledgehammer/classic/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded = 25, force_wielded = 45, icon_wielded="[icon_prefix]2")
 
-/obj/item/twohanded/sledgehammer/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/sledgehammer/classic/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return

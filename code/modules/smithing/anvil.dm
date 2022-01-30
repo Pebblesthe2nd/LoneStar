@@ -3,37 +3,37 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-
+#define RECIPE_SMALLPICK "dbp" //draw bend punch
 #define RECIPE_LARGEPICK "ddbp" //draw draw bend punch
 #define RECIPE_SHOVEL "dfup" //draw fold upset punch
 #define RECIPE_HAMMER "sfp" //shrink fold punch
 
 #define RECIPE_SMALLKNIFE "sdd" //shrink draw draw
 #define RECIPE_SIMPLEMACHETE "dff" //draw fold fold
+#define RECIPE_MACHETE "ddsf" //draw draw shrink fold
 #define RECIPE_WAKI "dfsf" //draw  fold shrink fold
-#define RECIPE_HEAVYSABRE "dfb" //draw fold bend
-#define RECIPE_SABRE "ddsf" //draw draw shrink fold
-#define RECIPE_RAPIER "sdfd" //shrink draw  fold draw
 #define RECIPE_SWORD "dfuf" //draw fold upset fold
-#define RECIPE_AXE "udfsf" //upset draw fold shrink fold
+
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
+#define RECIPE_HEAVYAXE "udfsf" //upset draw fold shrink fold
+#define RECIPE_HEAVYSABRE "dfb" //draw fold bend
 
+#define RECIPE_MACE "spsp" //shrink punch shrink punch
+#define RECIPE_SPEAR "ddbf" //draw draw bend fold
 
-/*
-#define RECIPE_SCYTHE "bdf" //bend draw fold
-#define RECIPE_COGHEAD "bsf" //bend shrink fold.
+/* Commented out jan 2022
+#define RECIPE_JAVELIN "dbf" //draw bend fold dont even have any throwing stuff, misleading duplication.
+#define RECIPE_SCYTHE "bdf" //bend draw fold scythes dont even work in this codebase
+#define RECIPE_COGHEAD "bsf" //bend shrink fold. obsolete by mace
 #define RECIPE_HALBERD "duffp" //draw upset fold fold punch
 #define RECIPE_GLAIVE "usfp" //upset shrink fold punch
-#define RECIPE_SMALLPICK "dbp" //draw bend punch
+#define RECIPE_RAPIER "sdfd" //shrink draw  fold draw
 */
-
-#define RECIPE_JAVELIN "dbf" //draw bend fold
-#define RECIPE_SPEAR "ddbf" //draw draw bend fold
 
 /obj/structure/anvil
 	name = "anvil"
 	desc = "Base class of anvil. This shouldn't exist, but is useable."
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "anvil"
 	density = TRUE
 	anchored = TRUE
@@ -51,21 +51,18 @@
 	var/itemqualitymax = 20
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
 	RECIPE_LARGEPICK = /obj/item/smithing/pickaxehead,
-	RECIPE_MACHETE = /obj/item/melee/smith/machete,
-	RECIPE_SIMPLEMACHETE = /obj/item/melee/smith/machete/simple,
+	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
+	RECIPE_SIMPLEMACHETE = /obj/item/smithing/simplemacheteblade,
+	RECIPE_MACHETE = /obj/item/smithing/macheteblade,
 	RECIPE_SMALLKNIFE = /obj/item/smithing/knifeblade,
 	RECIPE_SWORD = /obj/item/smithing/swordblade,
-	RECIPE_AXE = /obj/item/melee/smith/twohand/axe,
+	RECIPE_HEAVYAXE = /obj/item/smithing/axe,
 	RECIPE_HEAVYSABRE = /obj/item/smithing/heavysabreblade,
 	RECIPE_SPEAR = /obj/item/smithing/spearhead,
 	RECIPE_WAKI = /obj/item/smithing/wakiblade,
-	RECIPE_KATANA = /obj/item/melee/smith/twohand/katana,)
-//	RECIPE_SMALLPICK = /obj/item/smithing/prospectingpickhead,
-//	RECIPE_RAPIER = /obj/item/smithing/rapierblade,
-//	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
-//	RECIPE_COGHEAD = /obj/item/smithing/cogheadclubhead,
+	RECIPE_KATANA = /obj/item/smithing/katanablade,
+	RECIPE_MACE = /obj/item/smithing/macehead,)
 
 /obj/structure/anvil/Initialize()
 	. = ..()
@@ -93,6 +90,20 @@
 		return
 	else if(istype(I, /obj/item/melee/smith/hammer))
 		var/obj/item/melee/smith/hammer/hammertime = I
+		if(!(workpiece_state == WORKPIECE_PRESENT || workpiece_state == WORKPIECE_INPROGRESS))
+			to_chat(user, "You can't work an empty anvil!")
+			return FALSE
+		var/mob/living/carbon/human/F = user
+		if(busy)
+			to_chat(user, "This anvil is already being worked!")
+			return FALSE
+		if(F.busy)
+			to_chat(user, "You are already working another anvil!")
+			return FALSE
+		do_shaping(user, hammertime.qualitymod)
+		return
+	else if(istype(I, /obj/item/twohanded/sledgehammer/classic))
+		var/obj/item/twohanded/sledgehammer/classic/hammertime = I
 		if(!(workpiece_state == WORKPIECE_PRESENT || workpiece_state == WORKPIECE_INPROGRESS))
 			to_chat(user, "You can't work an empty anvil!")
 			return FALSE
@@ -174,6 +185,7 @@
 	user.visible_message("<span class='notice'>[user] works the metal on the anvil with their hammer with a loud clang!</span>", \
 						"<span class='notice'>You [stepdone] the metal with a loud clang!</span>")
 	playsound(src, 'sound/effects/clang2.ogg',40, 2)
+	do_fake_sparks(1, TRUE, src) 
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/effects/clang2.ogg', 40, 2), 15)
 	if(length(stepsdone) >= 3)
 		tryfinish(user)

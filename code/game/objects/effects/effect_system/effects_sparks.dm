@@ -72,7 +72,7 @@
 /obj/effect/particle_effect/fake_sparks/Initialize()
 	. = ..()
 	flick(icon_state, src) // replay the animation
-	playsound(src, "sparks", 100, TRUE)
+//	playsound(src, "sparks", 100, TRUE) since its unused, appropriated for visual effects only, smithing.
 	QDEL_IN(src, 20)
 
 /datum/effect_system/fake_spark_spread

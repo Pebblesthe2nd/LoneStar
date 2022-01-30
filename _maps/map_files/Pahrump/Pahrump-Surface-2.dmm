@@ -3848,6 +3848,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/brotherhood/surface)
+"bEk" = (
+/obj/structure/legion_extractor,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "bEr" = (
 /obj/structure/wreck/trash/halftire,
 /obj/structure/nest/protectron{
@@ -4284,6 +4288,12 @@
 	icon_state = "bluerustychess2"
 	},
 /area/f13/bar)
+"bOR" = (
+/obj/structure/bookcase,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/book/manual/advice_farming,
+/turf/open/floor/wood/f13/old,
+/area/f13/building)
 "bOY" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -9182,7 +9192,9 @@
 	},
 /area/f13/followers)
 "dWw" = (
-/obj/machinery/smartfridge/drying_rack,
+/obj/machinery/smartfridge/bottlerack/gardentool/primitive,
+/obj/item/reagent_containers/spray/plantbgone,
+/obj/item/clothing/gloves/botanic_leather,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -14829,6 +14841,7 @@
 "gjI" = (
 /obj/structure/table/wood,
 /obj/item/storage/toolbox/mechanical,
+/obj/item/book/manual/advice_blacksmith,
 /turf/open/indestructible/ground/inside/subway{
 	name = "stone floor"
 	},
@@ -16348,7 +16361,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/twohanded/sledgehammer,
+/obj/item/twohanded/sledgehammer/classic,
 /obj/machinery/light/small/broken{
 	dir = 8
 	},
@@ -42940,10 +42953,7 @@
 	},
 /area/f13/wasteland)
 "sgJ" = (
-/obj/structure/legion_extractor{
-	pixel_x = -7;
-	pixel_y = 5
-	},
+/obj/machinery/smartfridge/bottlerack/gardentool/primitive,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
@@ -49309,14 +49319,7 @@
 	},
 /area/f13/wasteland)
 "uSz" = (
-/obj/structure/rack,
-/obj/item/storage/bag/plants,
-/obj/item/reagent_containers/spray/plantbgone,
-/obj/item/clothing/gloves/botanic_leather,
-/obj/item/shovel/spade,
-/obj/item/cultivator,
-/obj/item/reagent_containers/glass/bucket/wood,
-/obj/item/reagent_containers/glass/bucket/wood,
+/obj/machinery/smartfridge/drying_rack,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "uSC" = (
@@ -55476,6 +55479,12 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/f13/brotherhood/surface)
+"xBa" = (
+/obj/structure/bookcase,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/book/manual/advice_blacksmith,
+/turf/open/floor/wood/f13/old,
+/area/f13/building)
 "xBo" = (
 /obj/effect/decal/marking{
 	icon_state = "dottedverticalcorroded"
@@ -89567,7 +89576,7 @@ jdE
 gjP
 fyf
 gts
-eQR
+xBa
 mLv
 eQR
 eQR
@@ -90595,7 +90604,7 @@ fbq
 azC
 qOV
 gts
-eQR
+bOR
 rDa
 juw
 mLv
@@ -114597,7 +114606,7 @@ uqW
 oMp
 hom
 rEk
-xXm
+bEk
 xYS
 iVE
 cWG

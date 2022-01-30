@@ -3198,7 +3198,7 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "bXn" = (
-/obj/item/twohanded/sledgehammer,
+/obj/item/twohanded/sledgehammer/classic,
 /obj/structure/table/wood/settler,
 /turf/open/floor/f13/wood,
 /area/f13/den)
@@ -15576,7 +15576,7 @@
 "jIc" = (
 /obj/structure/table/wood/settler,
 /obj/item/hatchet,
-/obj/item/twohanded/sledgehammer,
+/obj/item/twohanded/sledgehammerk/classic,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -19206,7 +19206,7 @@
 "mCO" = (
 /obj/structure/rack,
 /obj/item/twohanded/spear,
-/obj/item/twohanded/sledgehammer,
+/obj/item/twohanded/sledgehammer/classic,
 /obj/item/stock_parts/cell/ammo/ec,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"

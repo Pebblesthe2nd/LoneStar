@@ -3,6 +3,8 @@
 	name = "base class obj/item/melee/smith" //tin. handles overlay and quality and shit.
 	desc = "cringe"
 	icon = 'icons/fallout/objects/blacksmith.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "claymore"
 	item_state = "claymore"
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
@@ -10,8 +12,6 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 6
-	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	var/quality
 	var/overlay_state = "stick"
 	var/mutable_appearance/overlay
@@ -30,8 +30,6 @@
 
 
 /obj/item/melee/smith/twohand
-	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	item_flags = NEEDS_PERMIT //it's a bigass sword/spear. beepsky is going to give you shit for it.
 	sharpness = SHARP_EDGED
 	obj_flags = UNIQUE_RENAME
@@ -54,8 +52,11 @@
 	name = "prospector's pickaxe"
 	desc = "A pickaxe that can sound rocks to find mineral deposits and stop gibtonite detonations."
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "minipick" //todo:sprite
+	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
+	item_state = "pickaxe"
 	sharpness = SHARP_POINTY//it doesnt have a blade it has a point
 
 /obj/item/mining_scanner/prospector/Initialize()
@@ -72,8 +73,11 @@
 	name = "pickaxe"
 	desc = "A pickaxe."
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
 	icon_state = "pickaxe"
+	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
+	item_state = "pickaxe"
 	sharpness = SHARP_POINTY
 
 /obj/item/pickaxe/smithed/Initialize()
@@ -92,7 +96,10 @@
 /obj/item/shovel/smithed
 	name = "shovel"
 	desc = "A shovel."
-	icon = 'icons/obj/smith.dmi'
+	icon = 'icons/fallout/objects/blacksmith.dmi'
+	lefthand_file = 'icons/fallout/onmob/tools/tools_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/tools/tools_righthand.dmi'
+	item_state = "shovel"
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	icon_state = "shovel"
 	sharpness = SHARP_EDGED //it cuts through the earth
@@ -112,21 +119,12 @@
 //        Spears         //
 ///////////////////////////
 
-/obj/item/melee/smith/twohand/javelin
-	name = "javelin"
-	icon_state = "javelin"
-	overlay_state = "longhandle"
-	item_state = "spear-metal"
-	wielded_mult = 1.6
-	slot_flags = ITEM_SLOT_BACK
-	obj_flags = UNIQUE_RENAME
-	sharpness = SHARP_POINTY
 
 /obj/item/melee/smith/twohand/spear
 	name = "spear"
 	icon_state = "spear"
 	overlay_state = "shaft_spear"
-	item_state = "spear-metal"
+	item_state = "spear_smith"
 	max_reach = 2
 	slot_flags = ITEM_SLOT_BACK
 	obj_flags = UNIQUE_RENAME
@@ -137,22 +135,23 @@
 //      Other Melee     //
 ///////////////////////////
 
-
-/obj/item/melee/smith/hammer//blacksmithing, not warhammer.
+//blacksmithing, not warhammer.
+/obj/item/melee/smith/hammer
 	name = "hammer"
 	icon_state = "hammer"
 	overlay_state = "hammerhandle"
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	item_state = "hammer-sledge"
 	var/qualitymod = 0
-
 
 //Machete
 /obj/item/melee/smith/machete
 	name = "machete"
 	icon_state = "machete"
 	overlay_state = "hilt_machete"
-	item_state = "machete"
+	item_state = "machete_smith"
 	force = 9
-	armour_penetration = 0.1
 	item_flags = NEEDS_PERMIT
 	obj_flags = UNIQUE_RENAME
 	sharpness = SHARP_EDGED
@@ -161,7 +160,9 @@
 	name = "simple machete"
 	icon_state = "simplemachete"
 	overlay_state = "hilt_simplemachete"
-	item_state = "salvagedmachete"
+	item_state = "machete_smith"
+	force = 9
+	armour_penetration = 0
 	sharpness = SHARP_EDGED
 	obj_flags = UNIQUE_RENAME
 
@@ -169,19 +170,20 @@
 	name = "sword"
 	icon_state = "sword"
 	overlay_state = "hilt_sword"
-	item_state = "spatha"
 	sharpness = SHARP_EDGED
 	armour_penetration = 0.1
-	force = 9
+	force = 8
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	obj_flags = UNIQUE_RENAME
-	block_parry_data = /datum/block_parry_data/captain_saber //yeah this is fine i guess
+	block_parry_data = /datum/block_parry_data/captain_saber
 
 /obj/item/melee/smith/twohand/axe
-	name = "axe"
+	name = "heavy axe"
 	icon_state = "axe"
 	overlay_state = "shaft_axe"
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	item_state = "fireaxe"
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
 	force = 8
@@ -192,7 +194,7 @@
 	name = "heavy sabre"
 	icon_state = "sabre"
 	overlay_state = "hilt_sabre"
-	item_state = "scrapsabre"
+	item_state = "scrap_smith"
 	sharpness = SHARP_EDGED
 	force = 7
 	wielded_mult = 2
@@ -201,27 +203,28 @@
 	block_parry_data = /datum/block_parry_data/captain_saber //todo
 
 /obj/item/melee/smith/twohand/katana
-	name = "heavy sabre"
-	icon_state = "sabre"
-	overlay_state = "hilt_sabre"
-	item_state = "scrapsabre"
+	name = "katana"
+	icon_state = "katana"
+	overlay_state = "katanahilt"
+	item_state = "katana"
 	sharpness = SHARP_EDGED
 	force = 7
+	armour_penetration = 0.1
 	wielded_mult = 2
 	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT //want to name your katana "DEMON BLADE" or some shit? go ahead, idiot.
 	obj_flags = UNIQUE_RENAME
 	block_parry_data = /datum/block_parry_data/captain_saber //todo
 
-
 /obj/item/melee/smith/wakizashi
 	name = "wakizashi"
+	icon_state = "waki"
+	overlay_state = "wakihilt"
+	item_state = "machete_smith"
 	sharpness = SHARP_EDGED
 	force = 7
 	armour_penetration = 0.1
 	item_flags = NEEDS_PERMIT | ITEM_CAN_PARRY
 	obj_flags = UNIQUE_RENAME
-	icon_state = "waki"
-	overlay_state = "wakihilt"
 	block_parry_data = /datum/block_parry_data/waki
 
 /datum/block_parry_data/waki //like longbokken but worse reflect
@@ -237,7 +240,31 @@
 	parry_efficiency_perfect = 120
 	parry_failed_stagger_duration = 3 SECONDS
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
+
+/obj/item/melee/smith/mace
+	name = "mace"
+	icon_state = "mace"
+	overlay_state = "handle_mace"
+	item_state = "mace_smith"
+	item_flags = NEEDS_PERMIT
+	obj_flags = UNIQUE_RENAME
+	force = 6
+	armour_penetration = 0.2
+
+
 /*
+/obj/item/melee/smith/twohand/javelin
+	name = "javelin"
+	icon_state = "javelin"
+	overlay_state = "longhandle"
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	item_state = "spear-metal"
+	wielded_mult = 1.6
+	slot_flags = ITEM_SLOT_BACK
+	obj_flags = UNIQUE_RENAME
+	sharpness = SHARP_POINTY
+
 /obj/item/melee/smith/sword/rapier
 	name = "rapier"
 	icon_state = "rapier"

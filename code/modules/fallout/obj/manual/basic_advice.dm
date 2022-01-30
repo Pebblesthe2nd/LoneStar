@@ -113,15 +113,17 @@
 				<ol>
 				<li>Hammer: (SFP) Shrink the metal, then fold and punch it.</li>
 				<li>Pickaxe: (DDBP) Draw the metal twice, then bend it and punch it like a profligates face.</li>
-				<li>Kitchen knife: (SDD) Shrink the metal, then draw it twice. </li>
+				<li>Shovel: (DFUP) Draw the metal, fold it, upset it and finish with a solid punch.</li>
+				<li>Knife: (SDD) Shrink the metal, then draw it twice. </li>
+				<li>Chopper: (DFF) Draw the metal and fold it twice. A crude machete, but works well. </li>
+				<li>Machete: (DDSF) Draw the metal twice, shrink then fold it. </li>
 				<li>Wakizashi: (DFSF) Draw the metal, then fold it, shrink it, and fold it some more, like some sort of damn pie dough.</li>
-				<li>Sabre: (DDSF) Draw the metal twice, shrink it and fold it. </li>
-				<li>Broadsword: (DFUF) Draw the metal, fold it, upset it, and fold it again.</li>
+				<li>Sword: (DFUF) Draw the metal, fold it, upset it, and fold it again. Balanced for parrying.</li>
 				<li>Katana: (FFFFF) Fold the metal five times. Because thats how you do it damn it boy, don't question me. </li>
-				<li>Zweihander: (UDFSF) Upset the hot metal, draw it, fold it, then shrink it and fold it again. Easy. </li>
-				<li>Javelin: (DBF) Draw the metal, bend it and fold it.</li>
-				<li>Halberd: (DUFFP) Draw the red hot metal, upset it, then fold it twice and punch it! </li>
-				<li>Pike: (DDBF) Draw the metal twice, bend it and fold it. </li>
+				<li>Heavy axe: (UDFSF) Upset the hot metal, draw it, fold it, then shrink it and fold it again. Easy. A heavy twohanded axe.</li>
+				<li>Heavy sabre: (DFB) Draw the metal, fold it and bend it. A big twohander sword.</li>
+				<li>Mace: (SPSP) Shrink the red hot metal, then punch it, then repeat both steps once more! </li>
+				<li>Spear: (DDBF) Draw the metal twice, bend it and fold it. Best used with two hands, long reach. </li>
 				</ol>
 				<p>
 
