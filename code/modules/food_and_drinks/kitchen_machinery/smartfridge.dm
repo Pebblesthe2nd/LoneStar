@@ -622,6 +622,7 @@
 /obj/machinery/smartfridge/bottlerack/gardentool/primitive
 	initial_contents = list(
 		/obj/item/shovel = 2,
+		/obj/item/shovel/spade = 1,
 		/obj/item/hatchet = 2,
 		/obj/item/cultivator/rake  = 2,
 		/obj/item/scythe = 1,

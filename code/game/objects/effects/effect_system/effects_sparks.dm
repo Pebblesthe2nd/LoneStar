@@ -64,15 +64,18 @@
 /datum/effect_system/lightning_spread
 	effect_type = /obj/effect/particle_effect/sparks/electricity
 
-//fake sparks, not subtyped because we don't want light/heat, nor checks inside an often used proc for a rare subcase for saving like 10 lines of code
+//fake sparks, not subtyped because we don't want light/heat, nor checks inside an often used proc for a rare subcase for saving like 10 lines of code. Not used beyond IPC emotes, appropriating it for smithing.
 /obj/effect/particle_effect/fake_sparks
-	name = "lightning"
-	icon_state = "electricity"
+	name = "sparks"
+	icon_state = "sparks"
 
 /obj/effect/particle_effect/fake_sparks/Initialize()
 	. = ..()
 	flick(icon_state, src) // replay the animation
-//	playsound(src, "sparks", 100, TRUE) since its unused, appropriated for visual effects only, smithing.
+	anchored = TRUE
+	light_power = 1.3
+	light_range = MINIMUM_USEFUL_LIGHT_RANGE
+	light_color = LIGHT_COLOR_FIRE
 	QDEL_IN(src, 20)
 
 /datum/effect_system/fake_spark_spread

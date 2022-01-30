@@ -6314,7 +6314,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin/trashbin{
+	pixel_x = 7
+	},
 /turf/open/floor/wood,
 /area/f13/building)
 "cLo" = (
@@ -6656,22 +6658,8 @@
 /turf/open/floor/wood/f13/old/ruinedstraightnorth,
 /area/f13/bar)
 "cTN" = (
-/obj/machinery/smartfridge/bottlerack/seedbin{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/seeds/xander,
-/obj/item/seeds/xander,
-/obj/item/seeds/xander,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/wheat,
-/obj/item/seeds/wheat,
-/obj/item/seeds/wheat,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2-broken"
-	},
+/obj/machinery/smartfridge/bottlerack/seedbin/primitive,
+/turf/open/floor/f13/wood,
 /area/f13/legion)
 "cTP" = (
 /obj/machinery/light{
@@ -14315,7 +14303,7 @@
 	name = "shutters button";
 	pixel_y = -28
 	},
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess{
 	icon_state = "redrustychess";
 	name = "tile"
@@ -22273,12 +22261,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "jdI" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/obj/structure/closet/crate/bin,
-/turf/open/floor/wood,
-/area/f13/building)
+/obj/structure/closet/crate/bin/trashbin,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
 "jdN" = (
 /obj/machinery/trading_machine/ammo,
 /obj/structure/barricade/bars{
@@ -32272,7 +32257,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "npH" = (
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin/trashbin,
 /obj/machinery/light{
 	dir = 1;
 	pixel_x = 16
@@ -49776,6 +49761,11 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/building)
+"vbW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/bin/trashbin,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/bar)
 "vcg" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt{
@@ -53591,10 +53581,9 @@
 /turf/open/floor/carpet,
 /area/f13/building)
 "wNq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/bin,
-/turf/open/floor/wood/f13/carpet,
-/area/f13/bar)
+/obj/structure/closet/crate/bin/trashbin,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "wNv" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -55112,7 +55101,7 @@
 	},
 /area/f13/building)
 "xqy" = (
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin/trashbin,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirtcorner"
@@ -71629,7 +71618,7 @@ kBU
 suS
 suS
 suS
-suS
+vbW
 kBU
 xuy
 xuy
@@ -72657,7 +72646,7 @@ kBU
 suS
 suS
 suS
-wNq
+suS
 kBU
 fTy
 xuy
@@ -84504,7 +84493,7 @@ uxv
 nbL
 voR
 voR
-jdI
+voR
 jEd
 kSJ
 vCc
@@ -97057,11 +97046,11 @@ uRJ
 uRJ
 uRJ
 gjP
-cpH
+wNq
 uRJ
 uRJ
 ijg
-cpH
+uRJ
 uRJ
 bjs
 srw
@@ -119561,7 +119550,7 @@ fyf
 fyf
 fyf
 kGc
-cpK
+jdI
 okX
 svF
 cpK

@@ -83,12 +83,12 @@
 
 				<h3>How to work a hammer and anvil and produce basic tools.</h3>
 
-				The needed tools are: good gloves, metal ingots, a furnace, wood planks, an anvil and a special hammer.
+				The needed tools are: good gloves, metal ingots, a furnace, wood planks, an anvil and a smithing hammer.
 				<p>
 				<ol>
 				<li>Gloves: Not all gloves can handle red hot metal, Forgemaster gloves, or most others with fingers, or handwraps are preferable. If you can move the hot metal from the furnace the gloves are good enough.</li>
 				<li>Metal ingots: Take the metal stack you want to work in your hand and fashion ingots from it. (inhand crafting) </li>
-				<li>Furnace: Needs fuel, welding fuel most commonly. Five measures of fuel burns fast but is enough to heat a couple ingots if you are fast.</li>
+				<li>Furnace: Needs fuel, welding fuel most commonly.</li>
 				<li>Wooden bits: From planks you can craft sword handles or wooden rods that the finished metal object can be fitted to for a functional tool. (crafting menu forging & blacksmithing)  </li>
 				<li>Anvil: The quality of the anvil determines how good the product will be, I recommend using the iron ones provided, if necessary one can be crafted however. </li>
 				<li>Hammer: Most commonly a toolbox hammer is used for the first work, which is making a better hammer. Craft one to get going. (crafting menu forging & blacksmithing) </li>
@@ -99,16 +99,16 @@
 
 				<p>
 				<ol>
-				<li>Heat the ingot, move it to the anvil.</li>
-				<li>Prepare the metal, weak, strong and heavy hits enhance the quality but overworking the metal will produce slag and you have to start over. Try two strong hits then move on to making the item if you have no other ideas. </li>
+				<li>Heat the ingot in the furnace, move it to the anvil.</li>
+				<li>Prepare the metal, weak, strong and heavy hits enhance the quality but overworking the metal will produce slag and you have to start over. </li>
 				<li>Follow the secret smithing recipe for the item you want to make, the end result will depend on how much experience you have smithing, and the quality of your tools and preparations. </li>
-				<li>The first item you make should be a good hammer, you might need to repeat the process and replace the previous hammer with a new one in steps. Try to have at least a masterworked iron hammer before moving on to other items to save you headache. </li>
+				<li>The first item you usually want to do is a good hammer, you might need to repeat the process and replace the previous hammer with a new one in steps. Try to have at least a masterworked iron hammer before moving on to other items to save you headache. </li>
 				</ol>
 				<p>
 
 				<h3>Some secret smithing recipes.</h3>
 
-				These are some of the items that can be made with hot iron and a steady hand.
+				These are the tools and weapons that can be made with hot iron and a steady hand.
 				<p>
 				<ol>
 				<li>Hammer: (SFP) Shrink the metal, then fold and punch it.</li>
@@ -126,8 +126,6 @@
 				<li>Spear: (DDBF) Draw the metal twice, bend it and fold it. Best used with two hands, long reach. </li>
 				</ol>
 				<p>
-
-				Know that there are more things to learn, but this is enough to get you started.
 
 				</body>
 				</html>
