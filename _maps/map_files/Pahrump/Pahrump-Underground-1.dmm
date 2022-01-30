@@ -15576,7 +15576,7 @@
 "jIc" = (
 /obj/structure/table/wood/settler,
 /obj/item/hatchet,
-/obj/item/twohanded/sledgehammerk/classic,
+/obj/item/twohanded/sledgehammer/classic,
 /obj/machinery/light/small{
 	dir = 1
 	},
