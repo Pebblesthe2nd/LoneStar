@@ -89,9 +89,9 @@
 				<li>Gloves: Not all gloves can handle red hot metal, Forgemaster gloves, or most others with fingers, or handwraps are preferable. If you can move the hot metal from the furnace the gloves are good enough.</li>
 				<li>Metal ingots: Take the metal stack you want to work in your hand and fashion ingots from it. (inhand crafting) </li>
 				<li>Furnace: Needs fuel, welding fuel most commonly.</li>
-				<li>Wooden bits: From planks you can craft sword handles or wooden rods that the finished metal object can be fitted to for a functional tool. (crafting menu forging & blacksmithing)  </li>
+				<li>Wooden bits: From planks you can craft sword handles or wooden rods that the finished metal object can be fitted to the blade for a functional tool. (crafting menu forging & blacksmithing)  </li>
 				<li>Anvil: The quality of the anvil determines how good the product will be, I recommend using the iron ones provided, if necessary one can be crafted however. </li>
-				<li>Hammer: Most commonly a toolbox hammer is used for the first work, which is making a better hammer. Craft one to get going. (crafting menu forging & blacksmithing) </li>
+				<li>Hammer: Most commonly a simple sledgehammer is used unless you have made a better hammer on the anvil, one could make a hammer from a toolbox too I suppose. (crafting menu forging & blacksmithing) </li>
 				</ol>
 				<p>
 
